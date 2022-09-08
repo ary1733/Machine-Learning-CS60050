@@ -1,0 +1,58 @@
+digraph "Decision Tree" {
+	rankdir=LR size="1000,500"
+	node [shape=rectangle]
+	Name:" Root
+Data Count": 105352
+Feature: Previously_Insured
+Children: 2
+ -> Name:" Previously_Insured == 0
+Data Count": 57178
+Feature: Vehicle_Damage
+Children: 2
+
+	Name:" Root
+Data Count": 105352
+Feature: Previously_Insured
+Children: 2
+ -> Name:" Previously_Insured == 1
+Data Count": 48174
+Feature: Vehicle_Damage
+Children: 2
+
+	Name:" Previously_Insured == 0
+Data Count": 57178
+Feature: Vehicle_Damage
+Children: 2
+ -> Name:" Vehicle_Damage == No
+Data Count": 6586
+Feature: Ans = 0
+Children: 0
+
+	Name:" Previously_Insured == 0
+Data Count": 57178
+Feature: Vehicle_Damage
+Children: 2
+ -> Name:" Vehicle_Damage == Yes
+Data Count": 50592
+Feature: Ans = 0
+Children: 0
+
+	Name:" Previously_Insured == 1
+Data Count": 48174
+Feature: Vehicle_Damage
+Children: 2
+ -> Name:" Vehicle_Damage == No
+Data Count": 45431
+Feature: Ans = 0
+Children: 0
+
+	Name:" Previously_Insured == 1
+Data Count": 48174
+Feature: Vehicle_Damage
+Children: 2
+ -> Name:" Vehicle_Damage == Yes
+Data Count": 2743
+Feature: Ans = 0
+Children: 0
+
+}
