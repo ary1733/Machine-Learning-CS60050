@@ -1,0 +1,154 @@
+digraph "Decision Tree" {
+	rankdir=TD size="1000,500"
+	node [shape=rectangle]
+	"Node id 0
+ Vehicle_Damage" -> "Node id 1
+ Age" [label="Vehicle_Damage == Yes"]
+	"Node id 0
+ Vehicle_Damage" -> "Node id 70
+ Age" [label="Vehicle_Damage == No"]
+	"Node id 1
+ Age" -> "Node id 2
+ Vintage" [label="Age <= 32.5"]
+	"Node id 1
+ Age" -> "Node id 23
+ Policy_Sales_Channel" [label="Age > 32.5"]
+	"Node id 23
+ Policy_Sales_Channel" -> "Node id 24
+ Ans = 0" [label="Policy_Sales_Channel <= 25.5"]
+	"Node id 23
+ Policy_Sales_Channel" -> "Node id 25
+ Age" [label="Policy_Sales_Channel > 25.5"]
+	"Node id 25
+ Age" -> "Node id 26
+ Vintage" [label="Age <= 58.5"]
+	"Node id 25
+ Age" -> "Node id 53
+ Annual_Premium" [label="Age > 58.5"]
+	"Node id 26
+ Vintage" -> "Node id 27
+ Vintage" [label="Vintage <= 292.5"]
+	"Node id 26
+ Vintage" -> "Node id 52
+ Ans = 0" [label="Vintage > 292.5"]
+	"Node id 53
+ Annual_Premium" -> "Node id 54
+ Vintage" [label="Annual_Premium <= 32714.0"]
+	"Node id 53
+ Annual_Premium" -> "Node id 65
+ Annual_Premium" [label="Annual_Premium > 32714.0"]
+	"Node id 27
+ Vintage" -> "Node id 28
+ Annual_Premium" [label="Vintage <= 36.5"]
+	"Node id 27
+ Vintage" -> "Node id 37
+ Region_Code" [label="Vintage > 36.5"]
+	"Node id 54
+ Vintage" -> "Node id 55
+ Ans = 0" [label="Vintage <= 90.5"]
+	"Node id 54
+ Vintage" -> "Node id 56
+ Vintage" [label="Vintage > 90.5"]
+	"Node id 65
+ Annual_Premium" -> "Node id 66
+ Ans = 0" [label="Annual_Premium <= 74615.0"]
+	"Node id 65
+ Annual_Premium" -> "Node id 67
+ Gender" [label="Annual_Premium > 74615.0"]
+	"Node id 28
+ Annual_Premium" -> "Node id 29
+ Ans = 1" [label="Annual_Premium <= 13294.0"]
+	"Node id 28
+ Annual_Premium" -> "Node id 30
+ Annual_Premium" [label="Annual_Premium > 13294.0"]
+	"Node id 37
+ Region_Code" -> "Node id 38
+ Policy_Sales_Channel" [label="Region_Code <= 46.5"]
+	"Node id 37
+ Region_Code" -> "Node id 51
+ Ans = 0" [label="Region_Code > 46.5"]
+	"Node id 56
+ Vintage" -> "Node id 57
+ Age" [label="Vintage <= 198.0"]
+	"Node id 56
+ Vintage" -> "Node id 64
+ Ans = 0" [label="Vintage > 198.0"]
+	"Node id 67
+ Gender" -> "Node id 68
+ Ans = 1" [label="Gender == Male"]
+	"Node id 67
+ Gender" -> "Node id 69
+ Ans = 0" [label="Gender == Female"]
+	"Node id 30
+ Annual_Premium" -> "Node id 31
+ Age" [label="Annual_Premium <= 42511.0"]
+	"Node id 30
+ Annual_Premium" -> "Node id 36
+ Ans = 1" [label="Annual_Premium > 42511.0"]
+	"Node id 38
+ Policy_Sales_Channel" -> "Node id 39
+ Age" [label="Policy_Sales_Channel <= 155.0"]
+	"Node id 38
+ Policy_Sales_Channel" -> "Node id 46
+ Vintage" [label="Policy_Sales_Channel > 155.0"]
+	"Node id 57
+ Age" -> "Node id 58
+ Ans = 1" [label="Age <= 61.5"]
+	"Node id 57
+ Age" -> "Node id 59
+ Age" [label="Age > 61.5"]
+	"Node id 31
+ Age" -> "Node id 32
+ Ans = 0" [label="Age <= 40.0"]
+	"Node id 31
+ Age" -> "Node id 33
+ Age" [label="Age > 40.0"]
+	"Node id 39
+ Age" -> "Node id 40
+ Annual_Premium" [label="Age <= 48.5"]
+	"Node id 39
+ Age" -> "Node id 43
+ Age" [label="Age > 48.5"]
+	"Node id 46
+ Vintage" -> "Node id 47
+ Ans = 0" [label="Vintage <= 86.5"]
+	"Node id 46
+ Vintage" -> "Node id 48
+ Vehicle_Age" [label="Vintage > 86.5"]
+	"Node id 59
+ Age" -> "Node id 60
+ Ans = 0" [label="Age <= 68.0"]
+	"Node id 59
+ Age" -> "Node id 61
+ Gender" [label="Age > 68.0"]
+	"Node id 33
+ Age" -> "Node id 34
+ Ans = 1" [label="Age <= 48.0"]
+	"Node id 33
+ Age" -> "Node id 35
+ Ans = 0" [label="Age > 48.0"]
+	"Node id 40
+ Annual_Premium" -> "Node id 41
+ Ans = 0" [label="Annual_Premium <= 54447.0"]
+	"Node id 40
+ Annual_Premium" -> "Node id 42
+ Ans = 1" [label="Annual_Premium > 54447.0"]
+	"Node id 43
+ Age" -> "Node id 44
+ Ans = 1" [label="Age <= 54.5"]
+	"Node id 43
+ Age" -> "Node id 45
+ Ans = 0" [label="Age > 54.5"]
+	"Node id 48
+ Vehicle_Age" -> "Node id 49
+ Ans = 1" [label="Vehicle_Age == 1-2 Year"]
+	"Node id 48
+ Vehicle_Age" -> "Node id 50
+ Ans = 0" [label="Vehicle_Age == > 2 Years"]
+	"Node id 61
+ Gender" -> "Node id 62
+ Ans = 0" [label="Gender == Male"]
+	"Node id 61
+ Gender" -> "Node id 63
+ Ans = 1" [label="Gender == Female"]
+}

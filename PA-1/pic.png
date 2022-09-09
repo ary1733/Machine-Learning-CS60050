@@ -3,56 +3,9065 @@ digraph "Decision Tree" {
 	node [shape=rectangle]
 	Name:" Root
 Data Count": 105352
-Feature: Previously_Insured
-Children: 2
- -> Name:" Previously_Insured == 0
-Data Count": 57178
 Feature: Vehicle_Damage
+Children: 2
+ -> Name:" Vehicle_Damage == Yes
+Data Count": 53224
+Feature: Age
 Children: 2
 
 	Name:" Root
 Data Count": 105352
+Feature: Vehicle_Damage
+Children: 2
+ -> Name:" Vehicle_Damage == No
+Data Count": 52128
+Feature: Previously_Insured
+Children: 2
+
+	Name:" Vehicle_Damage == Yes
+Data Count": 53224
+Feature: Age
+Children: 2
+ -> Name:" Age <= 26.5
+Data Count": 10915
+Feature: Previously_Insured
+Children: 2
+
+	Name:" Vehicle_Damage == Yes
+Data Count": 53224
+Feature: Age
+Children: 2
+ -> Name:" Age > 26.5
+Data Count": 42309
+Feature: Previously_Insured
+Children: 2
+
+	Name:" Vehicle_Damage == No
+Data Count": 52128
 Feature: Previously_Insured
 Children: 2
  -> Name:" Previously_Insured == 1
-Data Count": 48174
-Feature: Vehicle_Damage
+Data Count": 45528
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vehicle_Damage == No
+Data Count": 52128
+Feature: Previously_Insured
+Children: 2
+ -> Name:" Previously_Insured == 0
+Data Count": 6600
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age <= 26.5
+Data Count": 10915
+Feature: Previously_Insured
+Children: 2
+ -> Name:" Previously_Insured == 0
+Data Count": 9938
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age <= 26.5
+Data Count": 10915
+Feature: Previously_Insured
+Children: 2
+ -> Name:" Previously_Insured == 1
+Data Count": 977
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 26.5
+Data Count": 42309
+Feature: Previously_Insured
+Children: 2
+ -> Name:" Previously_Insured == 0
+Data Count": 40585
+Feature: Age
+Children: 2
+
+	Name:" Age > 26.5
+Data Count": 42309
+Feature: Previously_Insured
+Children: 2
+ -> Name:" Previously_Insured == 1
+Data Count": 1724
+Feature: Age
+Children: 2
+
+	Name:" Previously_Insured == 1
+Data Count": 45528
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 2.0
+Data Count": 52
+Feature: Vintage
+Children: 2
+
+	Name:" Previously_Insured == 1
+Data Count": 45528
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 2.0
+Data Count": 45476
+Feature: Vintage
 Children: 2
 
 	Name:" Previously_Insured == 0
-Data Count": 57178
-Feature: Vehicle_Damage
+Data Count": 6600
+Feature: Policy_Sales_Channel
 Children: 2
- -> Name:" Vehicle_Damage == No
-Data Count": 6586
+ -> Name:" Policy_Sales_Channel <= 152.5
+Data Count": 5543
+Feature: Age
+Children: 2
+
+	Name:" Previously_Insured == 0
+Data Count": 6600
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 152.5
+Data Count": 1057
+Feature: Age
+Children: 2
+
+	Name:" Previously_Insured == 0
+Data Count": 9938
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 158.5
+Data Count": 7811
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Previously_Insured == 0
+Data Count": 9938
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 158.5
+Data Count": 2127
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Previously_Insured == 1
+Data Count": 977
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 33026.5
+Data Count": 676
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Previously_Insured == 1
+Data Count": 977
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 33026.5
+Data Count": 301
 Feature: Ans = 0
 Children: 0
 
 	Name:" Previously_Insured == 0
-Data Count": 57178
-Feature: Vehicle_Damage
+Data Count": 40585
+Feature: Age
 Children: 2
- -> Name:" Vehicle_Damage == Yes
-Data Count": 50592
+ -> Name:" Age <= 59.5
+Data Count": 33162
+Feature: Age
+Children: 2
+
+	Name:" Previously_Insured == 0
+Data Count": 40585
+Feature: Age
+Children: 2
+ -> Name:" Age > 59.5
+Data Count": 7423
+Feature: Vehicle_Age
+Children: 3
+
+	Name:" Previously_Insured == 1
+Data Count": 1724
+Feature: Age
+Children: 2
+ -> Name:" Age <= 45.5
+Data Count": 730
+Feature: Vintage
+Children: 2
+
+	Name:" Previously_Insured == 1
+Data Count": 1724
+Feature: Age
+Children: 2
+ -> Name:" Age > 45.5
+Data Count": 994
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 2.0
+Data Count": 52
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 88.5
+Data Count": 13
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 2.0
+Data Count": 52
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 88.5
+Data Count": 39
 Feature: Ans = 0
 Children: 0
 
-	Name:" Previously_Insured == 1
-Data Count": 48174
-Feature: Vehicle_Damage
+	Name:" Policy_Sales_Channel > 2.0
+Data Count": 45476
+Feature: Vintage
 Children: 2
- -> Name:" Vehicle_Damage == No
-Data Count": 45431
+ -> Name:" Vintage <= 280.5
+Data Count": 42527
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel > 2.0
+Data Count": 45476
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 280.5
+Data Count": 2949
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 152.5
+Data Count": 5543
+Feature: Age
+Children: 2
+ -> Name:" Age <= 60.5
+Data Count": 4928
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 152.5
+Data Count": 5543
+Feature: Age
+Children: 2
+ -> Name:" Age > 60.5
+Data Count": 615
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel > 152.5
+Data Count": 1057
+Feature: Age
+Children: 2
+ -> Name:" Age <= 22.5
+Data Count": 392
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel > 152.5
+Data Count": 1057
+Feature: Age
+Children: 2
+ -> Name:" Age > 22.5
+Data Count": 665
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 158.5
+Data Count": 7811
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 150.5
+Data Count": 1134
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 158.5
+Data Count": 7811
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 150.5
+Data Count": 6677
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel > 158.5
+Data Count": 2127
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 161.5
+Data Count": 1976
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 158.5
+Data Count": 2127
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 161.5
+Data Count": 151
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 33026.5
+Data Count": 676
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 32438.5
+Data Count": 652
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Annual_Premium <= 33026.5
+Data Count": 676
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 32438.5
+Data Count": 24
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age <= 59.5
+Data Count": 33162
+Feature: Age
+Children: 2
+ -> Name:" Age <= 50.5
+Data Count": 25596
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age <= 59.5
+Data Count": 33162
+Feature: Age
+Children: 2
+ -> Name:" Age > 50.5
+Data Count": 7566
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age > 59.5
+Data Count": 7423
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 5902
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 59.5
+Data Count": 7423
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == > 2 Years
+Data Count": 1514
+Feature: Age
+Children: 2
+
+	Name:" Age > 59.5
+Data Count": 7423
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 7
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 45.5
+Data Count": 730
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 288.5
+Data Count": 710
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 45.5
+Data Count": 730
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 288.5
+Data Count": 20
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 45.5
+Data Count": 994
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36880.0
+Data Count": 551
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 45.5
+Data Count": 994
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36880.0
+Data Count": 443
 Feature: Ans = 0
 Children: 0
 
-	Name:" Previously_Insured == 1
-Data Count": 48174
-Feature: Vehicle_Damage
+	Name:" Vintage <= 88.5
+Data Count": 13
+Feature: Vintage
 Children: 2
- -> Name:" Vehicle_Damage == Yes
-Data Count": 2743
+ -> Name:" Vintage <= 84.5
+Data Count": 12
 Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 88.5
+Data Count": 13
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 84.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 280.5
+Data Count": 42527
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 152.5
+Data Count": 39067
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 280.5
+Data Count": 42527
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 152.5
+Data Count": 3460
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage > 280.5
+Data Count": 2949
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 2.5
+Data Count": 56
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 280.5
+Data Count": 2949
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 2.5
+Data Count": 2893
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age <= 60.5
+Data Count": 4928
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 38.5
+Data Count": 3906
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 60.5
+Data Count": 4928
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 38.5
+Data Count": 1022
+Feature: Age
+Children: 2
+
+	Name:" Age > 60.5
+Data Count": 615
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 28.5
+Data Count": 414
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 60.5
+Data Count": 615
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 28.5
+Data Count": 201
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 22.5
+Data Count": 392
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 27.5
+Data Count": 201
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 22.5
+Data Count": 392
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 27.5
+Data Count": 191
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 22.5
+Data Count": 665
+Feature: Age
+Children: 2
+ -> Name:" Age <= 42.5
+Data Count": 490
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 22.5
+Data Count": 665
+Feature: Age
+Children: 2
+ -> Name:" Age > 42.5
+Data Count": 175
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 150.5
+Data Count": 1134
+Feature: Age
+Children: 2
+ -> Name:" Age <= 22.5
+Data Count": 360
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 150.5
+Data Count": 1134
+Feature: Age
+Children: 2
+ -> Name:" Age > 22.5
+Data Count": 774
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel > 150.5
+Data Count": 6677
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 152.5
+Data Count": 6073
+Feature: Gender
+Children: 2
+
+	Name:" Policy_Sales_Channel > 150.5
+Data Count": 6677
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 152.5
+Data Count": 604
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 161.5
+Data Count": 1976
+Feature: Age
+Children: 2
+ -> Name:" Age <= 22.5
+Data Count": 1659
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 161.5
+Data Count": 1976
+Feature: Age
+Children: 2
+ -> Name:" Age > 22.5
+Data Count": 317
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 161.5
+Data Count": 151
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 43997.0
+Data Count": 136
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel > 161.5
+Data Count": 151
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 43997.0
+Data Count": 15
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 32438.5
+Data Count": 652
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 161.5
+Data Count": 637
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 32438.5
+Data Count": 652
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 161.5
+Data Count": 15
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium > 32438.5
+Data Count": 24
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 75.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 32438.5
+Data Count": 24
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 75.0
+Data Count": 23
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 50.5
+Data Count": 25596
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 150.5
+Data Count": 19250
+Feature: Vehicle_Age
+Children: 3
+
+	Name:" Age <= 50.5
+Data Count": 25596
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 150.5
+Data Count": 6346
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age > 50.5
+Data Count": 7566
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 27.5
+Data Count": 3764
+Feature: Vehicle_Age
+Children: 3
+
+	Name:" Age > 50.5
+Data Count": 7566
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 27.5
+Data Count": 3802
+Feature: Region_Code
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 5902
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 46.5
+Data Count": 5551
+Feature: Age
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 5902
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 46.5
+Data Count": 351
+Feature: Age
+Children: 2
+
+	Name:" Vehicle_Age == > 2 Years
+Data Count": 1514
+Feature: Age
+Children: 2
+ -> Name:" Age <= 65.5
+Data Count": 612
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vehicle_Age == > 2 Years
+Data Count": 1514
+Feature: Age
+Children: 2
+ -> Name:" Age > 65.5
+Data Count": 902
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 7
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 40.0
+Data Count": 6
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 7
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 40.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 288.5
+Data Count": 710
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 2.5
+Data Count": 13
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage <= 288.5
+Data Count": 710
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 2.5
+Data Count": 697
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage > 288.5
+Data Count": 20
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 11.5
+Data Count": 9
+Feature: Gender
+Children: 2
+
+	Name:" Vintage > 288.5
+Data Count": 20
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 11.5
+Data Count": 11
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 36880.0
+Data Count": 551
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 26873.0
+Data Count": 282
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 36880.0
+Data Count": 551
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 26873.0
+Data Count": 269
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 152.5
+Data Count": 39067
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30362.5
+Data Count": 17892
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 152.5
+Data Count": 39067
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30362.5
+Data Count": 21175
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel > 152.5
+Data Count": 3460
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 156.5
+Data Count": 556
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 152.5
+Data Count": 3460
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 156.5
+Data Count": 2904
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 2.5
+Data Count": 56
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 298.5
+Data Count": 52
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 2.5
+Data Count": 56
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 298.5
+Data Count": 4
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code > 2.5
+Data Count": 2893
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36214.5
+Data Count": 2022
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 2.5
+Data Count": 2893
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36214.5
+Data Count": 871
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code <= 38.5
+Data Count": 3906
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 37.5
+Data Count": 3886
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code <= 38.5
+Data Count": 3906
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 37.5
+Data Count": 20
+Feature: Age
+Children: 2
+
+	Name:" Region_Code > 38.5
+Data Count": 1022
+Feature: Age
+Children: 2
+ -> Name:" Age <= 30.5
+Data Count": 530
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code > 38.5
+Data Count": 1022
+Feature: Age
+Children: 2
+ -> Name:" Age > 30.5
+Data Count": 492
+Feature: Age
+Children: 2
+
+	Name:" Region_Code <= 28.5
+Data Count": 414
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 27.5
+Data Count": 172
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 28.5
+Data Count": 414
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 27.5
+Data Count": 242
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Region_Code > 27.5
+Data Count": 191
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 175.5
+Data Count": 114
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code > 27.5
+Data Count": 191
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 175.5
+Data Count": 77
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 42.5
+Data Count": 490
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36083.0
+Data Count": 428
+Feature: Age
+Children: 2
+
+	Name:" Age <= 42.5
+Data Count": 490
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36083.0
+Data Count": 62
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 42.5
+Data Count": 175
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 28.5
+Data Count": 110
+Feature: Age
+Children: 2
+
+	Name:" Age > 42.5
+Data Count": 175
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 28.5
+Data Count": 65
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 22.5
+Data Count": 360
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 123.0
+Data Count": 164
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 22.5
+Data Count": 360
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 123.0
+Data Count": 196
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 22.5
+Data Count": 774
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 48.5
+Data Count": 759
+Feature: Gender
+Children: 2
+
+	Name:" Age > 22.5
+Data Count": 774
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 48.5
+Data Count": 15
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 152.5
+Data Count": 6073
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 2723
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 152.5
+Data Count": 6073
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 3350
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 152.5
+Data Count": 604
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 22897.0
+Data Count": 316
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel > 152.5
+Data Count": 604
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 22897.0
+Data Count": 288
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 22.5
+Data Count": 1659
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 50.5
+Data Count": 1658
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 22.5
+Data Count": 1659
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 50.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age > 22.5
+Data Count": 317
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 30.5
+Data Count": 20
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 22.5
+Data Count": 317
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 30.5
+Data Count": 297
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 43997.0
+Data Count": 136
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 9.5
+Data Count": 18
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium <= 43997.0
+Data Count": 136
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 9.5
+Data Count": 118
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 161.5
+Data Count": 637
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 25996.5
+Data Count": 397
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 161.5
+Data Count": 637
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 25996.5
+Data Count": 240
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel > 161.5
+Data Count": 15
+Feature: Age
+Children: 2
+ -> Name:" Age <= 21.5
+Data Count": 9
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 161.5
+Data Count": 15
+Feature: Age
+Children: 2
+ -> Name:" Age > 21.5
+Data Count": 6
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 75.0
+Data Count": 23
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 15.5
+Data Count": 2
+Feature: Gender
+Children: 2
+
+	Name:" Policy_Sales_Channel > 75.0
+Data Count": 23
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 15.5
+Data Count": 21
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 150.5
+Data Count": 19250
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == > 2 Years
+Data Count": 1471
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 150.5
+Data Count": 19250
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 16726
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 150.5
+Data Count": 19250
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 1053
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 150.5
+Data Count": 6346
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 153.5
+Data Count": 1915
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel > 150.5
+Data Count": 6346
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 153.5
+Data Count": 4431
+Feature: Vehicle_Age
+Children: 3
+
+	Name:" Policy_Sales_Channel <= 27.5
+Data Count": 3764
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 3090
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 27.5
+Data Count": 3764
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == > 2 Years
+Data Count": 661
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 27.5
+Data Count": 3764
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 13
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel > 27.5
+Data Count": 3802
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 46.5
+Data Count": 3573
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 27.5
+Data Count": 3802
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 46.5
+Data Count": 229
+Feature: Age
+Children: 2
+
+	Name:" Region_Code <= 46.5
+Data Count": 5551
+Feature: Age
+Children: 2
+ -> Name:" Age <= 68.5
+Data Count": 3262
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 46.5
+Data Count": 5551
+Feature: Age
+Children: 2
+ -> Name:" Age > 68.5
+Data Count": 2289
+Feature: Driving_License
+Children: 2
+
+	Name:" Region_Code > 46.5
+Data Count": 351
+Feature: Age
+Children: 2
+ -> Name:" Age <= 64.5
+Data Count": 130
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Region_Code > 46.5
+Data Count": 351
+Feature: Age
+Children: 2
+ -> Name:" Age > 64.5
+Data Count": 221
+Feature: Age
+Children: 2
+
+	Name:" Age <= 65.5
+Data Count": 612
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 53.5
+Data Count": 364
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age <= 65.5
+Data Count": 612
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 53.5
+Data Count": 248
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 65.5
+Data Count": 902
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 147.5
+Data Count": 829
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 65.5
+Data Count": 902
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 147.5
+Data Count": 73
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 2.5
+Data Count": 13
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 153.0
+Data Count": 9
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 2.5
+Data Count": 13
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 153.0
+Data Count": 4
+Feature: Age
+Children: 2
+
+	Name:" Region_Code > 2.5
+Data Count": 697
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 121.0
+Data Count": 175
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 2.5
+Data Count": 697
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 121.0
+Data Count": 522
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 11.5
+Data Count": 9
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 4
+Feature: Age
+Children: 2
+
+	Name:" Region_Code <= 11.5
+Data Count": 9
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 26873.0
+Data Count": 269
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 18.5
+Data Count": 6
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium > 26873.0
+Data Count": 269
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 18.5
+Data Count": 263
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 30362.5
+Data Count": 17892
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 4364.0
+Data Count": 4471
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium <= 30362.5
+Data Count": 17892
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 4364.0
+Data Count": 13421
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 30362.5
+Data Count": 21175
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 33402.0
+Data Count": 5077
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium > 30362.5
+Data Count": 21175
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 33402.0
+Data Count": 16098
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 156.5
+Data Count": 556
+Feature: Age
+Children: 2
+ -> Name:" Age <= 32.5
+Data Count": 242
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 156.5
+Data Count": 556
+Feature: Age
+Children: 2
+ -> Name:" Age > 32.5
+Data Count": 314
+Feature: Vehicle_Age
+Children: 2
+
+	Name:" Vintage > 298.5
+Data Count": 4
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 26020.5
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 298.5
+Data Count": 4
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 26020.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 36214.5
+Data Count": 871
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36927.0
+Data Count": 56
+Feature: Gender
+Children: 2
+
+	Name:" Annual_Premium > 36214.5
+Data Count": 871
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36927.0
+Data Count": 815
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 37.5
+Data Count": 3886
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 46237.5
+Data Count": 3437
+Feature: Age
+Children: 2
+
+	Name:" Region_Code <= 37.5
+Data Count": 3886
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 46237.5
+Data Count": 449
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code > 37.5
+Data Count": 20
+Feature: Age
+Children: 2
+ -> Name:" Age <= 27.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 37.5
+Data Count": 20
+Feature: Age
+Children: 2
+ -> Name:" Age > 27.5
+Data Count": 19
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age <= 30.5
+Data Count": 530
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 157.5
+Data Count": 261
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 30.5
+Data Count": 530
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 157.5
+Data Count": 269
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 30.5
+Data Count": 492
+Feature: Age
+Children: 2
+ -> Name:" Age <= 34.5
+Data Count": 54
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 30.5
+Data Count": 492
+Feature: Age
+Children: 2
+ -> Name:" Age > 34.5
+Data Count": 438
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Region_Code > 27.5
+Data Count": 242
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 124.5
+Data Count": 235
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code > 27.5
+Data Count": 242
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 124.5
+Data Count": 7
+Feature: Age
+Children: 2
+
+	Name:" Vintage <= 175.5
+Data Count": 114
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 107.5
+Data Count": 68
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 175.5
+Data Count": 114
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 107.5
+Data Count": 46
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Annual_Premium <= 36083.0
+Data Count": 428
+Feature: Age
+Children: 2
+ -> Name:" Age <= 32.5
+Data Count": 245
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 36083.0
+Data Count": 428
+Feature: Age
+Children: 2
+ -> Name:" Age > 32.5
+Data Count": 183
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium > 36083.0
+Data Count": 62
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 32.5
+Data Count": 46
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36083.0
+Data Count": 62
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 32.5
+Data Count": 16
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 28.5
+Data Count": 110
+Feature: Age
+Children: 2
+ -> Name:" Age <= 52.0
+Data Count": 61
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 28.5
+Data Count": 110
+Feature: Age
+Children: 2
+ -> Name:" Age > 52.0
+Data Count": 49
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 123.0
+Data Count": 164
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 13.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 123.0
+Data Count": 164
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 13.0
+Data Count": 163
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 123.0
+Data Count": 196
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 42067.0
+Data Count": 140
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel > 123.0
+Data Count": 196
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 42067.0
+Data Count": 56
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 48.5
+Data Count": 759
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 393
+Feature: Age
+Children: 2
+
+	Name:" Region_Code <= 48.5
+Data Count": 759
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 366
+Feature: Region_Code
+Children: 2
+
+	Name:" Gender == Male
+Data Count": 2723
+Feature: Age
+Children: 2
+ -> Name:" Age <= 22.5
+Data Count": 959
+Feature: Region_Code
+Children: 2
+
+	Name:" Gender == Male
+Data Count": 2723
+Feature: Age
+Children: 2
+ -> Name:" Age > 22.5
+Data Count": 1764
+Feature: Region_Code
+Children: 2
+
+	Name:" Gender == Female
+Data Count": 3350
+Feature: Age
+Children: 2
+ -> Name:" Age <= 22.5
+Data Count": 1171
+Feature: Region_Code
+Children: 2
+
+	Name:" Gender == Female
+Data Count": 3350
+Feature: Age
+Children: 2
+ -> Name:" Age > 22.5
+Data Count": 2179
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium <= 22897.0
+Data Count": 316
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 21.5
+Data Count": 102
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 22897.0
+Data Count": 316
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 21.5
+Data Count": 214
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Annual_Premium > 22897.0
+Data Count": 288
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 130.5
+Data Count": 132
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium > 22897.0
+Data Count": 288
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 130.5
+Data Count": 156
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code <= 50.5
+Data Count": 1658
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 94.5
+Data Count": 479
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 50.5
+Data Count": 1658
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 94.5
+Data Count": 1179
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 30.5
+Data Count": 297
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 40.5
+Data Count": 15
+Feature: Age
+Children: 2
+
+	Name:" Vintage > 30.5
+Data Count": 297
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 40.5
+Data Count": 282
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 9.5
+Data Count": 18
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 8.5
+Data Count": 16
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code <= 9.5
+Data Count": 18
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 8.5
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 9.5
+Data Count": 118
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 296.5
+Data Count": 117
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code > 9.5
+Data Count": 118
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 296.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 25996.5
+Data Count": 240
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 26005.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 25996.5
+Data Count": 240
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 26005.0
+Data Count": 239
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 21.5
+Data Count": 6
+Feature: Age
+Children: 2
+ -> Name:" Age <= 22.5
+Data Count": 2
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 21.5
+Data Count": 6
+Feature: Age
+Children: 2
+ -> Name:" Age > 22.5
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 15.5
+Data Count": 2
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 15.5
+Data Count": 2
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vehicle_Age == > 2 Years
+Data Count": 1471
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 57.0
+Data Count": 831
+Feature: Age
+Children: 2
+
+	Name:" Vehicle_Age == > 2 Years
+Data Count": 1471
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 57.0
+Data Count": 640
+Feature: Region_Code
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 16726
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 0.5
+Data Count": 146
+Feature: Vintage
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 16726
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 0.5
+Data Count": 16580
+Feature: Age
+Children: 2
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 1053
+Feature: Age
+Children: 2
+ -> Name:" Age <= 28.5
+Data Count": 179
+Feature: Vintage
+Children: 2
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 1053
+Feature: Age
+Children: 2
+ -> Name:" Age > 28.5
+Data Count": 874
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 153.5
+Data Count": 1915
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 8151.5
+Data Count": 315
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 153.5
+Data Count": 1915
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 8151.5
+Data Count": 1600
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 153.5
+Data Count": 4431
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 3646
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel > 153.5
+Data Count": 4431
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 589
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel > 153.5
+Data Count": 4431
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == > 2 Years
+Data Count": 196
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 3090
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 22.5
+Data Count": 321
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 3090
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 22.5
+Data Count": 2769
+Feature: Region_Code
+Children: 2
+
+	Name:" Vehicle_Age == > 2 Years
+Data Count": 661
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 45929.5
+Data Count": 452
+Feature: Age
+Children: 2
+
+	Name:" Vehicle_Age == > 2 Years
+Data Count": 661
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 45929.5
+Data Count": 209
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 13
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 13.5
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 13
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 13.5
+Data Count": 11
+Feature: Age
+Children: 2
+
+	Name:" Region_Code <= 46.5
+Data Count": 3573
+Feature: Age
+Children: 2
+ -> Name:" Age <= 53.5
+Data Count": 1525
+Feature: Gender
+Children: 2
+
+	Name:" Region_Code <= 46.5
+Data Count": 3573
+Feature: Age
+Children: 2
+ -> Name:" Age > 53.5
+Data Count": 2048
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code > 46.5
+Data Count": 229
+Feature: Age
+Children: 2
+ -> Name:" Age <= 53.5
+Data Count": 96
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code > 46.5
+Data Count": 229
+Feature: Age
+Children: 2
+ -> Name:" Age > 53.5
+Data Count": 133
+Feature: Vehicle_Age
+Children: 3
+
+	Name:" Age <= 68.5
+Data Count": 3262
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 34.5
+Data Count": 299
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age <= 68.5
+Data Count": 3262
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 34.5
+Data Count": 2963
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age > 68.5
+Data Count": 2289
+Feature: Driving_License
+Children: 2
+ -> Name:" Driving_License == 1
+Data Count": 2244
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 68.5
+Data Count": 2289
+Feature: Driving_License
+Children: 2
+ -> Name:" Driving_License == 0
+Data Count": 45
+Feature: Age
+Children: 2
+
+	Name:" Age <= 64.5
+Data Count": 130
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 3.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age <= 64.5
+Data Count": 130
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 3.5
+Data Count": 129
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 64.5
+Data Count": 221
+Feature: Age
+Children: 2
+ -> Name:" Age <= 71.5
+Data Count": 124
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age > 64.5
+Data Count": 221
+Feature: Age
+Children: 2
+ -> Name:" Age > 71.5
+Data Count": 97
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 53.5
+Data Count": 364
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 11.5
+Data Count": 17
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 53.5
+Data Count": 364
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 11.5
+Data Count": 347
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel > 53.5
+Data Count": 248
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 252.5
+Data Count": 207
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 53.5
+Data Count": 248
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 252.5
+Data Count": 41
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 147.5
+Data Count": 829
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 51.0
+Data Count": 827
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 147.5
+Data Count": 829
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 51.0
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel > 147.5
+Data Count": 73
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 243.5
+Data Count": 57
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 147.5
+Data Count": 73
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 243.5
+Data Count": 16
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel > 153.0
+Data Count": 4
+Feature: Age
+Children: 2
+ -> Name:" Age <= 33.0
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 153.0
+Data Count": 4
+Feature: Age
+Children: 2
+ -> Name:" Age > 33.0
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel > 121.0
+Data Count": 522
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 13.5
+Data Count": 114
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 121.0
+Data Count": 522
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 13.5
+Data Count": 408
+Feature: Region_Code
+Children: 2
+
+	Name:" Gender == Female
+Data Count": 4
+Feature: Age
+Children: 2
+ -> Name:" Age <= 33.0
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Female
+Data Count": 4
+Feature: Age
+Children: 2
+ -> Name:" Age > 33.0
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 18.5
+Data Count": 6
+Feature: Age
+Children: 2
+ -> Name:" Age <= 60.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 18.5
+Data Count": 6
+Feature: Age
+Children: 2
+ -> Name:" Age > 60.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 18.5
+Data Count": 263
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 226.5
+Data Count": 184
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 18.5
+Data Count": 263
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 226.5
+Data Count": 79
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 4364.0
+Data Count": 4471
+Feature: Age
+Children: 2
+ -> Name:" Age <= 25.5
+Data Count": 963
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium <= 4364.0
+Data Count": 4471
+Feature: Age
+Children: 2
+ -> Name:" Age > 25.5
+Data Count": 3508
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 33402.0
+Data Count": 5077
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 88.5
+Data Count": 1412
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 33402.0
+Data Count": 5077
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 88.5
+Data Count": 3665
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium > 33402.0
+Data Count": 16098
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 70263.0
+Data Count": 15651
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium > 33402.0
+Data Count": 16098
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 70263.0
+Data Count": 447
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 32.5
+Data Count": 314
+Feature: Vehicle_Age
+Children: 2
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 313
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 32.5
+Data Count": 314
+Feature: Vehicle_Age
+Children: 2
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 36927.0
+Data Count": 56
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 29
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 36927.0
+Data Count": 56
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 27
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium > 36927.0
+Data Count": 815
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 48.5
+Data Count": 781
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36927.0
+Data Count": 815
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 48.5
+Data Count": 34
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 46237.5
+Data Count": 3437
+Feature: Age
+Children: 2
+ -> Name:" Age <= 40.5
+Data Count": 2240
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 46237.5
+Data Count": 3437
+Feature: Age
+Children: 2
+ -> Name:" Age > 40.5
+Data Count": 1197
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Annual_Premium > 46237.5
+Data Count": 449
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 219.5
+Data Count": 320
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium > 46237.5
+Data Count": 449
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 219.5
+Data Count": 129
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 27.5
+Data Count": 19
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36822.0
+Data Count": 14
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 27.5
+Data Count": 19
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36822.0
+Data Count": 5
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage > 157.5
+Data Count": 269
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 165.5
+Data Count": 17
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage > 157.5
+Data Count": 269
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 165.5
+Data Count": 252
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 34.5
+Data Count": 54
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 18.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age <= 34.5
+Data Count": 54
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 18.5
+Data Count": 53
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 34.5
+Data Count": 438
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 9.5
+Data Count": 37
+Feature: Age
+Children: 2
+
+	Name:" Age > 34.5
+Data Count": 438
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 9.5
+Data Count": 401
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 124.5
+Data Count": 235
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30421.0
+Data Count": 50
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 124.5
+Data Count": 235
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30421.0
+Data Count": 185
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 124.5
+Data Count": 7
+Feature: Age
+Children: 2
+ -> Name:" Age <= 67.5
+Data Count": 2
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 124.5
+Data Count": 7
+Feature: Age
+Children: 2
+ -> Name:" Age > 67.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 107.5
+Data Count": 46
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 154.5
+Data Count": 2
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage > 107.5
+Data Count": 46
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 154.5
+Data Count": 44
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 32.5
+Data Count": 245
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 31388.0
+Data Count": 219
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 32.5
+Data Count": 245
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 31388.0
+Data Count": 26
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 32.5
+Data Count": 183
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 279.0
+Data Count": 168
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 32.5
+Data Count": 183
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 279.0
+Data Count": 15
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 32.5
+Data Count": 16
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 35.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 32.5
+Data Count": 16
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 35.5
+Data Count": 15
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 52.0
+Data Count": 61
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 3.5
+Data Count": 5
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 52.0
+Data Count": 61
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 3.5
+Data Count": 56
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 52.0
+Data Count": 49
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 222.0
+Data Count": 36
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 52.0
+Data Count": 49
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 222.0
+Data Count": 13
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 13.0
+Data Count": 163
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 36.5
+Data Count": 14
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 13.0
+Data Count": 163
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 36.5
+Data Count": 149
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 42067.0
+Data Count": 140
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 40934.5
+Data Count": 131
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 42067.0
+Data Count": 140
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 40934.5
+Data Count": 9
+Feature: Vehicle_Age
+Children: 2
+
+	Name:" Annual_Premium > 42067.0
+Data Count": 56
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 6.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 42067.0
+Data Count": 56
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 6.0
+Data Count": 55
+Feature: Vintage
+Children: 2
+
+	Name:" Gender == Male
+Data Count": 393
+Feature: Age
+Children: 2
+ -> Name:" Age <= 23.5
+Data Count": 120
+Feature: Vehicle_Age
+Children: 3
+
+	Name:" Gender == Male
+Data Count": 393
+Feature: Age
+Children: 2
+ -> Name:" Age > 23.5
+Data Count": 273
+Feature: Vintage
+Children: 2
+
+	Name:" Gender == Female
+Data Count": 366
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 18.5
+Data Count": 84
+Feature: Region_Code
+Children: 2
+
+	Name:" Gender == Female
+Data Count": 366
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 18.5
+Data Count": 282
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age <= 22.5
+Data Count": 959
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 49.5
+Data Count": 931
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 22.5
+Data Count": 959
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 49.5
+Data Count": 28
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 22.5
+Data Count": 1764
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 49.5
+Data Count": 1721
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 22.5
+Data Count": 1764
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 49.5
+Data Count": 43
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 22.5
+Data Count": 1171
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 50.5
+Data Count": 1170
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age <= 22.5
+Data Count": 1171
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 50.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age > 22.5
+Data Count": 2179
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 42.5
+Data Count": 1832
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 22.5
+Data Count": 2179
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 42.5
+Data Count": 347
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 21.5
+Data Count": 102
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 21650.0
+Data Count": 99
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 21.5
+Data Count": 102
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 21650.0
+Data Count": 3
+Feature: Age
+Children: 2
+
+	Name:" Region_Code > 21.5
+Data Count": 214
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 155.5
+Data Count": 17
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 21.5
+Data Count": 214
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 155.5
+Data Count": 197
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage <= 130.5
+Data Count": 132
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 45.5
+Data Count": 116
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 130.5
+Data Count": 132
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 45.5
+Data Count": 16
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 130.5
+Data Count": 156
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 32699.5
+Data Count": 57
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 130.5
+Data Count": 156
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 32699.5
+Data Count": 99
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 94.5
+Data Count": 479
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 92.5
+Data Count": 473
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 94.5
+Data Count": 479
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 92.5
+Data Count": 6
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage > 94.5
+Data Count": 1179
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 115.5
+Data Count": 124
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 94.5
+Data Count": 1179
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 115.5
+Data Count": 1055
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 40.5
+Data Count": 15
+Feature: Age
+Children: 2
+ -> Name:" Age <= 24.5
+Data Count": 9
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 40.5
+Data Count": 15
+Feature: Age
+Children: 2
+ -> Name:" Age > 24.5
+Data Count": 6
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 40.5
+Data Count": 282
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 5.5
+Data Count": 21
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 40.5
+Data Count": 282
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 5.5
+Data Count": 261
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 8.5
+Data Count": 16
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30985.0
+Data Count": 12
+Feature: Gender
+Children: 2
+
+	Name:" Region_Code <= 8.5
+Data Count": 16
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30985.0
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 296.5
+Data Count": 117
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 40.0
+Data Count": 93
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 296.5
+Data Count": 117
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 40.0
+Data Count": 24
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium > 26005.0
+Data Count": 239
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 10.5
+Data Count": 54
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium > 26005.0
+Data Count": 239
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 10.5
+Data Count": 185
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 22.5
+Data Count": 2
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 31.5
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 22.5
+Data Count": 2
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 31.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 57.0
+Data Count": 831
+Feature: Age
+Children: 2
+ -> Name:" Age <= 42.5
+Data Count": 189
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 57.0
+Data Count": 831
+Feature: Age
+Children: 2
+ -> Name:" Age > 42.5
+Data Count": 642
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel > 57.0
+Data Count": 640
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 2.5
+Data Count": 15
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 57.0
+Data Count": 640
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 2.5
+Data Count": 625
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 0.5
+Data Count": 146
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 50.5
+Data Count": 24
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 0.5
+Data Count": 146
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 50.5
+Data Count": 122
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code > 0.5
+Data Count": 16580
+Feature: Age
+Children: 2
+ -> Name:" Age <= 40.5
+Data Count": 5589
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code > 0.5
+Data Count": 16580
+Feature: Age
+Children: 2
+ -> Name:" Age > 40.5
+Data Count": 10991
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age <= 28.5
+Data Count": 179
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 134.5
+Data Count": 74
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 28.5
+Data Count": 179
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 134.5
+Data Count": 105
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 28.5
+Data Count": 874
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 4.0
+Data Count": 13
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 28.5
+Data Count": 874
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 4.0
+Data Count": 861
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium <= 8151.5
+Data Count": 315
+Feature: Age
+Children: 2
+ -> Name:" Age <= 38.5
+Data Count": 278
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium <= 8151.5
+Data Count": 315
+Feature: Age
+Children: 2
+ -> Name:" Age > 38.5
+Data Count": 37
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 8151.5
+Data Count": 1600
+Feature: Age
+Children: 2
+ -> Name:" Age <= 27.5
+Data Count": 289
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium > 8151.5
+Data Count": 1600
+Feature: Age
+Children: 2
+ -> Name:" Age > 27.5
+Data Count": 1311
+Feature: Age
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 3646
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 8033.0
+Data Count": 1961
+Feature: Gender
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 3646
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 8033.0
+Data Count": 1685
+Feature: Age
+Children: 2
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 589
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 159.0
+Data Count": 381
+Feature: Region_Code
+Children: 2
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 589
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 159.0
+Data Count": 208
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vehicle_Age == > 2 Years
+Data Count": 196
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 160.5
+Data Count": 188
+Feature: Age
+Children: 2
+
+	Name:" Vehicle_Age == > 2 Years
+Data Count": 196
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 160.5
+Data Count": 8
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 22.5
+Data Count": 321
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 15.5
+Data Count": 286
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 22.5
+Data Count": 321
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 15.5
+Data Count": 35
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 22.5
+Data Count": 2769
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 46.5
+Data Count": 2653
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 22.5
+Data Count": 2769
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 46.5
+Data Count": 116
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 45929.5
+Data Count": 452
+Feature: Age
+Children: 2
+ -> Name:" Age <= 51.5
+Data Count": 53
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 45929.5
+Data Count": 452
+Feature: Age
+Children: 2
+ -> Name:" Age > 51.5
+Data Count": 399
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium > 45929.5
+Data Count": 209
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 70219.0
+Data Count": 183
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium > 45929.5
+Data Count": 209
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 70219.0
+Data Count": 26
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 13.5
+Data Count": 11
+Feature: Age
+Children: 2
+ -> Name:" Age <= 53.5
+Data Count": 5
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 13.5
+Data Count": 11
+Feature: Age
+Children: 2
+ -> Name:" Age > 53.5
+Data Count": 6
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age <= 53.5
+Data Count": 1525
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 510
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 53.5
+Data Count": 1525
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 1015
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 53.5
+Data Count": 2048
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 220.5
+Data Count": 1499
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age > 53.5
+Data Count": 2048
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 220.5
+Data Count": 549
+Feature: Gender
+Children: 2
+
+	Name:" Age <= 53.5
+Data Count": 96
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30623.0
+Data Count": 51
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 53.5
+Data Count": 96
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30623.0
+Data Count": 45
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 53.5
+Data Count": 133
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 111
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 53.5
+Data Count": 133
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == > 2 Years
+Data Count": 20
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 53.5
+Data Count": 133
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 2
+Feature: Age
+Children: 2
+
+	Name:" Vintage <= 34.5
+Data Count": 299
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 155.5
+Data Count": 277
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 34.5
+Data Count": 299
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 155.5
+Data Count": 22
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage > 34.5
+Data Count": 2963
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 22.5
+Data Count": 158
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage > 34.5
+Data Count": 2963
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 22.5
+Data Count": 2805
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Driving_License == 1
+Data Count": 2244
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 214.5
+Data Count": 1560
+Feature: Age
+Children: 2
+
+	Name:" Driving_License == 1
+Data Count": 2244
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 214.5
+Data Count": 684
+Feature: Region_Code
+Children: 2
+
+	Name:" Driving_License == 0
+Data Count": 45
+Feature: Age
+Children: 2
+ -> Name:" Age <= 69.5
+Data Count": 4
+Feature: Gender
+Children: 2
+
+	Name:" Driving_License == 0
+Data Count": 45
+Feature: Age
+Children: 2
+ -> Name:" Age > 69.5
+Data Count": 41
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 3.5
+Data Count": 129
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 33081.5
+Data Count": 88
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 3.5
+Data Count": 129
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 33081.5
+Data Count": 41
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age <= 71.5
+Data Count": 124
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 156.5
+Data Count": 122
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 71.5
+Data Count": 124
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 156.5
+Data Count": 2
+Feature: Gender
+Children: 2
+
+	Name:" Age > 71.5
+Data Count": 97
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 64.0
+Data Count": 20
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 71.5
+Data Count": 97
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 64.0
+Data Count": 77
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 11.5
+Data Count": 17
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30472.5
+Data Count": 7
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 11.5
+Data Count": 17
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30472.5
+Data Count": 10
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 11.5
+Data Count": 347
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 48.5
+Data Count": 342
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel > 11.5
+Data Count": 347
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 48.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 252.5
+Data Count": 207
+Feature: Age
+Children: 2
+ -> Name:" Age <= 61.5
+Data Count": 84
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 252.5
+Data Count": 207
+Feature: Age
+Children: 2
+ -> Name:" Age > 61.5
+Data Count": 123
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 252.5
+Data Count": 41
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 44.5
+Data Count": 36
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage > 252.5
+Data Count": 41
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 44.5
+Data Count": 5
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 51.0
+Data Count": 827
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 243.5
+Data Count": 676
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 51.0
+Data Count": 827
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 243.5
+Data Count": 151
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage <= 243.5
+Data Count": 57
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 16.0
+Data Count": 3
+Feature: Gender
+Children: 2
+
+	Name:" Vintage <= 243.5
+Data Count": 57
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 16.0
+Data Count": 54
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 243.5
+Data Count": 16
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 35.5
+Data Count": 15
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage > 243.5
+Data Count": 16
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 35.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 13.5
+Data Count": 408
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 28.5
+Data Count": 206
+Feature: Age
+Children: 2
+
+	Name:" Region_Code > 13.5
+Data Count": 408
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 28.5
+Data Count": 202
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage > 226.5
+Data Count": 79
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 248.5
+Data Count": 23
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage > 226.5
+Data Count": 79
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 248.5
+Data Count": 56
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 25.5
+Data Count": 963
+Feature: Age
+Children: 2
+ -> Name:" Age <= 24.5
+Data Count": 700
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 25.5
+Data Count": 963
+Feature: Age
+Children: 2
+ -> Name:" Age > 24.5
+Data Count": 263
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage > 88.5
+Data Count": 3665
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30428.0
+Data Count": 79
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage > 88.5
+Data Count": 3665
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30428.0
+Data Count": 3586
+Feature: Gender
+Children: 2
+
+	Name:" Annual_Premium <= 70263.0
+Data Count": 15651
+Feature: Age
+Children: 2
+ -> Name:" Age <= 26.5
+Data Count": 6780
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 70263.0
+Data Count": 15651
+Feature: Age
+Children: 2
+ -> Name:" Age > 26.5
+Data Count": 8871
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium > 70263.0
+Data Count": 447
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 85.5
+Data Count": 126
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium > 70263.0
+Data Count": 447
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 85.5
+Data Count": 321
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 313
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 27.5
+Data Count": 118
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 313
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 27.5
+Data Count": 195
+Feature: Age
+Children: 2
+
+	Name:" Gender == Male
+Data Count": 27
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36579.5
+Data Count": 12
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 27
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36579.5
+Data Count": 15
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code > 48.5
+Data Count": 34
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 281.5
+Data Count": 3
+Feature: Age
+Children: 2
+
+	Name:" Region_Code > 48.5
+Data Count": 34
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 281.5
+Data Count": 31
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 40.5
+Data Count": 2240
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 39457.0
+Data Count": 1993
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age <= 40.5
+Data Count": 2240
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 39457.0
+Data Count": 247
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 40.5
+Data Count": 1197
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 25.5
+Data Count": 120
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 40.5
+Data Count": 1197
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 25.5
+Data Count": 1077
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage <= 219.5
+Data Count": 320
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 56.0
+Data Count": 86
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 219.5
+Data Count": 320
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 56.0
+Data Count": 234
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium <= 36822.0
+Data Count": 14
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 80.5
+Data Count": 2
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium <= 36822.0
+Data Count": 14
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 80.5
+Data Count": 12
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36822.0
+Data Count": 5
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 48545.5
+Data Count": 3
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium > 36822.0
+Data Count": 5
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 48545.5
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 165.5
+Data Count": 17
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 151.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 165.5
+Data Count": 17
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 151.5
+Data Count": 16
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage > 165.5
+Data Count": 252
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 264.0
+Data Count": 181
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 165.5
+Data Count": 252
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 264.0
+Data Count": 71
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 18.5
+Data Count": 53
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 45.5
+Data Count": 25
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 18.5
+Data Count": 53
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 45.5
+Data Count": 28
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 9.5
+Data Count": 37
+Feature: Age
+Children: 2
+ -> Name:" Age <= 46.5
+Data Count": 20
+Feature: Gender
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 9.5
+Data Count": 37
+Feature: Age
+Children: 2
+ -> Name:" Age > 46.5
+Data Count": 17
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 9.5
+Data Count": 401
+Feature: Age
+Children: 2
+ -> Name:" Age <= 44.5
+Data Count": 161
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 9.5
+Data Count": 401
+Feature: Age
+Children: 2
+ -> Name:" Age > 44.5
+Data Count": 240
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium <= 30421.0
+Data Count": 50
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 147.0
+Data Count": 20
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 30421.0
+Data Count": 50
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 147.0
+Data Count": 30
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 30421.0
+Data Count": 185
+Feature: Age
+Children: 2
+ -> Name:" Age <= 61.5
+Data Count": 9
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium > 30421.0
+Data Count": 185
+Feature: Age
+Children: 2
+ -> Name:" Age > 61.5
+Data Count": 176
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 67.5
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age <= 64.0
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 67.5
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age > 64.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 154.5
+Data Count": 2
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 31.5
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 154.5
+Data Count": 2
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 31.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel > 154.5
+Data Count": 44
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 109.5
+Data Count": 2
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 154.5
+Data Count": 44
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 109.5
+Data Count": 42
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium <= 31388.0
+Data Count": 219
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 30.5
+Data Count": 127
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 31388.0
+Data Count": 219
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 30.5
+Data Count": 92
+Feature: Age
+Children: 2
+
+	Name:" Vintage <= 279.0
+Data Count": 168
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 46.5
+Data Count": 159
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 279.0
+Data Count": 168
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 46.5
+Data Count": 9
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 3.5
+Data Count": 5
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 137.0
+Data Count": 3
+Feature: Gender
+Children: 2
+
+	Name:" Region_Code <= 3.5
+Data Count": 5
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 137.0
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 3.5
+Data Count": 56
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 11202.0
+Data Count": 23
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 3.5
+Data Count": 56
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 11202.0
+Data Count": 33
+Feature: Age
+Children: 2
+
+	Name:" Vintage > 222.0
+Data Count": 13
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 226.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 222.0
+Data Count": 13
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 226.0
+Data Count": 12
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 36.5
+Data Count": 149
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 38.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 36.5
+Data Count": 149
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 38.0
+Data Count": 148
+Feature: Vehicle_Age
+Children: 2
+
+	Name:" Annual_Premium <= 40934.5
+Data Count": 131
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 39372.5
+Data Count": 122
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 40934.5
+Data Count": 131
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 39372.5
+Data Count": 9
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 40934.5
+Data Count": 9
+Feature: Vehicle_Age
+Children: 2
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 6
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium > 40934.5
+Data Count": 9
+Feature: Vehicle_Age
+Children: 2
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 6.0
+Data Count": 55
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 232.5
+Data Count": 41
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code > 6.0
+Data Count": 55
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 232.5
+Data Count": 14
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 23.5
+Data Count": 120
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 93
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 23.5
+Data Count": 120
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 26
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 23.5
+Data Count": 120
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == > 2 Years
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age > 23.5
+Data Count": 273
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 31.5
+Data Count": 25
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 23.5
+Data Count": 273
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 31.5
+Data Count": 248
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 18.5
+Data Count": 84
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 12.5
+Data Count": 58
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code <= 18.5
+Data Count": 84
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 12.5
+Data Count": 26
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 18.5
+Data Count": 282
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 64945.0
+Data Count": 274
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code > 18.5
+Data Count": 282
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 64945.0
+Data Count": 8
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 49.5
+Data Count": 931
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 24.5
+Data Count": 41
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 49.5
+Data Count": 931
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 24.5
+Data Count": 890
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code <= 49.5
+Data Count": 1721
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 232.5
+Data Count": 1294
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code <= 49.5
+Data Count": 1721
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 232.5
+Data Count": 427
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 50.5
+Data Count": 1170
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 33454.0
+Data Count": 696
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 50.5
+Data Count": 1170
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 33454.0
+Data Count": 474
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 42.5
+Data Count": 1832
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 40.5
+Data Count": 1733
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code <= 42.5
+Data Count": 1832
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 40.5
+Data Count": 99
+Feature: Age
+Children: 2
+
+	Name:" Region_Code > 42.5
+Data Count": 347
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 44.5
+Data Count": 31
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 42.5
+Data Count": 347
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 44.5
+Data Count": 316
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium <= 21650.0
+Data Count": 99
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 2.5
+Data Count": 6
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 21650.0
+Data Count": 99
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 2.5
+Data Count": 93
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium > 21650.0
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age <= 23.5
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 21650.0
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age > 23.5
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 155.5
+Data Count": 197
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 285.5
+Data Count": 182
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 155.5
+Data Count": 197
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 285.5
+Data Count": 15
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 45.5
+Data Count": 116
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 27627.5
+Data Count": 19
+Feature: Age
+Children: 2
+
+	Name:" Region_Code <= 45.5
+Data Count": 116
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 27627.5
+Data Count": 97
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 32699.5
+Data Count": 57
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 233.0
+Data Count": 36
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 32699.5
+Data Count": 57
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 233.0
+Data Count": 21
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium > 32699.5
+Data Count": 99
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 167379.5
+Data Count": 97
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium > 32699.5
+Data Count": 99
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 167379.5
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 92.5
+Data Count": 473
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 52162.5
+Data Count": 452
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 92.5
+Data Count": 473
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 52162.5
+Data Count": 21
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage > 92.5
+Data Count": 6
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 35611.5
+Data Count": 3
+Feature: Age
+Children: 2
+
+	Name:" Vintage > 92.5
+Data Count": 6
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 35611.5
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 115.5
+Data Count": 1055
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36099.5
+Data Count": 768
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage > 115.5
+Data Count": 1055
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36099.5
+Data Count": 287
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age <= 24.5
+Data Count": 9
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 35413.5
+Data Count": 8
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 24.5
+Data Count": 9
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 35413.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 5.5
+Data Count": 261
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 6.5
+Data Count": 8
+Feature: Age
+Children: 2
+
+	Name:" Region_Code > 5.5
+Data Count": 261
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 6.5
+Data Count": 253
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 30985.0
+Data Count": 12
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 30985.0
+Data Count": 12
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 10
+Feature: Age
+Children: 2
+
+	Name:" Region_Code <= 40.0
+Data Count": 93
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 41975.0
+Data Count": 92
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 40.0
+Data Count": 93
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 41975.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 40.0
+Data Count": 24
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 125.0
+Data Count": 12
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code > 40.0
+Data Count": 24
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 125.0
+Data Count": 12
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 10.5
+Data Count": 54
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 9.5
+Data Count": 50
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 10.5
+Data Count": 54
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 9.5
+Data Count": 4
+Feature: Age
+Children: 2
+
+	Name:" Age <= 42.5
+Data Count": 189
+Feature: Age
+Children: 2
+ -> Name:" Age <= 40.5
+Data Count": 97
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 42.5
+Data Count": 189
+Feature: Age
+Children: 2
+ -> Name:" Age > 40.5
+Data Count": 92
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 42.5
+Data Count": 642
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 5.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 42.5
+Data Count": 642
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 5.5
+Data Count": 637
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code > 2.5
+Data Count": 625
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 65.5
+Data Count": 110
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code > 2.5
+Data Count": 625
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 65.5
+Data Count": 515
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage > 50.5
+Data Count": 122
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 200.5
+Data Count": 74
+Feature: Age
+Children: 2
+
+	Name:" Vintage > 50.5
+Data Count": 122
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 200.5
+Data Count": 48
+Feature: Age
+Children: 2
+
+	Name:" Age <= 40.5
+Data Count": 5589
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 47.5
+Data Count": 5419
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 40.5
+Data Count": 5589
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 47.5
+Data Count": 170
+Feature: Age
+Children: 2
+
+	Name:" Age > 40.5
+Data Count": 10991
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 36.5
+Data Count": 5477
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 40.5
+Data Count": 10991
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 36.5
+Data Count": 5514
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage <= 134.5
+Data Count": 74
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 28.5
+Data Count": 52
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage <= 134.5
+Data Count": 74
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 28.5
+Data Count": 22
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage > 134.5
+Data Count": 105
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 46.5
+Data Count": 97
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage > 134.5
+Data Count": 105
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 46.5
+Data Count": 8
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 4.0
+Data Count": 13
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 23.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 4.0
+Data Count": 13
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 23.5
+Data Count": 12
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 4.0
+Data Count": 861
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 46.5
+Data Count": 818
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 4.0
+Data Count": 861
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 46.5
+Data Count": 43
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 38.5
+Data Count": 278
+Feature: Age
+Children: 2
+ -> Name:" Age <= 27.5
+Data Count": 48
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 38.5
+Data Count": 278
+Feature: Age
+Children: 2
+ -> Name:" Age > 27.5
+Data Count": 230
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 27.5
+Data Count": 289
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 16482.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age <= 27.5
+Data Count": 289
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 16482.0
+Data Count": 288
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 27.5
+Data Count": 1311
+Feature: Age
+Children: 2
+ -> Name:" Age <= 41.5
+Data Count": 1195
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 27.5
+Data Count": 1311
+Feature: Age
+Children: 2
+ -> Name:" Age > 41.5
+Data Count": 116
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 8033.0
+Data Count": 1961
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 1121
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Annual_Premium <= 8033.0
+Data Count": 1961
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 840
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium > 8033.0
+Data Count": 1685
+Feature: Age
+Children: 2
+ -> Name:" Age <= 35.5
+Data Count": 569
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium > 8033.0
+Data Count": 1685
+Feature: Age
+Children: 2
+ -> Name:" Age > 35.5
+Data Count": 1116
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 159.0
+Data Count": 381
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 35.5
+Data Count": 288
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 159.0
+Data Count": 381
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 35.5
+Data Count": 93
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 159.0
+Data Count": 208
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 161.5
+Data Count": 153
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 159.0
+Data Count": 208
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 161.5
+Data Count": 55
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 160.5
+Data Count": 188
+Feature: Age
+Children: 2
+ -> Name:" Age <= 35.5
+Data Count": 19
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 160.5
+Data Count": 188
+Feature: Age
+Children: 2
+ -> Name:" Age > 35.5
+Data Count": 169
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 160.5
+Data Count": 8
+Feature: Age
+Children: 2
+ -> Name:" Age <= 43.5
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel > 160.5
+Data Count": 8
+Feature: Age
+Children: 2
+ -> Name:" Age > 43.5
+Data Count": 5
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 15.5
+Data Count": 286
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 14.5
+Data Count": 265
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 15.5
+Data Count": 286
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 14.5
+Data Count": 21
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 15.5
+Data Count": 35
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 34.5
+Data Count": 3
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 15.5
+Data Count": 35
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 34.5
+Data Count": 32
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 46.5
+Data Count": 2653
+Feature: Age
+Children: 2
+ -> Name:" Age <= 54.5
+Data Count": 1430
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 46.5
+Data Count": 2653
+Feature: Age
+Children: 2
+ -> Name:" Age > 54.5
+Data Count": 1223
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code > 46.5
+Data Count": 116
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 123.5
+Data Count": 40
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Region_Code > 46.5
+Data Count": 116
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 123.5
+Data Count": 76
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 51.5
+Data Count": 53
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 278.0
+Data Count": 49
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 51.5
+Data Count": 53
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 278.0
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 51.5
+Data Count": 399
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 33765.0
+Data Count": 193
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 51.5
+Data Count": 399
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 33765.0
+Data Count": 206
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium <= 70219.0
+Data Count": 183
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 65.0
+Data Count": 25
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium <= 70219.0
+Data Count": 183
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 65.0
+Data Count": 158
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Annual_Premium > 70219.0
+Data Count": 26
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 227.0
+Data Count": 17
+Feature: Vintage
+Children: 2
+
+	Name:" Annual_Premium > 70219.0
+Data Count": 26
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 227.0
+Data Count": 9
+Feature: Age
+Children: 2
+
+	Name:" Age <= 53.5
+Data Count": 5
+Feature: Age
+Children: 2
+ -> Name:" Age <= 52.5
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age <= 53.5
+Data Count": 5
+Feature: Age
+Children: 2
+ -> Name:" Age > 52.5
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Female
+Data Count": 510
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 235.5
+Data Count": 403
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Gender == Female
+Data Count": 510
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 235.5
+Data Count": 107
+Feature: Region_Code
+Children: 2
+
+	Name:" Gender == Male
+Data Count": 1015
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 2.5
+Data Count": 30
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Gender == Male
+Data Count": 1015
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 2.5
+Data Count": 985
+Feature: Vehicle_Age
+Children: 3
+
+	Name:" Vintage <= 220.5
+Data Count": 1499
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 29.5
+Data Count": 14
+Feature: Age
+Children: 2
+
+	Name:" Vintage <= 220.5
+Data Count": 1499
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 29.5
+Data Count": 1485
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 220.5
+Data Count": 549
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 378
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage > 220.5
+Data Count": 549
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 171
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium > 30623.0
+Data Count": 45
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 195.5
+Data Count": 31
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium > 30623.0
+Data Count": 45
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 195.5
+Data Count": 14
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 111
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 278.5
+Data Count": 106
+Feature: Age
+Children: 2
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 111
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 278.5
+Data Count": 5
+Feature: Gender
+Children: 2
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age <= 56.0
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age > 56.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 155.5
+Data Count": 277
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 10619.5
+Data Count": 37
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 155.5
+Data Count": 277
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 10619.5
+Data Count": 240
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Policy_Sales_Channel > 155.5
+Data Count": 22
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 9.0
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel > 155.5
+Data Count": 22
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 9.0
+Data Count": 19
+Feature: Region_Code
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 22.5
+Data Count": 158
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 77876.0
+Data Count": 157
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 22.5
+Data Count": 158
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 77876.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel > 22.5
+Data Count": 2805
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 55439.0
+Data Count": 2558
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 22.5
+Data Count": 2805
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 55439.0
+Data Count": 247
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage <= 214.5
+Data Count": 1560
+Feature: Age
+Children: 2
+ -> Name:" Age <= 73.5
+Data Count": 832
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Vintage <= 214.5
+Data Count": 1560
+Feature: Age
+Children: 2
+ -> Name:" Age > 73.5
+Data Count": 728
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 214.5
+Data Count": 684
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 42.0
+Data Count": 649
+Feature: Age
+Children: 2
+
+	Name:" Vintage > 214.5
+Data Count": 684
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 42.0
+Data Count": 35
+Feature: Region_Code
+Children: 2
+
+	Name:" Age <= 69.5
+Data Count": 4
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 69.5
+Data Count": 4
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 33081.5
+Data Count": 88
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 295.0
+Data Count": 87
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium <= 33081.5
+Data Count": 88
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 295.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 33081.5
+Data Count": 41
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 40609.0
+Data Count": 28
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 33081.5
+Data Count": 41
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 40609.0
+Data Count": 13
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 156.5
+Data Count": 122
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 47.5
+Data Count": 22
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel <= 156.5
+Data Count": 122
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 47.5
+Data Count": 100
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 156.5
+Data Count": 2
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 156.5
+Data Count": 2
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 64.0
+Data Count": 77
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 229.5
+Data Count": 64
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 64.0
+Data Count": 77
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 229.5
+Data Count": 13
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 30472.5
+Data Count": 7
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 49.0
+Data Count": 6
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium <= 30472.5
+Data Count": 7
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 49.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code <= 48.5
+Data Count": 342
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 71061.0
+Data Count": 329
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code <= 48.5
+Data Count": 342
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 71061.0
+Data Count": 13
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age <= 61.5
+Data Count": 84
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30853.0
+Data Count": 26
+Feature: Vintage
+Children: 2
+
+	Name:" Age <= 61.5
+Data Count": 84
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30853.0
+Data Count": 58
+Feature: Region_Code
+Children: 2
+
+	Name:" Age > 61.5
+Data Count": 123
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 248.0
+Data Count": 121
+Feature: Policy_Sales_Channel
+Children: 2
+
+	Name:" Age > 61.5
+Data Count": 123
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 248.0
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code <= 44.5
+Data Count": 36
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 17.5
+Data Count": 7
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 44.5
+Data Count": 36
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 17.5
+Data Count": 29
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 44.5
+Data Count": 5
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 286.0
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 44.5
+Data Count": 5
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 286.0
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 243.5
+Data Count": 676
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 14.5
+Data Count": 72
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage <= 243.5
+Data Count": 676
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 14.5
+Data Count": 604
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 243.5
+Data Count": 151
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 254.5
+Data Count": 29
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 243.5
+Data Count": 151
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 254.5
+Data Count": 122
+Feature: Age
+Children: 2
+
+	Name:" Vintage <= 16.0
+Data Count": 3
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 16.0
+Data Count": 3
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code <= 35.5
+Data Count": 15
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 157.5
+Data Count": 13
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 35.5
+Data Count": 15
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 157.5
+Data Count": 2
+Feature: Gender
+Children: 2
+
+	Name:" Region_Code <= 28.5
+Data Count": 206
+Feature: Age
+Children: 2
+ -> Name:" Age <= 29.5
+Data Count": 48
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 28.5
+Data Count": 206
+Feature: Age
+Children: 2
+ -> Name:" Age > 29.5
+Data Count": 158
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code > 28.5
+Data Count": 202
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 158.5
+Data Count": 181
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 28.5
+Data Count": 202
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 158.5
+Data Count": 21
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage <= 248.5
+Data Count": 23
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36248.5
+Data Count": 22
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage <= 248.5
+Data Count": 23
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36248.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age > 24.5
+Data Count": 263
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 34.5
+Data Count": 187
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 24.5
+Data Count": 263
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 34.5
+Data Count": 76
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium <= 30428.0
+Data Count": 79
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 28.0
+Data Count": 13
+Feature: Age
+Children: 2
+
+	Name:" Annual_Premium <= 30428.0
+Data Count": 79
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 28.0
+Data Count": 66
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 30428.0
+Data Count": 3586
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 1921
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium > 30428.0
+Data Count": 3586
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 1665
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 26.5
+Data Count": 8871
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 190.5
+Data Count": 5970
+Feature: Vintage
+Children: 2
+
+	Name:" Age > 26.5
+Data Count": 8871
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 190.5
+Data Count": 2901
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 85.5
+Data Count": 126
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 81.5
+Data Count": 118
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 85.5
+Data Count": 126
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 81.5
+Data Count": 8
+Feature: Gender
+Children: 2
+
+	Name:" Region_Code > 27.5
+Data Count": 195
+Feature: Age
+Children: 2
+ -> Name:" Age <= 45.5
+Data Count": 132
+Feature: Age
+Children: 2
+
+	Name:" Region_Code > 27.5
+Data Count": 195
+Feature: Age
+Children: 2
+ -> Name:" Age > 45.5
+Data Count": 63
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36579.5
+Data Count": 15
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36590.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 36579.5
+Data Count": 15
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36590.5
+Data Count": 14
+Feature: Age
+Children: 2
+
+	Name:" Vintage <= 281.5
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age <= 27.5
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 281.5
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age > 27.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 39457.0
+Data Count": 1993
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 36727.5
+Data Count": 1805
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium <= 39457.0
+Data Count": 1993
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 36727.5
+Data Count": 188
+Feature: Region_Code
+Children: 2
+
+	Name:" Annual_Premium > 39457.0
+Data Count": 247
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 39697.0
+Data Count": 11
+Feature: Gender
+Children: 2
+
+	Name:" Annual_Premium > 39457.0
+Data Count": 247
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 39697.0
+Data Count": 236
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 25.5
+Data Count": 1077
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 278.5
+Data Count": 994
+Feature: Vintage
+Children: 2
+
+	Name:" Policy_Sales_Channel > 25.5
+Data Count": 1077
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 278.5
+Data Count": 83
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 56.0
+Data Count": 234
+Feature: Age
+Children: 2
+ -> Name:" Age <= 26.5
+Data Count": 63
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 56.0
+Data Count": 234
+Feature: Age
+Children: 2
+ -> Name:" Age > 26.5
+Data Count": 171
+Feature: Age
+Children: 2
+
+	Name:" Vintage <= 80.5
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age <= 41.5
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 80.5
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age > 41.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 48545.5
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age <= 55.5
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 48545.5
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age > 55.5
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 151.5
+Data Count": 16
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 42.0
+Data Count": 3
+Feature: Age
+Children: 2
+
+	Name:" Policy_Sales_Channel > 151.5
+Data Count": 16
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 42.0
+Data Count": 13
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 264.0
+Data Count": 71
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 275.5
+Data Count": 21
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage > 264.0
+Data Count": 71
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 275.5
+Data Count": 50
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 45.5
+Data Count": 28
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 10907.5
+Data Count": 13
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 45.5
+Data Count": 28
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 10907.5
+Data Count": 15
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age <= 46.5
+Data Count": 20
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 8
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 46.5
+Data Count": 20
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 12
+Feature: Vehicle_Age
+Children: 2
+
+	Name:" Age > 44.5
+Data Count": 240
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 41.5
+Data Count": 76
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Age > 44.5
+Data Count": 240
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 41.5
+Data Count": 164
+Feature: Region_Code
+Children: 2
+
+	Name:" Vintage <= 147.0
+Data Count": 20
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30142.0
+Data Count": 19
+Feature: Vintage
+Children: 2
+
+	Name:" Vintage <= 147.0
+Data Count": 20
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30142.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age <= 61.5
+Data Count": 9
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 256.5
+Data Count": 7
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 61.5
+Data Count": 9
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 256.5
+Data Count": 2
+Feature: Gender
+Children: 2
+
+	Name:" Vintage <= 109.5
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age <= 20.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 109.5
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age > 20.5
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 109.5
+Data Count": 42
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 28.5
+Data Count": 4
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Vintage > 109.5
+Data Count": 42
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 28.5
+Data Count": 38
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 30.5
+Data Count": 127
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 26.5
+Data Count": 11
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 30.5
+Data Count": 127
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 26.5
+Data Count": 116
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Region_Code > 30.5
+Data Count": 92
+Feature: Age
+Children: 2
+ -> Name:" Age <= 25.5
+Data Count": 37
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 30.5
+Data Count": 92
+Feature: Age
+Children: 2
+ -> Name:" Age > 25.5
+Data Count": 55
+Feature: Region_Code
+Children: 2
+
+	Name:" Region_Code <= 46.5
+Data Count": 159
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 35373.0
+Data Count": 155
+Feature: Vintage
+Children: 2
+
+	Name:" Region_Code <= 46.5
+Data Count": 159
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 35373.0
+Data Count": 4
+Feature: Age
+Children: 2
+
+	Name:" Vintage <= 137.0
+Data Count": 3
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 2
+Feature: Age
+Children: 2
+
+	Name:" Vintage <= 137.0
+Data Count": 3
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 11202.0
+Data Count": 33
+Feature: Age
+Children: 2
+ -> Name:" Age <= 47.5
+Data Count": 22
+Feature: Annual_Premium
+Children: 2
+
+	Name:" Annual_Premium > 11202.0
+Data Count": 33
+Feature: Age
+Children: 2
+ -> Name:" Age > 47.5
+Data Count": 11
+Feature: Gender
+Children: 2
+
+	Name:" Vintage > 38.0
+Data Count": 148
+Feature: Vehicle_Age
+Children: 2
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 52
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 38.0
+Data Count": 148
+Feature: Vehicle_Age
+Children: 2
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 96
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 39372.5
+Data Count": 122
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 298.5
+Data Count": 121
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 39372.5
+Data Count": 122
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 298.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 6
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 40966.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 6
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 40966.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 232.5
+Data Count": 41
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 62523.5
+Data Count": 36
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 232.5
+Data Count": 41
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 62523.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 93
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 287.0
+Data Count": 88
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vehicle_Age == < 1 Year
+Data Count": 93
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 287.0
+Data Count": 5
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 26
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 48.5
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vehicle_Age == 1-2 Year
+Data Count": 26
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 48.5
+Data Count": 22
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 31.5
+Data Count": 25
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 41792.5
+Data Count": 18
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 31.5
+Data Count": 25
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 41792.5
+Data Count": 7
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 31.5
+Data Count": 248
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 137.5
+Data Count": 103
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 31.5
+Data Count": 248
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 137.5
+Data Count": 145
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 12.5
+Data Count": 58
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 41868.5
+Data Count": 51
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 12.5
+Data Count": 58
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 41868.5
+Data Count": 7
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 64945.0
+Data Count": 274
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 243.5
+Data Count": 221
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 64945.0
+Data Count": 274
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 243.5
+Data Count": 53
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 24.5
+Data Count": 41
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 13.5
+Data Count": 9
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 24.5
+Data Count": 41
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 13.5
+Data Count": 32
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 24.5
+Data Count": 890
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 22044.0
+Data Count": 131
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 24.5
+Data Count": 890
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 22044.0
+Data Count": 759
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 232.5
+Data Count": 1294
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 40603.5
+Data Count": 1079
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 232.5
+Data Count": 1294
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 40603.5
+Data Count": 215
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 232.5
+Data Count": 427
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 233.5
+Data Count": 9
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 232.5
+Data Count": 427
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 233.5
+Data Count": 418
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 33454.0
+Data Count": 696
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 16.5
+Data Count": 17
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 33454.0
+Data Count": 696
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 16.5
+Data Count": 679
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 33454.0
+Data Count": 474
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 112.5
+Data Count": 178
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 33454.0
+Data Count": 474
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 112.5
+Data Count": 296
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 40.5
+Data Count": 1733
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30611.0
+Data Count": 839
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 40.5
+Data Count": 1733
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30611.0
+Data Count": 894
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 40.5
+Data Count": 99
+Feature: Age
+Children: 2
+ -> Name:" Age <= 25.5
+Data Count": 89
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 40.5
+Data Count": 99
+Feature: Age
+Children: 2
+ -> Name:" Age > 25.5
+Data Count": 10
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 44.5
+Data Count": 316
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 48.5
+Data Count": 228
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 44.5
+Data Count": 316
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 48.5
+Data Count": 88
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 2.5
+Data Count": 93
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 11145.0
+Data Count": 89
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 2.5
+Data Count": 93
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 11145.0
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 285.5
+Data Count": 182
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 263.5
+Data Count": 164
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 285.5
+Data Count": 182
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 263.5
+Data Count": 18
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 27627.5
+Data Count": 19
+Feature: Age
+Children: 2
+ -> Name:" Age <= 20.5
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 27627.5
+Data Count": 19
+Feature: Age
+Children: 2
+ -> Name:" Age > 20.5
+Data Count": 16
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 27627.5
+Data Count": 97
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 118.5
+Data Count": 88
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 27627.5
+Data Count": 97
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 118.5
+Data Count": 9
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 233.0
+Data Count": 36
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30132.0
+Data Count": 25
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 233.0
+Data Count": 36
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30132.0
+Data Count": 11
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 233.0
+Data Count": 21
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 23972.0
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 233.0
+Data Count": 21
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 23972.0
+Data Count": 18
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 167379.5
+Data Count": 97
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 46.5
+Data Count": 93
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 167379.5
+Data Count": 97
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 46.5
+Data Count": 4
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 52162.5
+Data Count": 452
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 42068.0
+Data Count": 408
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 52162.5
+Data Count": 452
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 42068.0
+Data Count": 44
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 52162.5
+Data Count": 21
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 54495.0
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 52162.5
+Data Count": 21
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 54495.0
+Data Count": 17
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 35611.5
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age <= 20.5
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 35611.5
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age > 20.5
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 36099.5
+Data Count": 768
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 26.5
+Data Count": 380
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 36099.5
+Data Count": 768
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 26.5
+Data Count": 388
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36099.5
+Data Count": 287
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 40584.0
+Data Count": 129
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36099.5
+Data Count": 287
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 40584.0
+Data Count": 158
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 35413.5
+Data Count": 8
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 36.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 35413.5
+Data Count": 8
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 36.5
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code <= 6.5
+Data Count": 8
+Feature: Age
+Children: 2
+ -> Name:" Age <= 24.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 6.5
+Data Count": 8
+Feature: Age
+Children: 2
+ -> Name:" Age > 24.5
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 6.5
+Data Count": 253
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 251.5
+Data Count": 209
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 6.5
+Data Count": 253
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 251.5
+Data Count": 44
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 10
+Feature: Age
+Children: 2
+ -> Name:" Age <= 21.5
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 10
+Feature: Age
+Children: 2
+ -> Name:" Age > 21.5
+Data Count": 6
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 41975.0
+Data Count": 92
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 37.5
+Data Count": 86
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 41975.0
+Data Count": 92
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 37.5
+Data Count": 6
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 125.0
+Data Count": 12
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 35855.0
+Data Count": 11
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 125.0
+Data Count": 12
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 35855.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 9.5
+Data Count": 4
+Feature: Age
+Children: 2
+ -> Name:" Age <= 23.0
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 9.5
+Data Count": 4
+Feature: Age
+Children: 2
+ -> Name:" Age > 23.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age <= 40.5
+Data Count": 97
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 66.5
+Data Count": 19
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 40.5
+Data Count": 97
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 66.5
+Data Count": 78
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 40.5
+Data Count": 92
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 27.0
+Data Count": 19
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 40.5
+Data Count": 92
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 27.0
+Data Count": 73
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 5.5
+Data Count": 637
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 45.5
+Data Count": 599
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel > 5.5
+Data Count": 637
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 45.5
+Data Count": 38
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 65.5
+Data Count": 110
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 40.0
+Data Count": 97
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 65.5
+Data Count": 110
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 40.0
+Data Count": 13
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 65.5
+Data Count": 515
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 37.5
+Data Count": 435
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 65.5
+Data Count": 515
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 37.5
+Data Count": 80
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 200.5
+Data Count": 74
+Feature: Age
+Children: 2
+ -> Name:" Age <= 43.5
+Data Count": 33
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 200.5
+Data Count": 74
+Feature: Age
+Children: 2
+ -> Name:" Age > 43.5
+Data Count": 41
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 200.5
+Data Count": 48
+Feature: Age
+Children: 2
+ -> Name:" Age <= 40.5
+Data Count": 14
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 200.5
+Data Count": 48
+Feature: Age
+Children: 2
+ -> Name:" Age > 40.5
+Data Count": 34
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 47.5
+Data Count": 5419
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 1.5
+Data Count": 17
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 47.5
+Data Count": 5419
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 1.5
+Data Count": 5402
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 47.5
+Data Count": 170
+Feature: Age
+Children: 2
+ -> Name:" Age <= 34.5
+Data Count": 23
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 47.5
+Data Count": 170
+Feature: Age
+Children: 2
+ -> Name:" Age > 34.5
+Data Count": 147
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 36.5
+Data Count": 5477
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 47.5
+Data Count": 5253
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 36.5
+Data Count": 5477
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 47.5
+Data Count": 224
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 36.5
+Data Count": 5514
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 9.5
+Data Count": 709
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 36.5
+Data Count": 5514
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 9.5
+Data Count": 4805
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 28.5
+Data Count": 52
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 18.5
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 28.5
+Data Count": 52
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 18.5
+Data Count": 50
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 28.5
+Data Count": 22
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 28945.0
+Data Count": 10
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 28.5
+Data Count": 22
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 28945.0
+Data Count": 12
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 46.5
+Data Count": 97
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 9.5
+Data Count": 13
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 46.5
+Data Count": 97
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 9.5
+Data Count": 84
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 46.5
+Data Count": 818
+Feature: Age
+Children: 2
+ -> Name:" Age <= 48.5
+Data Count": 813
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 46.5
+Data Count": 818
+Feature: Age
+Children: 2
+ -> Name:" Age > 48.5
+Data Count": 5
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 46.5
+Data Count": 43
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 51.5
+Data Count": 42
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 46.5
+Data Count": 43
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 51.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age <= 27.5
+Data Count": 48
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 251.5
+Data Count": 40
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 27.5
+Data Count": 48
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 251.5
+Data Count": 8
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 27.5
+Data Count": 230
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 165.5
+Data Count": 110
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 27.5
+Data Count": 230
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 165.5
+Data Count": 120
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 16482.0
+Data Count": 288
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 49198.0
+Data Count": 272
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 16482.0
+Data Count": 288
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 49198.0
+Data Count": 16
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 41.5
+Data Count": 1195
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 46.5
+Data Count": 1114
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 41.5
+Data Count": 1195
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 46.5
+Data Count": 81
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 41.5
+Data Count": 116
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 27542.0
+Data Count": 28
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 41.5
+Data Count": 116
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 27542.0
+Data Count": 88
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 1121
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 161.5
+Data Count": 1041
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 1121
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 161.5
+Data Count": 80
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Female
+Data Count": 840
+Feature: Age
+Children: 2
+ -> Name:" Age <= 47.5
+Data Count": 786
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Female
+Data Count": 840
+Feature: Age
+Children: 2
+ -> Name:" Age > 47.5
+Data Count": 54
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 35.5
+Data Count": 569
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 49.5
+Data Count": 561
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 35.5
+Data Count": 569
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 49.5
+Data Count": 8
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 35.5
+Data Count": 1116
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 34174.5
+Data Count": 708
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 35.5
+Data Count": 1116
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 34174.5
+Data Count": 408
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 35.5
+Data Count": 288
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 57718.5
+Data Count": 283
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 35.5
+Data Count": 288
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 57718.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 35.5
+Data Count": 93
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 77.0
+Data Count": 16
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 35.5
+Data Count": 93
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 77.0
+Data Count": 77
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 161.5
+Data Count": 153
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 175.0
+Data Count": 91
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 161.5
+Data Count": 153
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 175.0
+Data Count": 62
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 161.5
+Data Count": 55
+Feature: Age
+Children: 2
+ -> Name:" Age <= 29.5
+Data Count": 22
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 161.5
+Data Count": 55
+Feature: Age
+Children: 2
+ -> Name:" Age > 29.5
+Data Count": 33
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 35.5
+Data Count": 19
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 141.5
+Data Count": 11
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 35.5
+Data Count": 19
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 141.5
+Data Count": 8
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 35.5
+Data Count": 169
+Feature: Age
+Children: 2
+ -> Name:" Age <= 47.5
+Data Count": 139
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 35.5
+Data Count": 169
+Feature: Age
+Children: 2
+ -> Name:" Age > 47.5
+Data Count": 30
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 43.5
+Data Count": 5
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 37.0
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 43.5
+Data Count": 5
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 37.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 14.5
+Data Count": 265
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 215.0
+Data Count": 191
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 14.5
+Data Count": 265
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 215.0
+Data Count": 74
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 14.5
+Data Count": 21
+Feature: Age
+Children: 2
+ -> Name:" Age <= 58.5
+Data Count": 18
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 14.5
+Data Count": 21
+Feature: Age
+Children: 2
+ -> Name:" Age > 58.5
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 34.5
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age <= 53.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 34.5
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age > 53.5
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 54.5
+Data Count": 1430
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 10.5
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 54.5
+Data Count": 1430
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 10.5
+Data Count": 1425
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 54.5
+Data Count": 1223
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 7.5
+Data Count": 79
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 54.5
+Data Count": 1223
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 7.5
+Data Count": 1144
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 123.5
+Data Count": 40
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 24.5
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 123.5
+Data Count": 40
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 24.5
+Data Count": 38
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 123.5
+Data Count": 76
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 51.5
+Data Count": 75
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 123.5
+Data Count": 76
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 51.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 278.0
+Data Count": 49
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 163.0
+Data Count": 27
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 278.0
+Data Count": 49
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 163.0
+Data Count": 22
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 33765.0
+Data Count": 193
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 47.5
+Data Count": 181
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 33765.0
+Data Count": 193
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 47.5
+Data Count": 12
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 33765.0
+Data Count": 206
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 256.5
+Data Count": 181
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 33765.0
+Data Count": 206
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 256.5
+Data Count": 25
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 65.0
+Data Count": 25
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 55855.5
+Data Count": 18
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 65.0
+Data Count": 25
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 55855.5
+Data Count": 7
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 65.0
+Data Count": 158
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 9.5
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 65.0
+Data Count": 158
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 9.5
+Data Count": 154
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 227.0
+Data Count": 17
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 130.0
+Data Count": 9
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 227.0
+Data Count": 17
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 130.0
+Data Count": 8
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 227.0
+Data Count": 9
+Feature: Age
+Children: 2
+ -> Name:" Age <= 56.5
+Data Count": 5
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 227.0
+Data Count": 9
+Feature: Age
+Children: 2
+ -> Name:" Age > 56.5
+Data Count": 4
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 235.5
+Data Count": 403
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 33000.0
+Data Count": 208
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 235.5
+Data Count": 403
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 33000.0
+Data Count": 195
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 235.5
+Data Count": 107
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 26.5
+Data Count": 30
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 235.5
+Data Count": 107
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 26.5
+Data Count": 77
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 2.5
+Data Count": 30
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 76.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code <= 2.5
+Data Count": 30
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 76.0
+Data Count": 29
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 2.5
+Data Count": 985
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 848
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 2.5
+Data Count": 985
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == > 2 Years
+Data Count": 133
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 2.5
+Data Count": 985
+Feature: Vehicle_Age
+Children: 3
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 4
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 29.5
+Data Count": 14
+Feature: Age
+Children: 2
+ -> Name:" Age <= 56.0
+Data Count": 6
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 29.5
+Data Count": 14
+Feature: Age
+Children: 2
+ -> Name:" Age > 56.0
+Data Count": 8
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel > 29.5
+Data Count": 1485
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 210.5
+Data Count": 1405
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 29.5
+Data Count": 1485
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 210.5
+Data Count": 80
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 378
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 60.5
+Data Count": 30
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 378
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 60.5
+Data Count": 348
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Female
+Data Count": 171
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 28.5
+Data Count": 136
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Female
+Data Count": 171
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 28.5
+Data Count": 35
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 195.5
+Data Count": 31
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 50.5
+Data Count": 28
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 195.5
+Data Count": 31
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 50.5
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 195.5
+Data Count": 14
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 33245.5
+Data Count": 4
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 195.5
+Data Count": 14
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 33245.5
+Data Count": 10
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 278.5
+Data Count": 106
+Feature: Age
+Children: 2
+ -> Name:" Age <= 57.5
+Data Count": 76
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 278.5
+Data Count": 106
+Feature: Age
+Children: 2
+ -> Name:" Age > 57.5
+Data Count": 30
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 278.5
+Data Count": 5
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 278.5
+Data Count": 5
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 10619.5
+Data Count": 37
+Feature: Age
+Children: 2
+ -> Name:" Age <= 62.5
+Data Count": 16
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 10619.5
+Data Count": 37
+Feature: Age
+Children: 2
+ -> Name:" Age > 62.5
+Data Count": 21
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 10619.5
+Data Count": 240
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 3.5
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 10619.5
+Data Count": 240
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 3.5
+Data Count": 238
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 9.0
+Data Count": 19
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 45.5
+Data Count": 17
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 9.0
+Data Count": 19
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 45.5
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 77876.0
+Data Count": 157
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 38.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 77876.0
+Data Count": 157
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 38.5
+Data Count": 156
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 55439.0
+Data Count": 2558
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 245.5
+Data Count": 2068
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 55439.0
+Data Count": 2558
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 245.5
+Data Count": 490
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 55439.0
+Data Count": 247
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 58.5
+Data Count": 151
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 55439.0
+Data Count": 247
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 58.5
+Data Count": 96
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 73.5
+Data Count": 832
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 161.5
+Data Count": 827
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 73.5
+Data Count": 832
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 161.5
+Data Count": 5
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age > 73.5
+Data Count": 728
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 18.5
+Data Count": 40
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 73.5
+Data Count": 728
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 18.5
+Data Count": 688
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 42.0
+Data Count": 649
+Feature: Age
+Children: 2
+ -> Name:" Age <= 71.5
+Data Count": 231
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 42.0
+Data Count": 649
+Feature: Age
+Children: 2
+ -> Name:" Age > 71.5
+Data Count": 418
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 42.0
+Data Count": 35
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 44.0
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code > 42.0
+Data Count": 35
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 44.0
+Data Count": 32
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 295.0
+Data Count": 87
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 48.5
+Data Count": 55
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 295.0
+Data Count": 87
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 48.5
+Data Count": 32
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 40609.0
+Data Count": 13
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 41231.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 40609.0
+Data Count": 13
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 41231.5
+Data Count": 12
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 47.5
+Data Count": 22
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 69.0
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 47.5
+Data Count": 22
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 69.0
+Data Count": 17
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 229.5
+Data Count": 64
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 215.0
+Data Count": 59
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 229.5
+Data Count": 64
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 215.0
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 49.0
+Data Count": 6
+Feature: Age
+Children: 2
+ -> Name:" Age <= 61.5
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 49.0
+Data Count": 6
+Feature: Age
+Children: 2
+ -> Name:" Age > 61.5
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 71061.0
+Data Count": 329
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 50029.5
+Data Count": 269
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 71061.0
+Data Count": 329
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 50029.5
+Data Count": 60
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 71061.0
+Data Count": 13
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 103064.0
+Data Count": 10
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 71061.0
+Data Count": 13
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 103064.0
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 30853.0
+Data Count": 26
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 66.5
+Data Count": 4
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium <= 30853.0
+Data Count": 26
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 66.5
+Data Count": 22
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 30853.0
+Data Count": 58
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 11.5
+Data Count": 9
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 30853.0
+Data Count": 58
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 11.5
+Data Count": 49
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 248.0
+Data Count": 121
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel <= 151.0
+Data Count": 91
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 248.0
+Data Count": 121
+Feature: Policy_Sales_Channel
+Children: 2
+ -> Name:" Policy_Sales_Channel > 151.0
+Data Count": 30
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 17.5
+Data Count": 7
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 14.5
+Data Count": 6
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 17.5
+Data Count": 7
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 14.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code <= 14.5
+Data Count": 72
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 48096.5
+Data Count": 58
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 14.5
+Data Count": 72
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 48096.5
+Data Count": 14
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 14.5
+Data Count": 604
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 234.5
+Data Count": 590
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 14.5
+Data Count": 604
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 234.5
+Data Count": 14
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 254.5
+Data Count": 122
+Feature: Age
+Children: 2
+ -> Name:" Age <= 79.5
+Data Count": 119
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 254.5
+Data Count": 122
+Feature: Age
+Children: 2
+ -> Name:" Age > 79.5
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 157.5
+Data Count": 13
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 272.5
+Data Count": 10
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 157.5
+Data Count": 13
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 272.5
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 157.5
+Data Count": 2
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 157.5
+Data Count": 2
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age > 29.5
+Data Count": 158
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 66.5
+Data Count": 26
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 29.5
+Data Count": 158
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 66.5
+Data Count": 132
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 158.5
+Data Count": 21
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 44.5
+Data Count": 19
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel > 158.5
+Data Count": 21
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 44.5
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 36248.5
+Data Count": 22
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 8.5
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 36248.5
+Data Count": 22
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 8.5
+Data Count": 20
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 34.5
+Data Count": 76
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 35.5
+Data Count": 6
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 34.5
+Data Count": 76
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 35.5
+Data Count": 70
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 28.0
+Data Count": 13
+Feature: Age
+Children: 2
+ -> Name:" Age <= 34.5
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Policy_Sales_Channel <= 28.0
+Data Count": 13
+Feature: Age
+Children: 2
+ -> Name:" Age > 34.5
+Data Count": 11
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Female
+Data Count": 1921
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 32591.0
+Data Count": 1437
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Female
+Data Count": 1921
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 32591.0
+Data Count": 484
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 190.5
+Data Count": 5970
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 182.5
+Data Count": 5722
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 190.5
+Data Count": 5970
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 182.5
+Data Count": 248
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 81.5
+Data Count": 8
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 3
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 81.5
+Data Count": 8
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 45.5
+Data Count": 132
+Feature: Age
+Children: 2
+ -> Name:" Age <= 42.5
+Data Count": 110
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 45.5
+Data Count": 132
+Feature: Age
+Children: 2
+ -> Name:" Age > 42.5
+Data Count": 22
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36590.5
+Data Count": 14
+Feature: Age
+Children: 2
+ -> Name:" Age <= 24.5
+Data Count": 4
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36590.5
+Data Count": 14
+Feature: Age
+Children: 2
+ -> Name:" Age > 24.5
+Data Count": 10
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 36727.5
+Data Count": 1805
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 32.5
+Data Count": 1476
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 36727.5
+Data Count": 1805
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 32.5
+Data Count": 329
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36727.5
+Data Count": 188
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 7.5
+Data Count": 13
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 36727.5
+Data Count": 188
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 7.5
+Data Count": 175
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 39697.0
+Data Count": 11
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 6
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 39697.0
+Data Count": 11
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 39697.0
+Data Count": 236
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 34.5
+Data Count": 23
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 39697.0
+Data Count": 236
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 34.5
+Data Count": 213
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 278.5
+Data Count": 994
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 98.5
+Data Count": 330
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 278.5
+Data Count": 994
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 98.5
+Data Count": 664
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 26.5
+Data Count": 171
+Feature: Age
+Children: 2
+ -> Name:" Age <= 27.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age > 26.5
+Data Count": 171
+Feature: Age
+Children: 2
+ -> Name:" Age > 27.5
+Data Count": 170
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 42.0
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age <= 25.0
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 42.0
+Data Count": 3
+Feature: Age
+Children: 2
+ -> Name:" Age > 25.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage <= 275.5
+Data Count": 21
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 274.5
+Data Count": 20
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage <= 275.5
+Data Count": 21
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 274.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 10907.5
+Data Count": 15
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 21439.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 10907.5
+Data Count": 15
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 21439.0
+Data Count": 14
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 12
+Feature: Vehicle_Age
+Children: 2
+ -> Name:" Vehicle_Age == < 1 Year
+Data Count": 10
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 12
+Feature: Vehicle_Age
+Children: 2
+ -> Name:" Vehicle_Age == 1-2 Year
+Data Count": 2
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code <= 41.5
+Data Count": 76
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 24691.5
+Data Count": 21
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 41.5
+Data Count": 76
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 24691.5
+Data Count": 55
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 41.5
+Data Count": 164
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 49.5
+Data Count": 141
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code > 41.5
+Data Count": 164
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 49.5
+Data Count": 23
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 30142.0
+Data Count": 19
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 144.5
+Data Count": 18
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 30142.0
+Data Count": 19
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 144.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Vintage > 256.5
+Data Count": 2
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 256.5
+Data Count": 2
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Region_Code <= 28.5
+Data Count": 4
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 30502.0
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Region_Code <= 28.5
+Data Count": 4
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 30502.0
+Data Count": 2
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 26.5
+Data Count": 116
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 31345.0
+Data Count": 115
+Feature: Ans = 0
+Children: 0
+
+	Name:" Vintage > 26.5
+Data Count": 116
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 31345.0
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Age > 25.5
+Data Count": 55
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code <= 37.5
+Data Count": 12
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 25.5
+Data Count": 55
+Feature: Region_Code
+Children: 2
+ -> Name:" Region_Code > 37.5
+Data Count": 43
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 35373.0
+Data Count": 155
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage <= 164.5
+Data Count": 90
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium <= 35373.0
+Data Count": 155
+Feature: Vintage
+Children: 2
+ -> Name:" Vintage > 164.5
+Data Count": 65
+Feature: Ans = 0
+Children: 0
+
+	Name:" Annual_Premium > 35373.0
+Data Count": 4
+Feature: Age
+Children: 2
+ -> Name:" Age <= 38.5
+Data Count": 3
+Feature: Ans = 1
+Children: 0
+
+	Name:" Annual_Premium > 35373.0
+Data Count": 4
+Feature: Age
+Children: 2
+ -> Name:" Age > 38.5
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age <= 46.5
+Data Count": 1
+Feature: Ans = 1
+Children: 0
+
+	Name:" Gender == Male
+Data Count": 2
+Feature: Age
+Children: 2
+ -> Name:" Age > 46.5
+Data Count": 1
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 47.5
+Data Count": 22
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium <= 46751.0
+Data Count": 17
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age <= 47.5
+Data Count": 22
+Feature: Annual_Premium
+Children: 2
+ -> Name:" Annual_Premium > 46751.0
+Data Count": 5
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 47.5
+Data Count": 11
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Male
+Data Count": 7
+Feature: Ans = 0
+Children: 0
+
+	Name:" Age > 47.5
+Data Count": 11
+Feature: Gender
+Children: 2
+ -> Name:" Gender == Female
+Data Count": 4
+Feature: Ans = 1
 Children: 0
 
 }
