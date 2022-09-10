@@ -1,0 +1,234 @@
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 131689 entries, 0 to 131688
+Data columns (total 12 columns):
+ #   Column                Non-Null Count   Dtype 
+---  ------                --------------   ----- 
+ 0   id                    131689 non-null  int64 
+ 1   Gender                131689 non-null  object
+ 2   Age                   131689 non-null  int64 
+ 3   Driving_License       131689 non-null  int64 
+ 4   Region_Code           131689 non-null  int64 
+ 5   Previously_Insured    131689 non-null  int64 
+ 6   Vehicle_Age           131689 non-null  object
+ 7   Vehicle_Damage        131689 non-null  object
+ 8   Annual_Premium        131689 non-null  int64 
+ 9   Policy_Sales_Channel  131689 non-null  int64 
+ 10  Vintage               131689 non-null  int64 
+ 11  Response              131689 non-null  int64 
+dtypes: int64(9), object(3)
+memory usage: 12.1+ MB
+Analzing dataset
+Attribute => Gender has 2 unique values.[ Male, Female, ]
+Attribute => Age has 66 unique values.
+Attribute => Driving_License has 2 unique values.[ 1, 0, ]
+Attribute => Region_Code has 53 unique values.
+Attribute => Previously_Insured has 2 unique values.[ 0, 1, ]
+Attribute => Vehicle_Age has 3 unique values.[ > 2 Years, 1-2 Year, < 1 Year, ]
+Attribute => Vehicle_Damage has 2 unique values.[ Yes, No, ]
+Attribute => Annual_Premium has 36617 unique values.
+Attribute => Policy_Sales_Channel has 140 unique values.
+Attribute => Vintage has 290 unique values.
+Label     => Response has 2 unique values.[ 1, 0, ]
+
+Determining type of feature
+Attr Gender is categorical
+Attr Age is continuous
+Attr Driving_License is categorical
+Attr Region_Code is continuous
+Attr Previously_Insured is categorical
+Attr Vehicle_Age is categorical
+Attr Vehicle_Damage is categorical
+Attr Annual_Premium is continuous
+Attr Policy_Sales_Channel is continuous
+Attr Vintage is continuous
+-------------------------Task-1-Started---------------------------
+Accuracy  = 0.8055207502752781 and Depth = 14
+Precision = 0.3322135785007072 and Depth = 14
+Recall    = 0.5828163771712159 and Depth = 14
+The total number of nodes in the tree : 411
+-------------------------Task-1-Completed-------------------------
+
+-------------------------Task-2-Started---------------------------
+Testing tree #0
+Accuracy  = 0.7845236739188214 and Depth = 9
+Precision = 0.3210687691633815 and Depth = 9
+Recall    = 0.6820719602977667 and Depth = 9
+# of nodes in tree 143
+
+Testing tree #1
+Accuracy  = 0.7726012833656073 and Depth = 9
+Precision = 0.3163278862760728 and Depth = 9
+Recall    = 0.7385235732009926 and Depth = 9
+# of nodes in tree 134
+
+Testing tree #2
+Accuracy  = 0.7733227019022668 and Depth = 9
+Precision = 0.31550658425154526 and Depth = 9
+Recall    = 0.728287841191067 and Depth = 9
+# of nodes in tree 140
+
+Testing tree #3
+Accuracy  = 0.7860424497854729 and Depth = 9
+Precision = 0.33061683293522554 and Depth = 9
+Recall    = 0.7298387096774194 and Depth = 9
+# of nodes in tree 150
+
+Testing tree #4
+Accuracy  = 0.7773854273455595 and Depth = 9
+Precision = 0.3215686274509804 and Depth = 9
+Recall    = 0.7375930521091811 and Depth = 9
+# of nodes in tree 146
+
+Testing tree #5
+Accuracy  = 0.7836124083988305 and Depth = 9
+Precision = 0.3201046663759267 and Depth = 9
+Recall    = 0.6830024813895782 and Depth = 9
+# of nodes in tree 142
+
+Testing tree #6
+Accuracy  = 0.7866119907354672 and Depth = 9
+Precision = 0.32418550044027006 and Depth = 9
+Recall    = 0.6851736972704715 and Depth = 9
+# of nodes in tree 143
+
+Testing tree #7
+Accuracy  = 0.7904848691954285 and Depth = 9
+Precision = 0.33299359347699475 and Depth = 9
+Recall    = 0.7093672456575683 and Depth = 9
+# of nodes in tree 159
+
+Testing tree #8
+Accuracy  = 0.7918897368720811 and Depth = 9
+Precision = 0.33184324243778873 and Depth = 9
+Recall    = 0.69075682382134 and Depth = 9
+# of nodes in tree 159
+
+Testing tree #9
+Accuracy  = 0.7752211717355811 and Depth = 9
+Precision = 0.31754195993502976 and Depth = 9
+Recall    = 0.7276674937965261 and Depth = 9
+# of nodes in tree 132
+
+The Best tree : Root #8
+Accuracy  = 0.7918897368720811 and Depth = 9
+Precision = 0.33184324243778873 and Depth = 9
+Recall    = 0.69075682382134 and Depth = 9
+The total number of nodes in the tree : 159
+-------------------------Task-2-Completed-------------------------
+
+-------------------------Task-3-Started---------------------------
+Metrics before pruning
+Accuracy  = 0.7918897368720811 and Depth = 9
+Precision = 0.33184324243778873 and Depth = 9
+Recall    = 0.69075682382134 and Depth = 9
+The total number of nodes in the tree : 159
+Base accuracy = 0.7928389717887383
+Increased accuracy from 0.7928389717887383 to 0.7962941868853703
+Pruned nodeId = 104
+Pruning iteration 1 completed
+Base accuracy = 0.7962941868853703
+Increased accuracy from 0.7962941868853703 to 0.7983065649086836
+Increased accuracy from 0.7983065649086836 to 0.7984204730986825
+Increased accuracy from 0.7984204730986825 to 0.7995215856020048
+Pruned nodeId = 3
+Pruning iteration 2 completed
+Base accuracy = 0.7995215856020048
+Increased accuracy from 0.7995215856020048 to 0.801533963625318
+Increased accuracy from 0.801533963625318 to 0.8016478718153168
+Pruned nodeId = 50
+Pruning iteration 3 completed
+Base accuracy = 0.8016478718153168
+Increased accuracy from 0.8016478718153168 to 0.80366024983863
+Pruned nodeId = 91
+Pruning iteration 4 completed
+Base accuracy = 0.80366024983863
+Increased accuracy from 0.80366024983863 to 0.8038880662186277
+Pruned nodeId = 79
+Pruning iteration 5 completed
+Base accuracy = 0.8038880662186277
+Reduced Error Pruning finished
+No of nodes after R.E.P. 60
+
+Metrics after pruning
+Accuracy  = 0.8041538519952918 and Depth = 9
+Precision = 0.33834837846873955 and Depth = 9
+Recall    = 0.6277915632754343 and Depth = 9
+The total number of nodes in the tree : 60
+
+Collecting Data for different heights
+Collecting Data for depth = 1
+Accuracy  = 0.8775866651478909 and Depth = 1
+Precision = 0 and Depth = 1
+Recall    = 0.0 and Depth = 1
+The total number of nodes in the tree : 3
+Collecting Data for depth = 2
+Accuracy  = 0.8775866651478909 and Depth = 2
+Precision = 0 and Depth = 2
+Recall    = 0.0 and Depth = 2
+The total number of nodes in the tree : 5
+Collecting Data for depth = 3
+Accuracy  = 0.711166799559555 and Depth = 3
+Precision = 0.28230853283003876 and Depth = 3
+Recall    = 0.8815136476426799 and Depth = 3
+The total number of nodes in the tree : 9
+Collecting Data for depth = 4
+Accuracy  = 0.7631469035957019 and Depth = 4
+Precision = 0.3128415300546448 and Depth = 4
+Recall    = 0.7813275434243176 and Depth = 4
+The total number of nodes in the tree : 15
+Collecting Data for depth = 5
+Accuracy  = 0.7631469035957019 and Depth = 5
+Precision = 0.3128415300546448 and Depth = 5
+Recall    = 0.7813275434243176 and Depth = 5
+The total number of nodes in the tree : 25
+Collecting Data for depth = 6
+Accuracy  = 0.7952690131753807 and Depth = 6
+Precision = 0.3239688210457941 and Depth = 6
+Recall    = 0.6187965260545906 and Depth = 6
+The total number of nodes in the tree : 43
+Collecting Data for depth = 7
+Accuracy  = 0.7832327144321677 and Depth = 7
+Precision = 0.32482729451571973 and Depth = 7
+Recall    = 0.7146401985111662 and Depth = 7
+The total number of nodes in the tree : 70
+Collecting Data for depth = 8
+Accuracy  = 0.7896115730721038 and Depth = 8
+Precision = 0.3299574343167474 and Depth = 8
+Recall    = 0.6972704714640199 and Depth = 8
+The total number of nodes in the tree : 108
+Collecting Data for depth = 9
+Accuracy  = 0.7936363291187303 and Depth = 9
+Precision = 0.331350114416476 and Depth = 9
+Recall    = 0.673697270471464 and Depth = 9
+The total number of nodes in the tree : 155
+Collecting Data for depth = 10
+Accuracy  = 0.7965599726620344 and Depth = 10
+Precision = 0.3324434673366834 and Depth = 10
+Recall    = 0.6566377171215881 and Depth = 10
+The total number of nodes in the tree : 208
+Collecting Data for depth = 11
+Accuracy  = 0.7928389717887383 and Depth = 11
+Precision = 0.33167420814479637 and Depth = 11
+Recall    = 0.6820719602977667 and Depth = 11
+The total number of nodes in the tree : 265
+Collecting Data for depth = 12
+Accuracy  = 0.7971295136120287 and Depth = 12
+Precision = 0.33416810142432307 and Depth = 12
+Recall    = 0.6622208436724566 and Depth = 12
+The total number of nodes in the tree : 327
+Collecting Data for depth = 13
+Accuracy  = 0.799939248965334 and Depth = 13
+Precision = 0.33705179282868525 and Depth = 13
+Recall    = 0.6560173697270472 and Depth = 13
+The total number of nodes in the tree : 398
+Collecting Data for depth = 14
+Accuracy  = 0.7969396666286973 and Depth = 14
+Precision = 0.3331238214959145 and Depth = 14
+Recall    = 0.6575682382133995 and Depth = 14
+The total number of nodes in the tree : 466
+Collecting Data for depth = 15
+Accuracy  = 0.7998633101720014 and Depth = 15
+Precision = 0.33478611783696527 and Depth = 15
+Recall    = 0.6433002481389578 and Depth = 15
+The total number of nodes in the tree : 528
+-------------------------Task-3-Completed-------------------------
