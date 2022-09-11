@@ -276,7 +276,7 @@ class DecisionNode:
     decisionThreshold and prePruningThreshold are design parameters.
     '''
     decisionThreshold = .35
-    prePruningThreshold = 80
+    prePruningThreshold = 40
     def __init__(self, featureSet, label, classList, decisionNodeName, depth, max_depth):
         # print(depth, decisionNodeName)
         self.nodeId = DecisionNode.nodeId
@@ -597,7 +597,7 @@ for i in range(10):
     # print(f"Testing #{i} with splitRatio = {splitRatio}")
     # train_set, test_set = train_test_split(df, splitRatio)
     featureSet = set(FEATURE_TYPES.keys())
-    tree= DecisionTree(featureSet, LABEL, train_set[LABEL].unique(), f"Root #{i}", 9)
+    tree= DecisionTree(featureSet, LABEL, train_set[LABEL].unique(), f"Root #{i}", 12)
     tree.fitData(train_set)
     print(f"Testing tree #{i}")
     curVal = GetAccuracy(tree, test_set)
@@ -630,12 +630,11 @@ def pruneTree(tree:DecisionTree, validation_set, Based=ACC_BASED_PRUNING):
     elif(Based == REC_BASED_PRUNING):
         scoreFunction = GetRecall
         metric = "recall"
-    
-    maxVal = scoreFunction(tree, validation_set, False)
-    print(f"Base {metric} = {maxVal}")
+    baseVal = scoreFunction(tree, validation_set, False)
+    print(f"Base {metric} = {baseVal}")
     node = tree.root
     st = [node]
-
+    maxVal = 0.0
     nodeToPrune = None
     while(len(st)>0):
         node = st.pop()
@@ -650,17 +649,18 @@ def pruneTree(tree:DecisionTree, validation_set, Based=ACC_BASED_PRUNING):
         # no matter what, we should only consider pruning if the recall value is sufficient
         if( curVal > maxVal and recVal > RECALL_LIMIT_THRESHOLD):
             nodeToPrune = node
-            print(f"Increased {metric} from {maxVal} to {curVal}")
+            print(f"Non decreasing pruning {metric} from {maxVal} to {curVal}")
             maxVal = curVal
 
         for key in node.childrenNode:
             st.append(node.childrenNode[key])
     
-    if(nodeToPrune is not None):
+    if((nodeToPrune is not None) and maxVal >= baseVal):
         nodeToPrune.Prune()
         print(f"Pruned nodeId = {nodeToPrune.nodeId}")
         return True
-    
+    else:
+        print("No optimal pruning found!")
     return False
 
 def reducedErrorPruning(tree, validation_set, Based = ACC_BASED_PRUNING):
@@ -725,7 +725,11 @@ evaluateTree(bestTree, bestTestSet)
 # In[53]:
 
 
+print()
+print("Pruning started.")
 data = reducedErrorPruning(bestTree, bestTestSet, ACC_BASED_PRUNING)
+print("Pruning finished.")
+print()
 
 
 # In[51]:
@@ -755,7 +759,7 @@ print("Collecting Data for different heights")
 train_set, test_set = train_test_split(df, 0.8)
 feature_set = set(FEATURE_TYPES.keys())
 data_depth = []
-for depth in range(1,16):
+for depth in range(1,20):
     print(f"Collecting Data for depth = {depth}")
     curTree =  DecisionTree(featureSet, LABEL, train_set[LABEL].unique(), "Root", depth)
     curTree.fitData(train_set)

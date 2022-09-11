@@ -5,303 +5,482 @@ digraph "Decision Tree" {
  Previously_Insured" -> "Node id 1
  Vehicle_Damage" [label="Previously_Insured == 0"]
 	"Node id 0
- Previously_Insured" -> "Node id 158
+ Previously_Insured" -> "Node id 444
  Ans = 0" [label="Previously_Insured == 1"]
 	"Node id 1
  Vehicle_Damage" -> "Node id 2
  Age" [label="Vehicle_Damage == Yes"]
 	"Node id 1
- Vehicle_Damage" -> "Node id 144
- Age" [label="Vehicle_Damage == No"]
-	"Node id 158
+ Vehicle_Damage" -> "Node id 405
+ Ans = 0" [label="Vehicle_Damage == No"]
+	"Node id 444
  Ans = 0" [shape=oval]
-	"Node id 158
+	"Node id 444
  Ans = 0" [color=Red]
 	"Node id 2
  Age" -> "Node id 3
  Ans = 0" [label="Age <= 27.5"]
 	"Node id 2
- Age" -> "Node id 46
+ Age" -> "Node id 107
  Age" [label="Age > 27.5"]
-	"Node id 144
- Age" -> "Node id 145
- Vehicle_Age" [label="Age <= 62.5"]
-	"Node id 144
- Age" -> "Node id 157
- Ans = 0" [label="Age > 62.5"]
+	"Node id 405
+ Ans = 0" [shape=oval]
+	"Node id 405
+ Ans = 0" [color=Red]
 	"Node id 3
  Ans = 0" [shape=oval]
 	"Node id 3
  Ans = 0" [color=Red]
-	"Node id 46
- Age" -> "Node id 47
- Age" [label="Age <= 58.5"]
-	"Node id 46
- Age" -> "Node id 104
+	"Node id 107
+ Age" -> "Node id 108
+ Policy_Sales_Channel" [label="Age <= 58.5"]
+	"Node id 107
+ Age" -> "Node id 310
  Ans = 0" [label="Age > 58.5"]
-	"Node id 145
- Vehicle_Age" -> "Node id 146
- Region_Code" [label="Vehicle_Age == < 1 Year"]
-	"Node id 145
- Vehicle_Age" -> "Node id 151
+	"Node id 108
+ Policy_Sales_Channel" -> "Node id 109
+ Vehicle_Age" [label="Policy_Sales_Channel <= 31.5"]
+	"Node id 108
+ Policy_Sales_Channel" -> "Node id 203
+ Age" [label="Policy_Sales_Channel > 31.5"]
+	"Node id 310
+ Ans = 0" [shape=oval]
+	"Node id 310
+ Ans = 0" [color=Red]
+	"Node id 109
+ Vehicle_Age" -> "Node id 110
+ Annual_Premium" [label="Vehicle_Age == > 2 Years"]
+	"Node id 109
+ Vehicle_Age" -> "Node id 141
  Policy_Sales_Channel" [label="Vehicle_Age == 1-2 Year"]
-	"Node id 145
- Vehicle_Age" -> "Node id 156
- Ans = 0" [label="Vehicle_Age == > 2 Years"]
-	"Node id 157
- Ans = 0" [shape=oval]
-	"Node id 157
- Ans = 0" [color=Red]
-	"Node id 47
- Age" -> "Node id 48
- Policy_Sales_Channel" [label="Age <= 49.5"]
-	"Node id 47
- Age" -> "Node id 76
- Policy_Sales_Channel" [label="Age > 49.5"]
-	"Node id 104
- Ans = 0" [shape=oval]
-	"Node id 104
- Ans = 0" [color=Red]
-	"Node id 146
- Region_Code" -> "Node id 147
- Age" [label="Region_Code <= 42.5"]
-	"Node id 146
- Region_Code" -> "Node id 150
- Ans = 0" [label="Region_Code > 42.5"]
-	"Node id 151
- Policy_Sales_Channel" -> "Node id 152
- Policy_Sales_Channel" [label="Policy_Sales_Channel <= 149.0"]
-	"Node id 151
- Policy_Sales_Channel" -> "Node id 155
- Ans = 0" [label="Policy_Sales_Channel > 149.0"]
-	"Node id 156
- Ans = 0" [color=Red]
-	"Node id 48
- Policy_Sales_Channel" -> "Node id 49
- Policy_Sales_Channel" [label="Policy_Sales_Channel <= 27.5"]
-	"Node id 48
- Policy_Sales_Channel" -> "Node id 63
- Age" [label="Policy_Sales_Channel > 27.5"]
-	"Node id 76
- Policy_Sales_Channel" -> "Node id 77
- Vehicle_Age" [label="Policy_Sales_Channel <= 27.5"]
-	"Node id 76
- Policy_Sales_Channel" -> "Node id 91
- Ans = 0" [label="Policy_Sales_Channel > 27.5"]
-	"Node id 147
- Age" -> "Node id 148
- Ans = 0" [label="Age <= 25.5"]
-	"Node id 147
- Age" -> "Node id 149
- Ans = 0" [label="Age > 25.5"]
-	"Node id 150
- Ans = 0" [shape=oval]
-	"Node id 150
- Ans = 0" [color=Red]
-	"Node id 152
- Policy_Sales_Channel" -> "Node id 153
- Ans = 0" [label="Policy_Sales_Channel <= 108.5"]
-	"Node id 152
- Policy_Sales_Channel" -> "Node id 154
- Ans = 0" [label="Policy_Sales_Channel > 108.5"]
-	"Node id 155
- Ans = 0" [shape=oval]
-	"Node id 155
- Ans = 0" [color=Red]
-	"Node id 49
- Policy_Sales_Channel" -> "Node id 50
- Ans = 0" [label="Policy_Sales_Channel <= 20.5"]
-	"Node id 49
- Policy_Sales_Channel" -> "Node id 55
- Annual_Premium" [label="Policy_Sales_Channel > 20.5"]
-	"Node id 63
- Age" -> "Node id 64
- Policy_Sales_Channel" [label="Age <= 40.5"]
-	"Node id 63
- Age" -> "Node id 71
- Region_Code" [label="Age > 40.5"]
-	"Node id 77
- Vehicle_Age" -> "Node id 78
- Policy_Sales_Channel" [label="Vehicle_Age == 1-2 Year"]
-	"Node id 77
- Vehicle_Age" -> "Node id 85
- Age" [label="Vehicle_Age == > 2 Years"]
-	"Node id 77
- Vehicle_Age" -> "Node id 90
- Ans = 1" [label="Vehicle_Age == < 1 Year"]
-	"Node id 91
- Ans = 0" [shape=oval]
-	"Node id 91
- Ans = 0" [color=Red]
-	"Node id 148
- Ans = 0" [shape=oval]
-	"Node id 148
- Ans = 0" [color=Red]
-	"Node id 149
- Ans = 0" [shape=oval]
-	"Node id 149
- Ans = 0" [color=Red]
-	"Node id 153
- Ans = 0" [shape=oval]
-	"Node id 153
- Ans = 0" [color=Red]
-	"Node id 154
- Ans = 0" [shape=oval]
-	"Node id 154
- Ans = 0" [color=Red]
-	"Node id 50
- Ans = 0" [shape=oval]
-	"Node id 50
- Ans = 0" [color=Red]
-	"Node id 55
- Annual_Premium" -> "Node id 56
- Region_Code" [label="Annual_Premium <= 7591.0"]
-	"Node id 55
- Annual_Premium" -> "Node id 59
- Vehicle_Age" [label="Annual_Premium > 7591.0"]
-	"Node id 64
- Policy_Sales_Channel" -> "Node id 65
- Region_Code" [label="Policy_Sales_Channel <= 142.5"]
-	"Node id 64
- Policy_Sales_Channel" -> "Node id 68
- Policy_Sales_Channel" [label="Policy_Sales_Channel > 142.5"]
-	"Node id 71
- Region_Code" -> "Node id 72
+	"Node id 109
+ Vehicle_Age" -> "Node id 190
+ Policy_Sales_Channel" [label="Vehicle_Age == < 1 Year"]
+	"Node id 203
+ Age" -> "Node id 204
+ Region_Code" [label="Age <= 46.5"]
+	"Node id 203
+ Age" -> "Node id 254
+ Ans = 0" [label="Age > 46.5"]
+	"Node id 110
+ Annual_Premium" -> "Node id 111
+ Age" [label="Annual_Premium <= 44109.5"]
+	"Node id 110
+ Annual_Premium" -> "Node id 128
+ Age" [label="Annual_Premium > 44109.5"]
+	"Node id 141
+ Policy_Sales_Channel" -> "Node id 142
+ Ans = 0" [label="Policy_Sales_Channel <= 24.5"]
+	"Node id 141
+ Policy_Sales_Channel" -> "Node id 159
+ Age" [label="Policy_Sales_Channel > 24.5"]
+	"Node id 190
+ Policy_Sales_Channel" -> "Node id 191
+ Ans = 0" [label="Policy_Sales_Channel <= 4.0"]
+	"Node id 190
+ Policy_Sales_Channel" -> "Node id 192
+ Age" [label="Policy_Sales_Channel > 4.0"]
+	"Node id 204
+ Region_Code" -> "Node id 205
  Ans = 0" [label="Region_Code <= 0.5"]
-	"Node id 71
- Region_Code" -> "Node id 73
- Age" [label="Region_Code > 0.5"]
-	"Node id 78
- Policy_Sales_Channel" -> "Node id 79
- Ans = 0" [label="Policy_Sales_Channel <= 25.5"]
-	"Node id 78
- Policy_Sales_Channel" -> "Node id 82
- Region_Code" [label="Policy_Sales_Channel > 25.5"]
-	"Node id 85
- Age" -> "Node id 86
+	"Node id 204
+ Region_Code" -> "Node id 206
+ Policy_Sales_Channel" [label="Region_Code > 0.5"]
+	"Node id 254
+ Ans = 0" [shape=oval]
+	"Node id 254
+ Ans = 0" [color=Red]
+	"Node id 111
+ Age" -> "Node id 112
  Age" [label="Age <= 56.5"]
-	"Node id 85
- Age" -> "Node id 89
- Ans = 1" [label="Age > 56.5"]
-	"Node id 90
- Ans = 1" [shape=oval]
-	"Node id 90
- Ans = 1" [color=Green]
-	"Node id 56
- Region_Code" -> "Node id 57
- Ans = 0" [label="Region_Code <= 0.5"]
-	"Node id 56
- Region_Code" -> "Node id 58
- Ans = 1" [label="Region_Code > 0.5"]
-	"Node id 59
- Vehicle_Age" -> "Node id 60
- Ans = 1" [label="Vehicle_Age == > 2 Years"]
-	"Node id 59
- Vehicle_Age" -> "Node id 61
- Ans = 1" [label="Vehicle_Age == 1-2 Year"]
-	"Node id 59
- Vehicle_Age" -> "Node id 62
- Ans = 1" [label="Vehicle_Age == < 1 Year"]
-	"Node id 65
- Region_Code" -> "Node id 66
- Ans = 0" [label="Region_Code <= 0.5"]
-	"Node id 65
- Region_Code" -> "Node id 67
- Ans = 1" [label="Region_Code > 0.5"]
-	"Node id 68
- Policy_Sales_Channel" -> "Node id 69
- Ans = 0" [label="Policy_Sales_Channel <= 153.5"]
-	"Node id 68
- Policy_Sales_Channel" -> "Node id 70
- Ans = 1" [label="Policy_Sales_Channel > 153.5"]
-	"Node id 72
+	"Node id 111
+ Age" -> "Node id 127
+ Ans = 0" [label="Age > 56.5"]
+	"Node id 128
+ Age" -> "Node id 129
+ Ans = 0" [label="Age <= 37.5"]
+	"Node id 128
+ Age" -> "Node id 130
+ Region_Code" [label="Age > 37.5"]
+	"Node id 142
  Ans = 0" [shape=oval]
-	"Node id 72
+	"Node id 142
  Ans = 0" [color=Red]
-	"Node id 73
- Age" -> "Node id 74
- Ans = 1" [label="Age <= 47.5"]
-	"Node id 73
- Age" -> "Node id 75
- Ans = 0" [label="Age > 47.5"]
-	"Node id 79
+	"Node id 159
+ Age" -> "Node id 160
+ Region_Code" [label="Age <= 52.5"]
+	"Node id 159
+ Age" -> "Node id 175
+ Policy_Sales_Channel" [label="Age > 52.5"]
+	"Node id 191
  Ans = 0" [shape=oval]
-	"Node id 79
+	"Node id 191
  Ans = 0" [color=Red]
-	"Node id 82
- Region_Code" -> "Node id 83
- Ans = 1" [label="Region_Code <= 48.5"]
-	"Node id 82
- Region_Code" -> "Node id 84
+	"Node id 192
+ Age" -> "Node id 193
+ Age" [label="Age <= 47.5"]
+	"Node id 192
+ Age" -> "Node id 202
+ Ans = 1" [label="Age > 47.5"]
+	"Node id 205
+ Ans = 0" [shape=oval]
+	"Node id 205
+ Ans = 0" [color=Red]
+	"Node id 206
+ Policy_Sales_Channel" -> "Node id 207
+ Age" [label="Policy_Sales_Channel <= 138.5"]
+	"Node id 206
+ Policy_Sales_Channel" -> "Node id 232
+ Policy_Sales_Channel" [label="Policy_Sales_Channel > 138.5"]
+	"Node id 112
+ Age" -> "Node id 113
+ Vintage" [label="Age <= 44.5"]
+	"Node id 112
+ Age" -> "Node id 120
+ Ans = 1" [label="Age > 44.5"]
+	"Node id 127
+ Ans = 0" [shape=oval]
+	"Node id 127
+ Ans = 0" [color=Red]
+	"Node id 129
+ Ans = 0" [shape=oval]
+	"Node id 129
+ Ans = 0" [color=Red]
+	"Node id 130
+ Region_Code" -> "Node id 131
+ Policy_Sales_Channel" [label="Region_Code <= 48.5"]
+	"Node id 130
+ Region_Code" -> "Node id 140
  Ans = 0" [label="Region_Code > 48.5"]
-	"Node id 86
- Age" -> "Node id 87
- Ans = 1" [label="Age <= 51.5"]
-	"Node id 86
- Age" -> "Node id 88
- Ans = 1" [label="Age > 51.5"]
-	"Node id 89
+	"Node id 160
+ Region_Code" -> "Node id 161
+ Ans = 0" [label="Region_Code <= 0.5"]
+	"Node id 160
+ Region_Code" -> "Node id 162
+ Age" [label="Region_Code > 0.5"]
+	"Node id 175
+ Policy_Sales_Channel" -> "Node id 176
+ Region_Code" [label="Policy_Sales_Channel <= 29.5"]
+	"Node id 175
+ Policy_Sales_Channel" -> "Node id 189
+ Ans = 0" [label="Policy_Sales_Channel > 29.5"]
+	"Node id 193
+ Age" -> "Node id 194
+ Ans = 1" [label="Age <= 29.5"]
+	"Node id 193
+ Age" -> "Node id 195
+ Age" [label="Age > 29.5"]
+	"Node id 202
  Ans = 1" [shape=oval]
-	"Node id 89
+	"Node id 202
  Ans = 1" [color=Green]
-	"Node id 57
- Ans = 0" [shape=oval]
-	"Node id 57
+	"Node id 207
+ Age" -> "Node id 208
+ Age" [label="Age <= 40.5"]
+	"Node id 207
+ Age" -> "Node id 221
+ Policy_Sales_Channel" [label="Age > 40.5"]
+	"Node id 232
+ Policy_Sales_Channel" -> "Node id 233
+ Ans = 0" [label="Policy_Sales_Channel <= 153.5"]
+	"Node id 232
+ Policy_Sales_Channel" -> "Node id 240
+ Vehicle_Age" [label="Policy_Sales_Channel > 153.5"]
+	"Node id 113
+ Vintage" -> "Node id 114
+ Policy_Sales_Channel" [label="Vintage <= 221.5"]
+	"Node id 113
+ Vintage" -> "Node id 119
+ Ans = 1" [label="Vintage > 221.5"]
+	"Node id 120
+ Ans = 1" [shape=oval]
+	"Node id 120
+ Ans = 1" [color=Green]
+	"Node id 131
+ Policy_Sales_Channel" -> "Node id 132
+ Age" [label="Policy_Sales_Channel <= 30.5"]
+	"Node id 131
+ Policy_Sales_Channel" -> "Node id 139
+ Ans = 0" [label="Policy_Sales_Channel > 30.5"]
+	"Node id 140
  Ans = 0" [color=Red]
-	"Node id 58
- Ans = 1" [shape=oval]
-	"Node id 58
- Ans = 1" [color=Green]
-	"Node id 60
- Ans = 1" [shape=oval]
-	"Node id 60
- Ans = 1" [color=Green]
-	"Node id 61
- Ans = 1" [shape=oval]
-	"Node id 61
- Ans = 1" [color=Green]
-	"Node id 62
- Ans = 1" [shape=oval]
-	"Node id 62
- Ans = 1" [color=Green]
-	"Node id 66
+	"Node id 161
  Ans = 0" [shape=oval]
-	"Node id 66
+	"Node id 161
  Ans = 0" [color=Red]
-	"Node id 67
- Ans = 1" [shape=oval]
-	"Node id 67
- Ans = 1" [color=Green]
-	"Node id 69
+	"Node id 162
+ Age" -> "Node id 163
+ Ans = 1" [label="Age <= 31.5"]
+	"Node id 162
+ Age" -> "Node id 168
+ Age" [label="Age > 31.5"]
+	"Node id 176
+ Region_Code" -> "Node id 177
+ Annual_Premium" [label="Region_Code <= 36.5"]
+	"Node id 176
+ Region_Code" -> "Node id 184
+ Ans = 0" [label="Region_Code > 36.5"]
+	"Node id 189
  Ans = 0" [shape=oval]
-	"Node id 69
+	"Node id 189
  Ans = 0" [color=Red]
-	"Node id 70
+	"Node id 194
  Ans = 1" [shape=oval]
-	"Node id 70
+	"Node id 194
  Ans = 1" [color=Green]
-	"Node id 74
- Ans = 1" [shape=oval]
-	"Node id 74
- Ans = 1" [color=Green]
-	"Node id 75
+	"Node id 195
+ Age" -> "Node id 196
+ Ans = 1" [label="Age <= 33.5"]
+	"Node id 195
+ Age" -> "Node id 201
+ Ans = 0" [label="Age > 33.5"]
+	"Node id 208
+ Age" -> "Node id 209
+ Region_Code" [label="Age <= 36.5"]
+	"Node id 208
+ Age" -> "Node id 214
+ Region_Code" [label="Age > 36.5"]
+	"Node id 221
+ Policy_Sales_Channel" -> "Node id 222
+ Ans = 0" [label="Policy_Sales_Channel <= 79.0"]
+	"Node id 221
+ Policy_Sales_Channel" -> "Node id 225
+ Region_Code" [label="Policy_Sales_Channel > 79.0"]
+	"Node id 233
  Ans = 0" [shape=oval]
-	"Node id 75
+	"Node id 233
  Ans = 0" [color=Red]
-	"Node id 83
+	"Node id 240
+ Vehicle_Age" -> "Node id 241
+ Ans = 1" [label="Vehicle_Age == 1-2 Year"]
+	"Node id 240
+ Vehicle_Age" -> "Node id 248
+ Ans = 0" [label="Vehicle_Age == > 2 Years"]
+	"Node id 240
+ Vehicle_Age" -> "Node id 249
+ Policy_Sales_Channel" [label="Vehicle_Age == < 1 Year"]
+	"Node id 114
+ Policy_Sales_Channel" -> "Node id 115
+ Ans = 0" [label="Policy_Sales_Channel <= 9.0"]
+	"Node id 114
+ Policy_Sales_Channel" -> "Node id 116
+ Annual_Premium" [label="Policy_Sales_Channel > 9.0"]
+	"Node id 119
  Ans = 1" [shape=oval]
-	"Node id 83
+	"Node id 119
  Ans = 1" [color=Green]
-	"Node id 84
+	"Node id 132
+ Age" -> "Node id 133
+ Policy_Sales_Channel" [label="Age <= 50.5"]
+	"Node id 132
+ Age" -> "Node id 136
+ Ans = 1" [label="Age > 50.5"]
+	"Node id 139
+ Ans = 0" [color=Red]
+	"Node id 163
+ Ans = 1" [shape=oval]
+	"Node id 163
+ Ans = 1" [color=Green]
+	"Node id 168
+ Age" -> "Node id 169
+ Region_Code" [label="Age <= 38.5"]
+	"Node id 168
+ Age" -> "Node id 172
+ Ans = 1" [label="Age > 38.5"]
+	"Node id 177
+ Annual_Premium" -> "Node id 178
+ Ans = 1" [label="Annual_Premium <= 39030.0"]
+	"Node id 177
+ Annual_Premium" -> "Node id 181
+ Region_Code" [label="Annual_Premium > 39030.0"]
+	"Node id 184
  Ans = 0" [shape=oval]
-	"Node id 84
+	"Node id 184
  Ans = 0" [color=Red]
-	"Node id 87
+	"Node id 196
  Ans = 1" [shape=oval]
-	"Node id 87
+	"Node id 196
  Ans = 1" [color=Green]
-	"Node id 88
+	"Node id 201
+ Ans = 0" [shape=oval]
+	"Node id 201
+ Ans = 0" [color=Red]
+	"Node id 209
+ Region_Code" -> "Node id 210
+ Ans = 1" [label="Region_Code <= 47.5"]
+	"Node id 209
+ Region_Code" -> "Node id 213
+ Ans = 0" [label="Region_Code > 47.5"]
+	"Node id 214
+ Region_Code" -> "Node id 215
+ Ans = 1" [label="Region_Code <= 43.5"]
+	"Node id 214
+ Region_Code" -> "Node id 218
+ Region_Code" [label="Region_Code > 43.5"]
+	"Node id 222
+ Ans = 0" [shape=oval]
+	"Node id 222
+ Ans = 0" [color=Red]
+	"Node id 225
+ Region_Code" -> "Node id 226
+ Region_Code" [label="Region_Code <= 31.5"]
+	"Node id 225
+ Region_Code" -> "Node id 229
+ Vintage" [label="Region_Code > 31.5"]
+	"Node id 241
  Ans = 1" [shape=oval]
-	"Node id 88
+	"Node id 241
  Ans = 1" [color=Green]
+	"Node id 248
+ Ans = 0" [shape=oval]
+	"Node id 248
+ Ans = 0" [color=Red]
+	"Node id 249
+ Policy_Sales_Channel" -> "Node id 250
+ Region_Code" [label="Policy_Sales_Channel <= 159.0"]
+	"Node id 249
+ Policy_Sales_Channel" -> "Node id 253
+ Ans = 0" [label="Policy_Sales_Channel > 159.0"]
+	"Node id 115
+ Ans = 0" [color=Red]
+	"Node id 116
+ Annual_Premium" -> "Node id 117
+ Ans = 1" [label="Annual_Premium <= 38593.0"]
+	"Node id 116
+ Annual_Premium" -> "Node id 118
+ Ans = 0" [label="Annual_Premium > 38593.0"]
+	"Node id 133
+ Policy_Sales_Channel" -> "Node id 134
+ Ans = 0" [label="Policy_Sales_Channel <= 12.5"]
+	"Node id 133
+ Policy_Sales_Channel" -> "Node id 135
+ Ans = 1" [label="Policy_Sales_Channel > 12.5"]
+	"Node id 136
+ Ans = 1" [shape=oval]
+	"Node id 136
+ Ans = 1" [color=Green]
+	"Node id 169
+ Region_Code" -> "Node id 170
+ Ans = 0" [label="Region_Code <= 1.5"]
+	"Node id 169
+ Region_Code" -> "Node id 171
+ Ans = 1" [label="Region_Code > 1.5"]
+	"Node id 172
+ Ans = 1" [shape=oval]
+	"Node id 172
+ Ans = 1" [color=Green]
+	"Node id 178
+ Ans = 1" [shape=oval]
+	"Node id 178
+ Ans = 1" [color=Green]
+	"Node id 181
+ Region_Code" -> "Node id 182
+ Ans = 0" [label="Region_Code <= 6.5"]
+	"Node id 181
+ Region_Code" -> "Node id 183
+ Ans = 1" [label="Region_Code > 6.5"]
+	"Node id 210
+ Ans = 1" [shape=oval]
+	"Node id 210
+ Ans = 1" [color=Green]
+	"Node id 213
+ Ans = 0" [shape=oval]
+	"Node id 213
+ Ans = 0" [color=Red]
+	"Node id 215
+ Ans = 1" [shape=oval]
+	"Node id 215
+ Ans = 1" [color=Green]
+	"Node id 218
+ Region_Code" -> "Node id 219
+ Ans = 1" [label="Region_Code <= 45.5"]
+	"Node id 218
+ Region_Code" -> "Node id 220
+ Ans = 0" [label="Region_Code > 45.5"]
+	"Node id 226
+ Region_Code" -> "Node id 227
+ Ans = 0" [label="Region_Code <= 10.5"]
+	"Node id 226
+ Region_Code" -> "Node id 228
+ Ans = 1" [label="Region_Code > 10.5"]
+	"Node id 229
+ Vintage" -> "Node id 230
+ Ans = 1" [label="Vintage <= 39.5"]
+	"Node id 229
+ Vintage" -> "Node id 231
+ Ans = 0" [label="Vintage > 39.5"]
+	"Node id 250
+ Region_Code" -> "Node id 251
+ Ans = 1" [label="Region_Code <= 34.0"]
+	"Node id 250
+ Region_Code" -> "Node id 252
+ Ans = 0" [label="Region_Code > 34.0"]
+	"Node id 253
+ Ans = 0" [shape=oval]
+	"Node id 253
+ Ans = 0" [color=Red]
+	"Node id 117
+ Ans = 1" [shape=oval]
+	"Node id 117
+ Ans = 1" [color=Green]
+	"Node id 118
+ Ans = 0" [shape=oval]
+	"Node id 118
+ Ans = 0" [color=Red]
+	"Node id 134
+ Ans = 0" [shape=oval]
+	"Node id 134
+ Ans = 0" [color=Red]
+	"Node id 135
+ Ans = 1" [shape=oval]
+	"Node id 135
+ Ans = 1" [color=Green]
+	"Node id 170
+ Ans = 0" [shape=oval]
+	"Node id 170
+ Ans = 0" [color=Red]
+	"Node id 171
+ Ans = 1" [shape=oval]
+	"Node id 171
+ Ans = 1" [color=Green]
+	"Node id 182
+ Ans = 0" [shape=oval]
+	"Node id 182
+ Ans = 0" [color=Red]
+	"Node id 183
+ Ans = 1" [shape=oval]
+	"Node id 183
+ Ans = 1" [color=Green]
+	"Node id 219
+ Ans = 1" [shape=oval]
+	"Node id 219
+ Ans = 1" [color=Green]
+	"Node id 220
+ Ans = 0" [shape=oval]
+	"Node id 220
+ Ans = 0" [color=Red]
+	"Node id 227
+ Ans = 0" [shape=oval]
+	"Node id 227
+ Ans = 0" [color=Red]
+	"Node id 228
+ Ans = 1" [shape=oval]
+	"Node id 228
+ Ans = 1" [color=Green]
+	"Node id 230
+ Ans = 1" [shape=oval]
+	"Node id 230
+ Ans = 1" [color=Green]
+	"Node id 231
+ Ans = 0" [shape=oval]
+	"Node id 231
+ Ans = 0" [color=Red]
+	"Node id 251
+ Ans = 1" [shape=oval]
+	"Node id 251
+ Ans = 1" [color=Green]
+	"Node id 252
+ Ans = 0" [shape=oval]
+	"Node id 252
+ Ans = 0" [color=Red]
 }
