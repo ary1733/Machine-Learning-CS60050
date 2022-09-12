@@ -13,7 +13,7 @@
 
 # ### Tools
 
-# In[1]:
+# In[32]:
 
 
 import numpy as np
@@ -26,7 +26,7 @@ import json
 import matplotlib.pyplot as plt
 
 
-# In[2]:
+# In[33]:
 
 
 # A constant to reference the result column
@@ -41,7 +41,7 @@ CATEGORICAL_FEATURE = "categorical"
 CONTINUOUS_FEATURE = "continuous"
 
 
-# In[3]:
+# In[34]:
 
 
 # splitting dataset index maintaing the ratio of true and false examples
@@ -61,7 +61,7 @@ def train_test_split(df,train_sample=0.5,target_col= LABEL):
     return train_df, test_df 
 
 
-# In[5]:
+# In[35]:
 
 
 # Data read using pandas
@@ -70,7 +70,7 @@ df = df.drop(["id"], axis = 1) # since id doesn't give any information
 df.info()
 
 
-# In[6]:
+# In[36]:
 
 
 # Classifying the attributes as continuous or categorical feature
@@ -96,7 +96,7 @@ print(f"Categorical string features are {categoricalStringCols}")
 print()
 
 
-# In[7]:
+# In[37]:
 
 
 print("---------------------Task-1-Started----------------------------")
@@ -123,13 +123,13 @@ df["Vehicle_Damage_encoded"] = df.Vehicle_Damage.map(vehicle_damage_dict)
 print("Encoding of categorical feature finished")
 
 
-# In[8]:
+# In[38]:
 
 
 df.info()
 
 
-# In[9]:
+# In[39]:
 
 
 # Dropping old non-encoded columns
@@ -138,13 +138,13 @@ df = df.drop(['Gender', 'Vehicle_Age', 'Vehicle_Damage'], axis = 1)
 print(f"Replaced the {categoricalStringCols} columns with their encoded versions")
 
 
-# In[10]:
+# In[40]:
 
 
 print(df.head())
 
 
-# In[11]:
+# In[41]:
 
 
 def determineTypeOfFeature(df):
@@ -171,7 +171,7 @@ for k, v in FEATURE_TYPES.items():
     print(f"Attr {k} is {v}")
 
 
-# In[12]:
+# In[42]:
 
 
 # Generating Random split with fixed ratio, for training and testing
@@ -181,7 +181,7 @@ print("---------------------Task-1-Completed--------------------------")
 
 # #### Removing Outliers
 
-# In[13]:
+# In[43]:
 
 
 print("---------------------Task-2-Started----------------------------")
@@ -207,7 +207,7 @@ print(f"Final dataset count after removing outliers = {df.shape[0]}")
 print()
 
 
-# In[14]:
+# In[44]:
 
 
 toDropFeature = []
@@ -220,7 +220,7 @@ for feature in FEATURE_TYPES.keys():
 df = df.drop(toDropFeature, axis = 1)
 
 
-# In[15]:
+# In[45]:
 
 
 # Generating a final constant map which we will use in futher analysis
@@ -230,7 +230,7 @@ for k, v in FINAL_FEATURE_TYPES.items():
     print(f"Feature {k} is {v}")
 
 
-# In[16]:
+# In[46]:
 
 
 print("Normalizing the data set, using min-max normalization")
@@ -238,7 +238,7 @@ normalized_df=(df-df.min())/(df.max()-df.min())
 print("Normalization complete")
 
 
-# In[17]:
+# In[47]:
 
 
 print(normalized_df.head())
@@ -247,7 +247,7 @@ print("---------------------Task-2-Completed--------------------------")
 
 # # Task 3
 
-# In[18]:
+# In[48]:
 
 
 # Calculating Prior for all classes of label
@@ -260,9 +260,6 @@ def calculate_prior(train_data, label):
 
 # Calculating P(X = x | Label = Y) for categorical features
 def calculate_likelihood_categorical(summary, feature, feature_value, label, Y, laplaceCorrection = False, uniqueFeatureCount = 0):
-#     Data for label = Y
-#     df_given_y = train_data[train_data[label] == Y]
-#     p_x_given_y = len(df_given_y[df_given_y[feature] == feature_value]) / len(df_given_y)
     numerator = summary[feature][Y][feature_value][0]
     denominator = summary[feature][Y][feature_value][1]
     if(laplaceCorrection):
@@ -273,15 +270,13 @@ def calculate_likelihood_categorical(summary, feature, feature_value, label, Y, 
 
 # Calculating P(X = x  | label = Y) for continous features
 def calculate_likelihood_gaussian(summary, feature, feature_value, label, Y):
-#     df_given_y = train_data[train_data[label] == Y]
-#     mean, std = df_given_y[feature].mean(), df_given_y[feature].std()
     mean, std = summary[feature][Y]['mean'], summary[feature][Y]['std']
 
     p_x_given_y = (1 / (np.sqrt(2 * np.pi) * std)) *  np.exp(-((feature_value-mean)**2 / (2 * std**2 )))
     return p_x_given_y
 
 
-# In[19]:
+# In[49]:
 
 
 # class to feature to summary 
@@ -322,7 +317,7 @@ def generateSummary(train_data, label):
             
 
 
-# In[20]:
+# In[50]:
 
 
 # count the number of unique categorical feature value
@@ -334,7 +329,7 @@ for feature in FINAL_FEATURE_TYPES.keys():
 UNIQUE_FEATURE_VALUES = count # we shall use this value in laplace correction
 
 
-# In[21]:
+# In[51]:
 
 
 print("---------------------Task-3-Started----------------------------")
@@ -343,7 +338,7 @@ summary = json.dumps(generateSummary(normalized_df, LABEL), indent=2)
 print(f"Summary of normalized data : {summary}")
 
 
-# In[22]:
+# In[52]:
 
 
 def naive_bayes_algo(train_data, test_X, label, laplaceCorrection = False):
@@ -382,7 +377,7 @@ def naive_bayes_algo(train_data, test_X, label, laplaceCorrection = False):
     return np.array(Y_pred) 
 
 
-# In[23]:
+# In[53]:
 
 
 # Evaluates Accuracy
@@ -426,7 +421,7 @@ def evaluateAlgo(Y_test, Y_pred, printDetails = True):
     return [acc, pre, rec]
 
 
-# In[24]:
+# In[54]:
 
 
 def KFolds(dataframe, k = 10):
@@ -446,7 +441,7 @@ def KFolds(dataframe, k = 10):
     
 
 
-# In[25]:
+# In[55]:
 
 
 
@@ -457,7 +452,6 @@ def kFoldValidation(dataframe, algorithm, label, k=10, laplaceCorrection = False
     recall = []
     folds = _folds
     if folds == None:
-        print("Ola")
         folds = KFolds(dataframe, 10)
     for iteration in range(k):
         print(f"Iter : {iteration+1}  started")
@@ -480,7 +474,7 @@ def kFoldValidation(dataframe, algorithm, label, k=10, laplaceCorrection = False
     return folds # for task 4
 
 
-# In[28]:
+# In[56]:
 
 
 folds = kFoldValidation(normalized_df, naive_bayes_algo, LABEL, 10)
@@ -488,7 +482,7 @@ print("---------------------Task-3-Completed--------------------------")
 print()
 
 
-# In[29]:
+# In[57]:
 
 
 print("---------------------Task-4-Started----------------------------")
