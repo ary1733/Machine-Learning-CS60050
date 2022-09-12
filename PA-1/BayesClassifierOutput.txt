@@ -1,0 +1,431 @@
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 131689 entries, 0 to 131688
+Data columns (total 11 columns):
+ #   Column                Non-Null Count   Dtype 
+---  ------                --------------   ----- 
+ 0   Gender                131689 non-null  object
+ 1   Age                   131689 non-null  int64 
+ 2   Driving_License       131689 non-null  int64 
+ 3   Region_Code           131689 non-null  int64 
+ 4   Previously_Insured    131689 non-null  int64 
+ 5   Vehicle_Age           131689 non-null  object
+ 6   Vehicle_Damage        131689 non-null  object
+ 7   Annual_Premium        131689 non-null  int64 
+ 8   Policy_Sales_Channel  131689 non-null  int64 
+ 9   Vintage               131689 non-null  int64 
+ 10  Response              131689 non-null  int64 
+dtypes: int64(8), object(3)
+memory usage: 11.1+ MB
+Analzing dataset
+Attribute => Gender has 2 unique values.[ Male, Female, ]
+Attribute => Age has 66 unique values.
+Attribute => Driving_License has 2 unique values.[ 1, 0, ]
+Attribute => Region_Code has 53 unique values.
+Attribute => Previously_Insured has 2 unique values.[ 0, 1, ]
+Attribute => Vehicle_Age has 3 unique values.[ > 2 Years, 1-2 Year, < 1 Year, ]
+Attribute => Vehicle_Damage has 2 unique values.[ Yes, No, ]
+Attribute => Annual_Premium has 36617 unique values.
+Attribute => Policy_Sales_Channel has 140 unique values.
+Attribute => Vintage has 290 unique values.
+Label     => Response has 2 unique values.[ 1, 0, ]
+Categorical string features are ['Gender', 'Vehicle_Age', 'Vehicle_Damage']
+
+---------------------Task-1-Started----------------------------
+Encoding of categorical feature started
+Encoding of categorical feature finished
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 131689 entries, 0 to 131688
+Data columns (total 14 columns):
+ #   Column                  Non-Null Count   Dtype 
+---  ------                  --------------   ----- 
+ 0   Gender                  131689 non-null  object
+ 1   Age                     131689 non-null  int64 
+ 2   Driving_License         131689 non-null  int64 
+ 3   Region_Code             131689 non-null  int64 
+ 4   Previously_Insured      131689 non-null  int64 
+ 5   Vehicle_Age             131689 non-null  object
+ 6   Vehicle_Damage          131689 non-null  object
+ 7   Annual_Premium          131689 non-null  int64 
+ 8   Policy_Sales_Channel    131689 non-null  int64 
+ 9   Vintage                 131689 non-null  int64 
+ 10  Response                131689 non-null  int64 
+ 11  Vehicle_Age_ordinal     131689 non-null  int64 
+ 12  Gender_encoded          131689 non-null  int64 
+ 13  Vehicle_Damage_encoded  131689 non-null  int64 
+dtypes: int64(11), object(3)
+memory usage: 14.1+ MB
+Replaced the ['Gender', 'Vehicle_Age', 'Vehicle_Damage'] columns with their encoded versions
+   Age  Driving_License  ...  Gender_encoded  Vehicle_Damage_encoded
+0   44                1  ...               0                       1
+1   76                1  ...               0                       0
+2   47                1  ...               0                       1
+3   21                1  ...               0                       0
+4   29                1  ...               1                       0
+
+[5 rows x 11 columns]
+Determining type of feature
+Attr Age is continuous
+Attr Driving_License is categorical
+Attr Region_Code is continuous
+Attr Previously_Insured is categorical
+Attr Annual_Premium is continuous
+Attr Policy_Sales_Channel is continuous
+Attr Vintage is continuous
+Attr Vehicle_Age_ordinal is categorical
+Attr Gender_encoded is categorical
+Attr Vehicle_Damage_encoded is categorical
+---------------------Task-1-Completed--------------------------
+---------------------Task-2-Started----------------------------
+Inititial Dataset count 131689
+
+Feature Age
+Mean               :38.8106068084654
+Standard Deviation :15.494455932192853
+Lower cutoff = -7.672760988113161
+Upper cutoff = 85.29397460504396
+Outlier count = 0
+Filtering the data set
+
+Feature Driving_License
+Mean               :0.9979193402638034
+Standard Deviation :0.04556694370158682
+Lower cutoff = 0.8612185091590429
+Upper cutoff = 1.1346201713685637
+Outlier count = 274
+Filtering the data set
+
+Feature Region_Code
+Mean               :26.407731233116465
+Standard Deviation :13.222132003580189
+Lower cutoff = -13.258664777624105
+Upper cutoff = 66.07412724385703
+Outlier count = 0
+Filtering the data set
+
+Feature Previously_Insured
+Mean               :0.45802229578054254
+Standard Deviation :0.4982366519278903
+Lower cutoff = -1.0366876600031283
+Upper cutoff = 1.9527322515642136
+Outlier count = 0
+Filtering the data set
+
+Feature Annual_Premium
+Mean               :30472.05259673553
+Standard Deviation :17120.169982518542
+Lower cutoff = -20888.457350820096
+Upper cutoff = 81832.56254429116
+Outlier count = 690
+Filtering the data set
+
+Feature Policy_Sales_Channel
+Mean               :112.37389175750621
+Standard Deviation :54.06433622706852
+Lower cutoff = -49.81911692369937
+Upper cutoff = 274.5669004387118
+Outlier count = 0
+Filtering the data set
+
+Feature Vintage
+Mean               :154.47036144578314
+Standard Deviation :83.79068007173944
+Lower cutoff = -96.9016787694352
+Upper cutoff = 405.8424016610015
+Outlier count = 0
+Filtering the data set
+
+Feature Vehicle_Age_ordinal
+Mean               :0.6073360107095047
+Standard Deviation :0.5672619232019509
+Lower cutoff = -1.094449758896348
+Upper cutoff = 2.3091217803153574
+Outlier count = 0
+Filtering the data set
+
+Feature Gender_encoded
+Mean               :0.4607917383820998
+Standard Deviation :0.49846224820670737
+Lower cutoff = -1.0345950062380223
+Upper cutoff = 1.956178483002222
+Outlier count = 0
+Filtering the data set
+
+Feature Vehicle_Damage_encoded
+Mean               :0.5050908395486708
+Standard Deviation :0.49997599500437545
+Lower cutoff = -0.9948371454644556
+Upper cutoff = 2.0050188245617973
+Outlier count = 0
+Filtering the data set
+Final dataset count after removing outliers = 130725
+
+Removing feature Driving_License, since the unique value left in the samples = 1
+Determining type of feature
+Final features
+Feature Age is continuous
+Feature Region_Code is continuous
+Feature Previously_Insured is categorical
+Feature Annual_Premium is continuous
+Feature Policy_Sales_Channel is continuous
+Feature Vintage is continuous
+Feature Vehicle_Age_ordinal is categorical
+Feature Gender_encoded is categorical
+Feature Vehicle_Damage_encoded is categorical
+Normalizing the data set, using min-max normalization
+Normalization complete
+        Age  Region_Code  ...  Gender_encoded  Vehicle_Damage_encoded
+0  0.369231     0.538462  ...             0.0                     1.0
+1  0.861538     0.057692  ...             0.0                     0.0
+2  0.415385     0.538462  ...             0.0                     1.0
+3  0.015385     0.211538  ...             0.0                     0.0
+4  0.138462     0.788462  ...             1.0                     0.0
+
+[5 rows x 10 columns]
+---------------------Task-2-Completed--------------------------
+---------------------Task-3-Started----------------------------
+unique feature value count = 9
+Summary of normalized data : {
+  "Age": {
+    "1.0": {
+      "mean": 0.3592262033499147,
+      "std": 0.18642265947548364
+    },
+    "0.0": {
+      "mean": 0.27835371741229487,
+      "std": 0.24224011012706498
+    }
+  },
+  "Region_Code": {
+    "1.0": {
+      "mean": 0.5147213611131136,
+      "std": 0.22525781100045275
+    },
+    "0.0": {
+      "mean": 0.5070472588778028,
+      "std": 0.25837371647767776
+    }
+  },
+  "Previously_Insured": {
+    "1.0": {
+      "0.0": [
+        15957,
+        16005
+      ],
+      "1.0": [
+        48,
+        16005
+      ]
+    },
+    "0.0": {
+      "0.0": [
+        54875,
+        114720
+      ],
+      "1.0": [
+        59845,
+        114720
+      ]
+    }
+  },
+  "Annual_Premium": {
+    "1.0": {
+      "mean": 0.3579357115665688,
+      "std": 0.2083782776534106
+    },
+    "0.0": {
+      "mean": 0.3445268118647404,
+      "std": 0.1966454689052933
+    }
+  },
+  "Policy_Sales_Channel": {
+    "1.0": {
+      "mean": 0.5629567920518666,
+      "std": 0.3454108191349708
+    },
+    "0.0": {
+      "mean": 0.7048676756719529,
+      "std": 0.3283362548834937
+    }
+  },
+  "Vintage": {
+    "1.0": {
+      "mean": 0.49922958763967573,
+      "std": 0.2910498586452688
+    },
+    "0.0": {
+      "mean": 0.4999906195557229,
+      "std": 0.2897781611753361
+    }
+  },
+  "Vehicle_Age_ordinal": {
+    "1.0": {
+      "1.0": [
+        1629,
+        16005
+      ],
+      "0.5": [
+        11897,
+        16005
+      ],
+      "0.0": [
+        2479,
+        16005
+      ]
+    },
+    "0.0": {
+      "1.0": [
+        3816,
+        114720
+      ],
+      "0.5": [
+        56607,
+        114720
+      ],
+      "0.0": [
+        54297,
+        114720
+      ]
+    }
+  },
+  "Gender_encoded": {
+    "1.0": {
+      "0.0": [
+        9729,
+        16005
+      ],
+      "1.0": [
+        6276,
+        16005
+      ]
+    },
+    "0.0": {
+      "0.0": [
+        60759,
+        114720
+      ],
+      "1.0": [
+        53961,
+        114720
+      ]
+    }
+  },
+  "Vehicle_Damage_encoded": {
+    "1.0": {
+      "1.0": [
+        15686,
+        16005
+      ],
+      "0.0": [
+        319,
+        16005
+      ]
+    },
+    "0.0": {
+      "1.0": [
+        50342,
+        114720
+      ],
+      "0.0": [
+        64378,
+        114720
+      ]
+    }
+  }
+}
+10 fold validation started
+Ola
+Iter : 1  started
+Accuracy  = 0.7659297789336801
+Precision = 0.2826086956521739
+Recall    = 0.593125
+Iter : 2  started
+Accuracy  = 0.7613401667559091
+Precision = 0.2797446314567615
+Recall    = 0.6017478152309613
+Iter : 3  started
+Accuracy  = 0.7675361431958999
+Precision = 0.2951205173427396
+Recall    = 0.6103343465045593
+Iter : 4  started
+Accuracy  = 0.7630230245544252
+Precision = 0.2749484839564321
+Recall    = 0.5952836201402167
+Iter : 5  started
+Accuracy  = 0.7666947142966419
+Precision = 0.28096947935368044
+Recall    = 0.5920554854981085
+Iter : 6  started
+Accuracy  = 0.7663122466151611
+Precision = 0.2853309481216458
+Recall    = 0.5925696594427244
+Iter : 7  started
+Accuracy  = 0.7699074428210816
+Precision = 0.2968564650059312
+Recall    = 0.6111111111111112
+Iter : 8  started
+Accuracy  = 0.764629388816645
+Precision = 0.2816613044749927
+Recall    = 0.6079545454545454
+Iter : 9  started
+Accuracy  = 0.7679186108773809
+Precision = 0.2889154466686585
+Recall    = 0.5965453423812461
+Iter : 10  started
+Accuracy  = 0.7660697887970616
+Precision = 0.27855887521968364
+Recall    = 0.6155339805825243
+
+Mean accuracy = 0.7659361305663885
+Mean precision = 0.28447148472526995
+Mean recall = 0.6016260906345997
+10 fold validation finished
+---------------------Task-3-Completed--------------------------
+
+---------------------Task-4-Started----------------------------
+10 fold validation started
+Iter : 1  started
+Accuracy  = 0.7657767918610877
+Precision = 0.28218116805721094
+Recall    = 0.591875
+Iter : 2  started
+Accuracy  = 0.761263673219613
+Precision = 0.27940749346500143
+Recall    = 0.6004993757802747
+Iter : 3  started
+Accuracy  = 0.7676891302684923
+Precision = 0.2950530035335689
+Recall    = 0.6091185410334347
+Iter : 4  started
+Accuracy  = 0.7629465310181289
+Precision = 0.27460223924572774
+Recall    = 0.5940089228808159
+Iter : 5  started
+Accuracy  = 0.7669241949055304
+Precision = 0.28109080011986814
+Recall    = 0.5914249684741488
+Iter : 6  started
+Accuracy  = 0.7663122466151611
+Precision = 0.2849462365591398
+Recall    = 0.5907120743034056
+Iter : 7  started
+Accuracy  = 0.770060429893674
+Precision = 0.29691211401425177
+Recall    = 0.6105006105006106
+Iter : 8  started
+Accuracy  = 0.7647058823529411
+Precision = 0.2814879906268307
+Recall    = 0.6066919191919192
+Iter : 9  started
+Accuracy  = 0.7680715979499733
+Precision = 0.2890881913303438
+Recall    = 0.5965453423812461
+Iter : 10  started
+Accuracy  = 0.7663758800122437
+Precision = 0.2786259541984733
+Recall    = 0.6142394822006473
+
+Mean accuracy = 0.7660126358096846
+Mean precision = 0.2843395191150417
+Mean recall = 0.6005616236746502
+10 fold validation finished
+---------------------Task-4-Finished---------------------------
