@@ -1,0 +1,419 @@
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 131689 entries, 0 to 131688
+Data columns (total 12 columns):
+ #   Column                Non-Null Count   Dtype 
+---  ------                --------------   ----- 
+ 0   id                    131689 non-null  int64 
+ 1   Gender                131689 non-null  object
+ 2   Age                   131689 non-null  int64 
+ 3   Driving_License       131689 non-null  int64 
+ 4   Region_Code           131689 non-null  int64 
+ 5   Previously_Insured    131689 non-null  int64 
+ 6   Vehicle_Age           131689 non-null  object
+ 7   Vehicle_Damage        131689 non-null  object
+ 8   Annual_Premium        131689 non-null  int64 
+ 9   Policy_Sales_Channel  131689 non-null  int64 
+ 10  Vintage               131689 non-null  int64 
+ 11  Response              131689 non-null  int64 
+dtypes: int64(9), object(3)
+memory usage: 12.1+ MB
+Analzing dataset
+Attribute => Gender has 2 unique values.[ Male, Female, ]
+Attribute => Age has 66 unique values.
+Attribute => Driving_License has 2 unique values.[ 1, 0, ]
+Attribute => Region_Code has 53 unique values.
+Attribute => Previously_Insured has 2 unique values.[ 0, 1, ]
+Attribute => Vehicle_Age has 3 unique values.[ > 2 Years, 1-2 Year, < 1 Year, ]
+Attribute => Vehicle_Damage has 2 unique values.[ Yes, No, ]
+Attribute => Annual_Premium has 36617 unique values.
+Attribute => Policy_Sales_Channel has 140 unique values.
+Attribute => Vintage has 290 unique values.
+Label     => Response has 2 unique values.[ 1, 0, ]
+
+Determining type of feature
+Attr Gender is categorical
+Attr Age is continuous
+Attr Driving_License is categorical
+Attr Region_Code is continuous
+Attr Previously_Insured is categorical
+Attr Vehicle_Age is categorical
+Attr Vehicle_Damage is categorical
+Attr Annual_Premium is continuous
+Attr Policy_Sales_Channel is continuous
+Attr Vintage is continuous
+-------------------------Task-1-Started---------------------------
+Accuracy  = 0.8024072597486426 and Depth = 14
+Precision = 0.3429070136464614 and Depth = 14
+Recall    = 0.6702853598014888 and Depth = 14
+The total number of nodes in the tree : 629
+-------------------------Task-1-Completed-------------------------
+
+-------------------------Task-2-Started---------------------------
+Testing tree #0
+Accuracy  = 0.8033564946652998 and Depth = 12
+Precision = 0.33988533988533987 and Depth = 12
+Recall    = 0.6436104218362283 and Depth = 12
+# of nodes in tree 447
+
+Testing tree #1
+Accuracy  = 0.7896875118654365 and Depth = 12
+Precision = 0.32910084157684927 and Depth = 12
+Recall    = 0.6913771712158809 and Depth = 12
+# of nodes in tree 473
+
+Testing tree #2
+Accuracy  = 0.7847894596954854 and Depth = 12
+Precision = 0.3261735419630156 and Depth = 12
+Recall    = 0.7112282878411911 and Depth = 12
+# of nodes in tree 453
+
+Testing tree #3
+Accuracy  = 0.7934085127387326 and Depth = 12
+Precision = 0.33293142426526 and Depth = 12
+Recall    = 0.6851736972704715 and Depth = 12
+# of nodes in tree 421
+
+Testing tree #4
+Accuracy  = 0.7924592778220754 and Depth = 12
+Precision = 0.3306134783922635 and Depth = 12
+Recall    = 0.6786600496277916 and Depth = 12
+# of nodes in tree 452
+
+Testing tree #5
+Accuracy  = 0.7964080950753692 and Depth = 12
+Precision = 0.334057746041602 and Depth = 12
+Recall    = 0.6674937965260546 and Depth = 12
+# of nodes in tree 411
+
+Testing tree #6
+Accuracy  = 0.7945096252420549 and Depth = 12
+Precision = 0.32501599488163785 and Depth = 12
+Recall    = 0.630272952853598 and Depth = 12
+# of nodes in tree 460
+
+Testing tree #7
+Accuracy  = 0.8028628925086381 and Depth = 12
+Precision = 0.3405186385737439 and Depth = 12
+Recall    = 0.6516749379652605 and Depth = 12
+# of nodes in tree 459
+
+Testing tree #8
+Accuracy  = 0.7921555226487451 and Depth = 12
+Precision = 0.32792903028449066 and Depth = 12
+Recall    = 0.6650124069478908 and Depth = 12
+# of nodes in tree 432
+
+Testing tree #9
+Accuracy  = 0.7942438394653909 and Depth = 12
+Precision = 0.3343896182284593 and Depth = 12
+Recall    = 0.6873449131513648 and Depth = 12
+# of nodes in tree 452
+
+The Best tree : Root #0
+Accuracy  = 0.8033564946652998 and Depth = 12
+Precision = 0.33988533988533987 and Depth = 12
+Recall    = 0.6436104218362283 and Depth = 12
+The total number of nodes in the tree : 447
+-------------------------Task-2-Completed-------------------------
+
+-------------------------Task-3-Started---------------------------
+Metrics before pruning
+Accuracy  = 0.8033564946652998 and Depth = 12
+Precision = 0.33988533988533987 and Depth = 12
+Recall    = 0.6436104218362283 and Depth = 12
+The total number of nodes in the tree : 447
+
+Pruning started.
+Base accuracy = 0.8100770778752325
+Non decreasing pruning accuracy from 0.0 to 0.8100770778752325
+Non decreasing pruning accuracy from 0.8100770778752325 to 0.8101150472718989
+Non decreasing pruning accuracy from 0.8101150472718989 to 0.8120135171052132
+Non decreasing pruning accuracy from 0.8120135171052132 to 0.8139119869385275
+Non decreasing pruning accuracy from 0.8139119869385275 to 0.8139499563351938
+Pruned nodeId = 3
+Pruning iteration 1 completed
+Base accuracy = 0.8139499563351938
+Non decreasing pruning accuracy from 0.0 to 0.8139499563351938
+Non decreasing pruning accuracy from 0.8139499563351938 to 0.8139879257318601
+Non decreasing pruning accuracy from 0.8139879257318601 to 0.8158863955651745
+Non decreasing pruning accuracy from 0.8158863955651745 to 0.8177848653984888
+Pruned nodeId = 254
+Pruning iteration 2 completed
+Base accuracy = 0.8177848653984888
+Non decreasing pruning accuracy from 0.0 to 0.8177848653984888
+Non decreasing pruning accuracy from 0.8177848653984888 to 0.817822834795155
+Non decreasing pruning accuracy from 0.817822834795155 to 0.8197213046284695
+Non decreasing pruning accuracy from 0.8197213046284695 to 0.820594600751794
+Pruned nodeId = 142
+Pruning iteration 3 completed
+Base accuracy = 0.820594600751794
+Non decreasing pruning accuracy from 0.0 to 0.820594600751794
+Non decreasing pruning accuracy from 0.820594600751794 to 0.8206325701484604
+Non decreasing pruning accuracy from 0.8206325701484604 to 0.8225310399817747
+Pruned nodeId = 310
+Pruning iteration 4 completed
+Base accuracy = 0.8225310399817747
+Non decreasing pruning accuracy from 0.0 to 0.8225310399817747
+Non decreasing pruning accuracy from 0.8225310399817747 to 0.822569009378441
+Non decreasing pruning accuracy from 0.822569009378441 to 0.8229487033451038
+Non decreasing pruning accuracy from 0.8229487033451038 to 0.823100580931769
+Pruned nodeId = 184
+Pruning iteration 5 completed
+Base accuracy = 0.823100580931769
+Non decreasing pruning accuracy from 0.0 to 0.823100580931769
+Non decreasing pruning accuracy from 0.823100580931769 to 0.8231385503284353
+Non decreasing pruning accuracy from 0.8231385503284353 to 0.8235182442950981
+Pruned nodeId = 233
+Pruning iteration 6 completed
+Base accuracy = 0.8235182442950981
+Non decreasing pruning accuracy from 0.0 to 0.8235182442950981
+Non decreasing pruning accuracy from 0.8235182442950981 to 0.8235562136917645
+Non decreasing pruning accuracy from 0.8235562136917645 to 0.8237080912784296
+Pruned nodeId = 222
+Pruning iteration 7 completed
+Base accuracy = 0.8237080912784296
+Non decreasing pruning accuracy from 0.0 to 0.8237080912784296
+Non decreasing pruning accuracy from 0.8237080912784296 to 0.8237460606750959
+Pruned nodeId = 405
+Pruning iteration 8 completed
+Base accuracy = 0.8237460606750959
+Non decreasing pruning accuracy from 0.0 to 0.8237460606750959
+Non decreasing pruning accuracy from 0.8237460606750959 to 0.8237840300717622
+Pruned nodeId = 178
+Pruning iteration 9 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.8237840300717622
+Pruned nodeId = 444
+Pruning iteration 10 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.7133310551695333
+Non decreasing pruning accuracy from 0.7133310551695333 to 0.763830352735695
+Non decreasing pruning accuracy from 0.763830352735695 to 0.7716520484489502
+Non decreasing pruning accuracy from 0.7716520484489502 to 0.8019136575919809
+Non decreasing pruning accuracy from 0.8019136575919809 to 0.8024831985419751
+Non decreasing pruning accuracy from 0.8024831985419751 to 0.8109503739985572
+Non decreasing pruning accuracy from 0.8109503739985572 to 0.8211261723051221
+Non decreasing pruning accuracy from 0.8211261723051221 to 0.8221893154117781
+Non decreasing pruning accuracy from 0.8221893154117781 to 0.8235941830884307
+Non decreasing pruning accuracy from 0.8235941830884307 to 0.8237840300717622
+Pruned nodeId = 241
+Pruning iteration 11 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.7133310551695333
+Non decreasing pruning accuracy from 0.7133310551695333 to 0.763830352735695
+Non decreasing pruning accuracy from 0.763830352735695 to 0.7716520484489502
+Non decreasing pruning accuracy from 0.7716520484489502 to 0.8019136575919809
+Non decreasing pruning accuracy from 0.8019136575919809 to 0.8024831985419751
+Non decreasing pruning accuracy from 0.8024831985419751 to 0.8109503739985572
+Non decreasing pruning accuracy from 0.8109503739985572 to 0.8211261723051221
+Non decreasing pruning accuracy from 0.8211261723051221 to 0.8221893154117781
+Non decreasing pruning accuracy from 0.8221893154117781 to 0.8235941830884307
+Non decreasing pruning accuracy from 0.8235941830884307 to 0.8237840300717622
+Pruned nodeId = 215
+Pruning iteration 12 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.7133310551695333
+Non decreasing pruning accuracy from 0.7133310551695333 to 0.763830352735695
+Non decreasing pruning accuracy from 0.763830352735695 to 0.7716520484489502
+Non decreasing pruning accuracy from 0.7716520484489502 to 0.8019136575919809
+Non decreasing pruning accuracy from 0.8019136575919809 to 0.8024831985419751
+Non decreasing pruning accuracy from 0.8024831985419751 to 0.8109503739985572
+Non decreasing pruning accuracy from 0.8109503739985572 to 0.8211261723051221
+Non decreasing pruning accuracy from 0.8211261723051221 to 0.8221893154117781
+Non decreasing pruning accuracy from 0.8221893154117781 to 0.8235941830884307
+Non decreasing pruning accuracy from 0.8235941830884307 to 0.8237840300717622
+Pruned nodeId = 210
+Pruning iteration 13 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.7133310551695333
+Non decreasing pruning accuracy from 0.7133310551695333 to 0.763830352735695
+Non decreasing pruning accuracy from 0.763830352735695 to 0.7716520484489502
+Non decreasing pruning accuracy from 0.7716520484489502 to 0.8019136575919809
+Non decreasing pruning accuracy from 0.8019136575919809 to 0.8024831985419751
+Non decreasing pruning accuracy from 0.8024831985419751 to 0.8109503739985572
+Non decreasing pruning accuracy from 0.8109503739985572 to 0.8211261723051221
+Non decreasing pruning accuracy from 0.8211261723051221 to 0.8221893154117781
+Non decreasing pruning accuracy from 0.8221893154117781 to 0.8235941830884307
+Non decreasing pruning accuracy from 0.8235941830884307 to 0.8237080912784296
+Non decreasing pruning accuracy from 0.8237080912784296 to 0.8237840300717622
+Pruned nodeId = 196
+Pruning iteration 14 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.7133310551695333
+Non decreasing pruning accuracy from 0.7133310551695333 to 0.763830352735695
+Non decreasing pruning accuracy from 0.763830352735695 to 0.7716520484489502
+Non decreasing pruning accuracy from 0.7716520484489502 to 0.8019136575919809
+Non decreasing pruning accuracy from 0.8019136575919809 to 0.8024831985419751
+Non decreasing pruning accuracy from 0.8024831985419751 to 0.8109503739985572
+Non decreasing pruning accuracy from 0.8109503739985572 to 0.8211261723051221
+Non decreasing pruning accuracy from 0.8211261723051221 to 0.8221893154117781
+Non decreasing pruning accuracy from 0.8221893154117781 to 0.8235941830884307
+Non decreasing pruning accuracy from 0.8235941830884307 to 0.8237080912784296
+Non decreasing pruning accuracy from 0.8237080912784296 to 0.8237840300717622
+Pruned nodeId = 172
+Pruning iteration 15 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.7133310551695333
+Non decreasing pruning accuracy from 0.7133310551695333 to 0.763830352735695
+Non decreasing pruning accuracy from 0.763830352735695 to 0.7716520484489502
+Non decreasing pruning accuracy from 0.7716520484489502 to 0.8019136575919809
+Non decreasing pruning accuracy from 0.8019136575919809 to 0.8024831985419751
+Non decreasing pruning accuracy from 0.8024831985419751 to 0.8109503739985572
+Non decreasing pruning accuracy from 0.8109503739985572 to 0.8211261723051221
+Non decreasing pruning accuracy from 0.8211261723051221 to 0.8221893154117781
+Non decreasing pruning accuracy from 0.8221893154117781 to 0.8235941830884307
+Non decreasing pruning accuracy from 0.8235941830884307 to 0.8237080912784296
+Non decreasing pruning accuracy from 0.8237080912784296 to 0.8237840300717622
+Pruned nodeId = 163
+Pruning iteration 16 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.7133310551695333
+Non decreasing pruning accuracy from 0.7133310551695333 to 0.763830352735695
+Non decreasing pruning accuracy from 0.763830352735695 to 0.7716520484489502
+Non decreasing pruning accuracy from 0.7716520484489502 to 0.8019136575919809
+Non decreasing pruning accuracy from 0.8019136575919809 to 0.8024831985419751
+Non decreasing pruning accuracy from 0.8024831985419751 to 0.8109503739985572
+Non decreasing pruning accuracy from 0.8109503739985572 to 0.8211261723051221
+Non decreasing pruning accuracy from 0.8211261723051221 to 0.8221893154117781
+Non decreasing pruning accuracy from 0.8221893154117781 to 0.8235941830884307
+Non decreasing pruning accuracy from 0.8235941830884307 to 0.8237080912784296
+Non decreasing pruning accuracy from 0.8237080912784296 to 0.8237460606750959
+Non decreasing pruning accuracy from 0.8237460606750959 to 0.8237840300717622
+Pruned nodeId = 136
+Pruning iteration 17 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.7133310551695333
+Non decreasing pruning accuracy from 0.7133310551695333 to 0.763830352735695
+Non decreasing pruning accuracy from 0.763830352735695 to 0.7716520484489502
+Non decreasing pruning accuracy from 0.7716520484489502 to 0.8019136575919809
+Non decreasing pruning accuracy from 0.8019136575919809 to 0.8024831985419751
+Non decreasing pruning accuracy from 0.8024831985419751 to 0.8109503739985572
+Non decreasing pruning accuracy from 0.8109503739985572 to 0.8211261723051221
+Non decreasing pruning accuracy from 0.8211261723051221 to 0.8221893154117781
+Non decreasing pruning accuracy from 0.8221893154117781 to 0.8235941830884307
+Non decreasing pruning accuracy from 0.8235941830884307 to 0.8237080912784296
+Non decreasing pruning accuracy from 0.8237080912784296 to 0.8237460606750959
+Non decreasing pruning accuracy from 0.8237460606750959 to 0.8237840300717622
+Pruned nodeId = 120
+Pruning iteration 18 completed
+Base accuracy = 0.8237840300717622
+Non decreasing pruning accuracy from 0.0 to 0.7133310551695333
+Non decreasing pruning accuracy from 0.7133310551695333 to 0.763830352735695
+Non decreasing pruning accuracy from 0.763830352735695 to 0.7716520484489502
+Non decreasing pruning accuracy from 0.7716520484489502 to 0.8019136575919809
+Non decreasing pruning accuracy from 0.8019136575919809 to 0.8024831985419751
+Non decreasing pruning accuracy from 0.8024831985419751 to 0.8109503739985572
+Non decreasing pruning accuracy from 0.8109503739985572 to 0.8211261723051221
+Non decreasing pruning accuracy from 0.8211261723051221 to 0.8221893154117781
+Non decreasing pruning accuracy from 0.8221893154117781 to 0.8235941830884307
+Non decreasing pruning accuracy from 0.8235941830884307 to 0.8237080912784296
+Non decreasing pruning accuracy from 0.8237080912784296 to 0.8237460606750959
+No optimal pruning found!
+Reduced Error Pruning finished
+No of nodes after R.E.P. 97
+
+Pruning finished.
+
+Metrics after pruning
+Accuracy  = 0.8228727645517713 and Depth = 12
+Precision = 0.3578615111461827 and Depth = 12
+Recall    = 0.5626550868486352 and Depth = 12
+The total number of nodes in the tree : 97
+
+Collecting Data for different heights
+Collecting Data for depth = 1
+Accuracy  = 0.8775866651478909 and Depth = 1
+Precision = 0 and Depth = 1
+Recall    = 0.0 and Depth = 1
+The total number of nodes in the tree : 3
+Collecting Data for depth = 2
+Accuracy  = 0.8775866651478909 and Depth = 2
+Precision = 0 and Depth = 2
+Recall    = 0.0 and Depth = 2
+The total number of nodes in the tree : 5
+Collecting Data for depth = 3
+Accuracy  = 0.7134449633595322 and Depth = 3
+Precision = 0.2844320335095243 and Depth = 3
+Recall    = 0.8846153846153846 and Depth = 3
+The total number of nodes in the tree : 9
+Collecting Data for depth = 4
+Accuracy  = 0.7646277100656871 and Depth = 4
+Precision = 0.31408573928258965 and Depth = 4
+Recall    = 0.7794665012406948 and Depth = 4
+The total number of nodes in the tree : 15
+Collecting Data for depth = 5
+Accuracy  = 0.7646277100656871 and Depth = 5
+Precision = 0.31408573928258965 and Depth = 5
+Recall    = 0.7794665012406948 and Depth = 5
+The total number of nodes in the tree : 27
+Collecting Data for depth = 6
+Accuracy  = 0.7823214489121768 and Depth = 6
+Precision = 0.3252542136787853 and Depth = 6
+Recall    = 0.7242555831265509 and Depth = 6
+The total number of nodes in the tree : 47
+Collecting Data for depth = 7
+Accuracy  = 0.7822455101188442 and Depth = 7
+Precision = 0.3241350329177756 and Depth = 7
+Recall    = 0.717741935483871 and Depth = 7
+The total number of nodes in the tree : 78
+Collecting Data for depth = 8
+Accuracy  = 0.7818658161521813 and Depth = 8
+Precision = 0.32461388618338666 and Depth = 8
+Recall    = 0.7236352357320099 and Depth = 8
+The total number of nodes in the tree : 117
+Collecting Data for depth = 9
+Accuracy  = 0.7804609484755287 and Depth = 9
+Precision = 0.32255826859045506 and Depth = 9
+Recall    = 0.7211538461538461 and Depth = 9
+The total number of nodes in the tree : 175
+Collecting Data for depth = 10
+Accuracy  = 0.7909784713520902 and Depth = 10
+Precision = 0.3295980875541611 and Depth = 10
+Recall    = 0.68424317617866 and Depth = 10
+The total number of nodes in the tree : 251
+Collecting Data for depth = 11
+Accuracy  = 0.7936363291187303 and Depth = 11
+Precision = 0.33119560238204304 and Depth = 11
+Recall    = 0.6727667493796526 and Depth = 11
+The total number of nodes in the tree : 346
+Collecting Data for depth = 12
+Accuracy  = 0.7932186657554011 and Depth = 12
+Precision = 0.3285493827160494 and Depth = 12
+Recall    = 0.6603598014888338 and Depth = 12
+The total number of nodes in the tree : 440
+Collecting Data for depth = 13
+Accuracy  = 0.7949652580020503 and Depth = 13
+Precision = 0.33163107397090685 and Depth = 13
+Recall    = 0.6647022332506204 and Depth = 13
+The total number of nodes in the tree : 538
+Collecting Data for depth = 14
+Accuracy  = 0.795458860158712 and Depth = 14
+Precision = 0.32911992415863484 and Depth = 14
+Recall    = 0.6460918114143921 and Depth = 14
+The total number of nodes in the tree : 644
+Collecting Data for depth = 15
+Accuracy  = 0.796901697232031 and Depth = 15
+Precision = 0.3307851568721134 and Depth = 15
+Recall    = 0.6442307692307693 and Depth = 15
+The total number of nodes in the tree : 755
+Collecting Data for depth = 16
+Accuracy  = 0.7942818088620572 and Depth = 16
+Precision = 0.32697160883280757 and Depth = 16
+Recall    = 0.6429900744416873 and Depth = 16
+The total number of nodes in the tree : 871
+Collecting Data for depth = 17
+Accuracy  = 0.7967877890420321 and Depth = 17
+Precision = 0.32838709677419353 and Depth = 17
+Recall    = 0.6315136476426799 and Depth = 17
+The total number of nodes in the tree : 993
+Collecting Data for depth = 18
+Accuracy  = 0.7958765235220412 and Depth = 18
+Precision = 0.32331691297208537 and Depth = 18
+Recall    = 0.6107320099255583 and Depth = 18
+The total number of nodes in the tree : 1105
+Collecting Data for depth = 19
+Accuracy  = 0.7995975243953374 and Depth = 19
+Precision = 0.32408359027064065 and Depth = 19
+Recall    = 0.586848635235732 and Depth = 19
+The total number of nodes in the tree : 1215
+-------------------------Task-3-Completed-------------------------
