@@ -1,0 +1,3 @@
+PCA https://www.youtube.com/watch?v=QdBy02ExhGI
+GitHub https://github.com/krishnaik06/Principle-Component-Analysis/blob/master/PCA.ipynb
+https://365datascience.com/tutorials/python-tutorials/pca-k-means/
