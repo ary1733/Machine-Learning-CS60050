@@ -1,3 +1,5 @@
 PCA https://www.youtube.com/watch?v=QdBy02ExhGI
 GitHub https://github.com/krishnaik06/Principle-Component-Analysis/blob/master/PCA.ipynb
 https://365datascience.com/tutorials/python-tutorials/pca-k-means/
+https://towardsdatascience.com/create-your-own-k-means-clustering-algorithm-in-python-d7d4c9077670
+https://course.ccs.neu.edu/cs6140sp15/7_locality_cluster/Assignment-6/NMI.pdf
