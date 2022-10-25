@@ -1,0 +1,30 @@
+   1   2   3   4    5   6   7   8   9   ...  49  50  51  52  53  54  55  56  57
+0   1   0   3   0  NaN   0   2   2   2  ...   2   2   2   2   1   1   1   2   2
+1   1   0   3   3  1.0   0   3   1   3  ...   2   2   2   2   2   2   1   2   2
+2   1   0   3   3  2.0   0   3   3   3  ...   2   2   2   2   2   2   2   1   2
+3   1   0   2   3  2.0   1   3   3   3  ...   2   2   2   2   2   2   2   2   2
+4   1   0   3   2  1.0   1   3   3   3  ...   2   2   2   2   2   2   1   2   2
+
+[5 rows x 57 columns]
+Dataset loaded successfully!
+Label attribute separated
+Attribute 5 has 4 missing data.
+Attribute 39 has 1 missing data.
+Missing data handled using mode!
+-------------------------Task-1-Started---------------------------
+21 components of explained variance captured 0.9533946229824255 variance
+-------------------------Task-1-Finished--------------------------
+-------------------------Task-2-Started---------------------------
+-------------------------Task-2-Finished--------------------------
+-------------------------Task-3-Started---------------------------
+Started KMeans fitting
+for k = 2, NMI = 0.0004887309814197579
+for k = 3, NMI = 0.3838705208427554
+for k = 4, NMI = 0.13142052694042242
+for k = 5, NMI = 0.19846481850687905
+for k = 6, NMI = 0.3610792667914908
+for k = 7, NMI = 0.14329673309688376
+for k = 8, NMI = 0.24698745548938442
+KMeans fitting finished for all k
+k = 3 corresponds to max NMI = 0.3838705208427554
+-------------------------Task-3-Finished--------------------------
