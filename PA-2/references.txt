@@ -3,3 +3,7 @@ GitHub https://github.com/krishnaik06/Principle-Component-Analysis/blob/master/P
 https://365datascience.com/tutorials/python-tutorials/pca-k-means/
 https://towardsdatascience.com/create-your-own-k-means-clustering-algorithm-in-python-d7d4c9077670
 https://course.ccs.neu.edu/cs6140sp15/7_locality_cluster/Assignment-6/NMI.pdf
+
+https://www.youtube.com/watch?v=Zj1CoJk2feE
+https://www.youtube.com/watch?v=797iq6m64w0
+https://automaticaddison.com/stepwise-forward-selection-algorithm-from-scratch/
