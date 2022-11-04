@@ -11,7 +11,7 @@
 # Student 2 : Seemant Guruprasad Achari 19CS30057
 # 
 
-# In[176]:
+# In[123]:
 
 
 # importing various tools and libraries
@@ -24,7 +24,7 @@ from sklearn import svm
 from sklearn.neural_network import MLPClassifier
 
 
-# In[118]:
+# In[124]:
 
 
 # Column 1 is defined as the class label
@@ -34,7 +34,7 @@ LABEL = 1
 np.random.seed(101)
 
 
-# In[119]:
+# In[125]:
 
 
 # loading the dataset
@@ -43,7 +43,7 @@ df = pd.read_csv('lung-cancer.data', header = None, na_values=["?"])
 df.columns += 1
 
 
-# In[120]:
+# In[126]:
 
 
 print(df.head())
@@ -51,7 +51,7 @@ print(df.head())
 print("Dataset loaded successfully!")
 
 
-# In[121]:
+# In[127]:
 
 
 for attr,value in df.isna().sum().items():
@@ -59,7 +59,7 @@ for attr,value in df.isna().sum().items():
         print(f"Attribute {attr} has {value} missing data.")
 
 
-# In[122]:
+# In[128]:
 
 
 # Filling the na values with mode of the columns
@@ -67,7 +67,7 @@ fill_mode = lambda col: col.replace(np.nan, col.mode()[0])
 df_without_na = df.apply(fill_mode, axis=0)
 
 
-# In[123]:
+# In[129]:
 
 
 for attr,value in df_without_na.isna().sum().items():
@@ -76,16 +76,16 @@ for attr,value in df_without_na.isna().sum().items():
 print("Missing data handled using mode!")
 
 
-# In[124]:
+# In[130]:
 
 
 print(df_without_na.head())
 
 
-# In[125]:
+# In[131]:
 
 
-# splitting dataset index maintaing the ratio of true and false examples
+# splitting dataset index maintaing the ratio of class labels
 def train_test_split(df,train_sample=0.5,target_col= LABEL):
     all_indexes=[]
     df_grouped= df.groupby(target_col)
@@ -95,39 +95,27 @@ def train_test_split(df,train_sample=0.5,target_col= LABEL):
     g = all_indexes[0].values
     for k in all_indexes[1:]:
         g=np.hstack([g,k.values])
-        #np.hstack([all_indexes[0].values,all_indexes[1].values])
 
     train_df = df[df.index.isin(g) ]
     test_df = df[~df.index.isin(g)]
     return train_df, test_df 
 
 
-# In[126]:
+# In[132]:
 
 
-df_without_na[LABEL].value_counts(True)
-
-
-# In[127]:
-
-
+print("-------------------------Task-1-Started---------------------------")
 train_df, test_df = train_test_split(df_without_na,0.8)
 
 
-# In[128]:
-
-
-train_df[LABEL].value_counts()
-
-
-# In[129]:
+# In[133]:
 
 
 print(f"The shape of training dataset {train_df.shape}")
 print(f"The shape of testing dataset {test_df.shape}")
 
 
-# In[130]:
+# In[134]:
 
 
 train_stats = train_df.describe()
@@ -136,7 +124,7 @@ train_stats = train_stats.transpose()
 print(train_stats)
 
 
-# In[131]:
+# In[135]:
 
 
 attr_to_drop = []
@@ -150,7 +138,7 @@ test_df_upd = test_df.drop(attr_to_drop, axis = 1)
         
 
 
-# In[132]:
+# In[136]:
 
 
 train_labels = train_df_upd.pop(LABEL)
@@ -159,7 +147,7 @@ test_labels = test_df_upd.pop(LABEL)
 
 # ### Data Normalization
 
-# In[166]:
+# In[137]:
 
 
 def standard_scalar_normalization(df, df_stats):
@@ -169,43 +157,24 @@ def standard_scalar_normalization(df, df_stats):
     return norm_df
 
 
-# In[134]:
+# In[138]:
 
 
 norm_train = standard_scalar_normalization(train_df_upd, train_stats_upd)
 norm_test = standard_scalar_normalization(test_df_upd, train_stats_upd)
 
 
-# In[135]:
+# In[139]:
 
 
 print("Normalization complete")
+print("-------------------------Task-1-Finished--------------------------")
 
 
-# In[136]:
+# In[140]:
 
 
-#Create a svm Classifier
-model = svm.SVC(C = 1, # reg paramater
-                kernel='linear', #kernel{‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’}, default=’rbf’
-               ) # Linear Kernel
-
-#Train the model using the training sets
-model.fit(norm_train, train_labels)
-
-#Predict the response for test dataset
-y_pred = model.predict(norm_test)
-
-
-# In[137]:
-
-
-from sklearn import metrics
-print("Accuracy:",metrics.accuracy_score(test_labels, y_pred))
-
-
-# In[138]:
-
+print("-------------------------Task-2-Started---------------------------")
 
 def GetAccuracy(trueLabel, pred, printDetails = True):
     total_samples = len(trueLabel)
@@ -217,26 +186,26 @@ def GetAccuracy(trueLabel, pred, printDetails = True):
     return accuracy
 
 
-# In[139]:
+# In[141]:
 
 
 model_map = {}
 accuracy_map = {}
 
 
-# In[140]:
+# In[142]:
 
 
 kernel_types = ['linear', 'poly', 'rbf']
 
 for kernel_type in kernel_types:
 
-    #Create a linear kernel svm Classifier
+    #Create a kernel svm Classifier
     model = svm.SVC(C = 1, 
                     kernel=kernel_type, 
                     degree = 2 # will be ignored by all kernel except poly
                     # Thus poly will become quadratic
-                ) # Linear Kernel
+                ) #  Kernel
 
     #Train the model using the training sets
     model.fit(norm_train, train_labels)
@@ -254,10 +223,13 @@ for kernel_type in kernel_types:
 
     model_map[kernel_type] = model
     accuracy_map[kernel_type] = acc
+print("-------------------------Task-2-Finished--------------------------")
 
 
-# In[149]:
+# In[143]:
 
+
+print("-------------------------Task-3-Started---------------------------")
 
 mlp_model_map= {}
 mlp_model_accuracy = {}
@@ -267,63 +239,41 @@ mlp_models_sizes = {
 }
 
 
-# In[151]:
-
-
-for name, layerSize in mlp_models_sizes.items():
-    mlp = MLPClassifier(learning_rate_init = 0.001, batch_size=32, hidden_layer_sizes=layerSize, solver='sgd')
-    mlp.fit(norm_train, train_labels)
-    pred = mlp.predict(norm_test)
-    acc = GetAccuracy(test_labels, pred, False)
-    print(f"Testing Accuracy for MLP with {name}  = {acc}")
-    mlp_model_map[name] = mlp
-    mlp_model_accuracy[name] = acc
-
-
-# In[143]:
-
-
-mlp = MLPClassifier(learning_rate_init = 0.001, batch_size=32, hidden_layer_sizes=(16,), solver='sgd')
-mlp
-
-
 # In[144]:
 
 
-mlp.fit(norm_train, train_labels)
+for name, layerSize in mlp_models_sizes.items():
+    mlp = MLPClassifier(learning_rate_init = 0.001, batch_size=16, hidden_layer_sizes=layerSize, solver='sgd', max_iter = 5000)
+    mlp.fit(norm_train, train_labels)
+    pred = mlp.predict(norm_test)
+    acc = GetAccuracy(test_labels, pred, False)
+    print(f"{name} has {layerSize} nodes")
+    print(f"Testing Accuracy for MLP with {name}  = {acc}")
+    mlp_model_map[name] = mlp
+    mlp_model_accuracy[name] = acc
+print("-------------------------Task-3-Finished--------------------------")
 
 
 # In[145]:
 
 
-pred = mlp.predict(norm_test)
 
-
-# In[148]:
-
-
-GetAccuracy(test_labels, pred)
-
-
-# In[156]:
-
-
-
+print("-------------------------Task-4-Started---------------------------")
 
 bestSetting = max(mlp_model_accuracy, key= mlp_model_accuracy.get)
 LayerSize = mlp_models_sizes[bestSetting]
 y_data = []
 x_data = [0.1, 0.01, 0.001, 0.0001, 0.00001]
 for l_rate in x_data:
-    mlp = MLPClassifier(learning_rate_init = l_rate, batch_size=32, hidden_layer_sizes=layerSize, solver='sgd')
+    mlp = MLPClassifier(learning_rate_init = l_rate, batch_size=16, hidden_layer_sizes=layerSize, solver='sgd', max_iter = 5000)
     mlp.fit(norm_train, train_labels)
     pred = mlp.predict(norm_test)
     acc = GetAccuracy(test_labels, pred, False)
-    print(f"Testing Accuracy for MLP with {name}  = {acc}")
+    print(f"Testing Accuracy for MLP with learning rate {l_rate}  = {acc}")
     y_data.append(acc)
 
 
-# In[158]:
+# In[146]:
 
 
 plt.figure(figsize = (10,8))
@@ -334,11 +284,13 @@ plt.ylabel("accuracy")
 plt.xscale("log")
 plt.show()
 
+print("-------------------------Task-4-Finished--------------------------")
 
-# In[167]:
+
+# In[147]:
 
 
-def modelEvaluation(model, df):
+def modelEvaluation(model, df, printInfo = False):
     fill_mode = lambda col: col.replace(np.nan, col.mode()[0])
     df_without_na = df.apply(fill_mode, axis=0)
     train_df, test_df = train_test_split(df_without_na,0.8)
@@ -348,7 +300,8 @@ def modelEvaluation(model, df):
     attr_to_drop = []
     for row, val in train_stats["std"].items():
         if val == 0:
-            print(f"Attribute {row} has 0 std in the training set, hence droping it.")
+            if (printInfo):
+                print(f"Attribute {row} has 0 std in the training set, hence droping it.")
             attr_to_drop.append(row)
             return 0.0 # since it has a useless attribute
     train_stats_upd = train_stats.drop(attr_to_drop)
@@ -364,43 +317,42 @@ def modelEvaluation(model, df):
     mlp.fit(norm_train, train_labels)
     pred = mlp.predict(norm_test)
     acc = GetAccuracy(test_labels, pred, False)
-    print(f"Testing Accuracy for MLP = {acc}")
+    if (printInfo):
+        print(f"Testing Accuracy for MLP = {acc}")
     return acc
 
-    
+# Stepwise Forward Selection
 def sfs(model, pd_data):
     '''
     # takes data frame and model as input
     # and then returns the dataframe with the optimal attributes
     '''
-    # Record the name of the column that contains the instance IDs and the class
+    # get len of attributes
     no_of_columns = len(pd_data.columns) # number of columns
     class_column_index = 0
+    # get the class label
     class_column_colname = pd_data.columns[class_column_index]
  
     # Record the number of available attributes
     no_of_available_attributes = no_of_columns - 1
  
-    # Create a dataframe containing the available attributes by removing
-    # the Instance and the Class Column
+    # Create a dataframe containing the available attributes by removing the Class Column
     available_attributes_df = pd_data.drop(columns = [class_column_colname]) 
  
-    # Create an empty optimal attribute dataframe containing only the
-    # Instance and the Class Columns
+    # Create an empty optimal attribute dataframe 
     optimal_attributes_df = pd_data[[class_column_colname]]
  
-    # Set the base performance to a really low number
+    # Init the base performance 
     base_performance = -9999.0
  
     # Check whether adding a new attribute to the optimal attributes dataframe
     # improves performance
     # While there are still available attributes left
     while no_of_available_attributes > 0: 
-        # Set the best performance to a low number
+        # init best performace
         best_performance = -9999.0
  
-        # Initialize the best attribute variable to a placeholder
-        best_attribute = "Placeholder"
+        best_attribute = "NA"
  
         # For all attributes in the available attribute data frame
         for col in range(0, len(available_attributes_df.columns)):
@@ -422,7 +374,7 @@ def sfs(model, pd_data):
                 best_performance = current_performance
                 best_attribute = this_attr
  
-        # Did adding another feature lead to improvement?
+        # adding another feature lead to improvement?
         if best_performance > base_performance:
             base_performance = best_performance
  
@@ -434,33 +386,25 @@ def sfs(model, pd_data):
             # Remove the best attribute from the available attribute data frame
             available_attributes_df = available_attributes_df.drop(
                 columns = [best_attribute]) 
- 
-            # Print the best attribute to the console
-            print()
-            print(str(best_attribute) + " added to the optimal attribute subset")
-            print()
             
-            # Decrement the number of available attributes by 1
+            print(f"Testing Accuracy for MLP = {best_performance}")
+            print("Attribute "+str(best_attribute) + " added to the optimal attribute subset")
             no_of_available_attributes -= 1
  
-            # Print number of attributes remaining to the console
-            print()
             print(str(no_of_available_attributes) + " attributes remaining")
-            print()
-            print()
         else:
-            print()
             print("Performance did not improve this round.")
             print("End of Stepwise Forward Selection.")
-            print()
             break
- 
+        print()
     # Return the optimal attribute set
     return optimal_attributes_df
 
 
-# In[168]:
+# In[148]:
 
+
+print("-------------------------Task-5-Started---------------------------")
 
 bestSetting = max(mlp_model_accuracy, key= mlp_model_accuracy.get)
 bestModel = mlp_model_map[bestSetting]
@@ -468,13 +412,14 @@ bestModel = mlp_model_map[bestSetting]
 opt_df = sfs(bestModel, df)
 
 
-# In[172]:
+# In[149]:
 
 
 print(f"The best set of features are {list(opt_df.columns)}, here we have also included the label class 1")
+print("-------------------------Task-5-Finished--------------------------")
 
 
-# In[202]:
+# In[150]:
 
 
 class ensembleModel:
@@ -485,6 +430,7 @@ class ensembleModel:
             model.fit(train_df, train_label)
     
     def predict(self, test_df):
+        # predict using voting method
         predictions = []
         for model in self.models:
             pred = model.predict(test_df)
@@ -493,8 +439,10 @@ class ensembleModel:
         return result.mode[0]
 
 
-# In[203]:
+# In[151]:
 
+
+print("-------------------------Task-6-Started---------------------------")
 
 bestSetting = max(mlp_model_accuracy, key= mlp_model_accuracy.get)
 bestModel = mlp_model_map[bestSetting]
@@ -506,39 +454,5 @@ ensemblemodel.fit(norm_train, train_labels)
 pred = ensemblemodel.predict(norm_test)
 acc = GetAccuracy(test_labels, pred, False)
 print(f"Testing Accuracy for Max Vote Ensemble model = {acc}")
-
-
-# In[174]:
-
-
-predict1 = model_map['linear'].predict(norm_test)
-predict2 = model_map['poly'].predict(norm_test)
-
-
-# In[183]:
-
-
-print(predict1)
-print(predict2)
-arrays = [predict1, predict2, predict1]
-
-
-# In[184]:
-
-
-result = scipy.stats.mode(np.stack(arrays), axis=0)
-print(result)
-result.mode
-
-
-# In[198]:
-
-
-predtype
-
-
-# In[ ]:
-
-
-
+print("-------------------------Task-6-Finished--------------------------")
 
