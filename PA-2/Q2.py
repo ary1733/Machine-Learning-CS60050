@@ -11,7 +11,7 @@
 # Student 2 : Seemant Guruprasad Achari 19CS30057
 # 
 
-# In[123]:
+# In[1]:
 
 
 # importing various tools and libraries
@@ -24,7 +24,7 @@ from sklearn import svm
 from sklearn.neural_network import MLPClassifier
 
 
-# In[124]:
+# In[2]:
 
 
 # Column 1 is defined as the class label
@@ -34,7 +34,7 @@ LABEL = 1
 np.random.seed(101)
 
 
-# In[125]:
+# In[3]:
 
 
 # loading the dataset
@@ -43,7 +43,7 @@ df = pd.read_csv('lung-cancer.data', header = None, na_values=["?"])
 df.columns += 1
 
 
-# In[126]:
+# In[4]:
 
 
 print(df.head())
@@ -51,7 +51,7 @@ print(df.head())
 print("Dataset loaded successfully!")
 
 
-# In[127]:
+# In[5]:
 
 
 for attr,value in df.isna().sum().items():
@@ -59,7 +59,7 @@ for attr,value in df.isna().sum().items():
         print(f"Attribute {attr} has {value} missing data.")
 
 
-# In[128]:
+# In[6]:
 
 
 # Filling the na values with mode of the columns
@@ -67,7 +67,7 @@ fill_mode = lambda col: col.replace(np.nan, col.mode()[0])
 df_without_na = df.apply(fill_mode, axis=0)
 
 
-# In[129]:
+# In[7]:
 
 
 for attr,value in df_without_na.isna().sum().items():
@@ -76,13 +76,13 @@ for attr,value in df_without_na.isna().sum().items():
 print("Missing data handled using mode!")
 
 
-# In[130]:
+# In[8]:
 
 
 print(df_without_na.head())
 
 
-# In[131]:
+# In[9]:
 
 
 # splitting dataset index maintaing the ratio of class labels
@@ -101,21 +101,21 @@ def train_test_split(df,train_sample=0.5,target_col= LABEL):
     return train_df, test_df 
 
 
-# In[132]:
+# In[10]:
 
 
 print("-------------------------Task-1-Started---------------------------")
 train_df, test_df = train_test_split(df_without_na,0.8)
 
 
-# In[133]:
+# In[11]:
 
 
 print(f"The shape of training dataset {train_df.shape}")
 print(f"The shape of testing dataset {test_df.shape}")
 
 
-# In[134]:
+# In[12]:
 
 
 train_stats = train_df.describe()
@@ -124,7 +124,7 @@ train_stats = train_stats.transpose()
 print(train_stats)
 
 
-# In[135]:
+# In[13]:
 
 
 attr_to_drop = []
@@ -138,7 +138,7 @@ test_df_upd = test_df.drop(attr_to_drop, axis = 1)
         
 
 
-# In[136]:
+# In[14]:
 
 
 train_labels = train_df_upd.pop(LABEL)
@@ -147,7 +147,7 @@ test_labels = test_df_upd.pop(LABEL)
 
 # ### Data Normalization
 
-# In[137]:
+# In[15]:
 
 
 def standard_scalar_normalization(df, df_stats):
@@ -157,21 +157,21 @@ def standard_scalar_normalization(df, df_stats):
     return norm_df
 
 
-# In[138]:
+# In[16]:
 
 
 norm_train = standard_scalar_normalization(train_df_upd, train_stats_upd)
 norm_test = standard_scalar_normalization(test_df_upd, train_stats_upd)
 
 
-# In[139]:
+# In[17]:
 
 
 print("Normalization complete")
 print("-------------------------Task-1-Finished--------------------------")
 
 
-# In[140]:
+# In[18]:
 
 
 print("-------------------------Task-2-Started---------------------------")
@@ -186,14 +186,14 @@ def GetAccuracy(trueLabel, pred, printDetails = True):
     return accuracy
 
 
-# In[141]:
+# In[19]:
 
 
 model_map = {}
 accuracy_map = {}
 
 
-# In[142]:
+# In[20]:
 
 
 kernel_types = ['linear', 'poly', 'rbf']
@@ -226,7 +226,7 @@ for kernel_type in kernel_types:
 print("-------------------------Task-2-Finished--------------------------")
 
 
-# In[143]:
+# In[21]:
 
 
 print("-------------------------Task-3-Started---------------------------")
@@ -239,7 +239,7 @@ mlp_models_sizes = {
 }
 
 
-# In[144]:
+# In[22]:
 
 
 for name, layerSize in mlp_models_sizes.items():
@@ -254,13 +254,14 @@ for name, layerSize in mlp_models_sizes.items():
 print("-------------------------Task-3-Finished--------------------------")
 
 
-# In[145]:
+# In[23]:
 
 
 
 print("-------------------------Task-4-Started---------------------------")
 
 bestSetting = max(mlp_model_accuracy, key= mlp_model_accuracy.get)
+print(f"The setting for the best mlp model was {bestSetting}")
 LayerSize = mlp_models_sizes[bestSetting]
 y_data = []
 x_data = [0.1, 0.01, 0.001, 0.0001, 0.00001]
@@ -273,7 +274,7 @@ for l_rate in x_data:
     y_data.append(acc)
 
 
-# In[146]:
+# In[24]:
 
 
 plt.figure(figsize = (10,8))
@@ -287,7 +288,7 @@ plt.show()
 print("-------------------------Task-4-Finished--------------------------")
 
 
-# In[147]:
+# In[25]:
 
 
 def modelEvaluation(model, df, printInfo = False):
@@ -401,7 +402,7 @@ def sfs(model, pd_data):
     return optimal_attributes_df
 
 
-# In[148]:
+# In[26]:
 
 
 print("-------------------------Task-5-Started---------------------------")
@@ -412,14 +413,14 @@ bestModel = mlp_model_map[bestSetting]
 opt_df = sfs(bestModel, df)
 
 
-# In[149]:
+# In[27]:
 
 
 print(f"The best set of features are {list(opt_df.columns)}, here we have also included the label class 1")
 print("-------------------------Task-5-Finished--------------------------")
 
 
-# In[150]:
+# In[28]:
 
 
 class ensembleModel:
@@ -439,13 +440,14 @@ class ensembleModel:
         return result.mode[0]
 
 
-# In[151]:
+# In[29]:
 
 
 print("-------------------------Task-6-Started---------------------------")
 
 bestSetting = max(mlp_model_accuracy, key= mlp_model_accuracy.get)
 bestModel = mlp_model_map[bestSetting]
+print(f"The setting for the best mlp model was {bestSetting}")
 modelsForEnsemble = [model_map['poly'], model_map['rbf'], bestModel]
 
 ensemblemodel= ensembleModel(modelsForEnsemble)

@@ -96,6 +96,7 @@ Multi Hidden Layer has (256, 16) nodes
 Testing Accuracy for MLP with Multi Hidden Layer  = 0.42857142857142855
 -------------------------Task-3-Finished--------------------------
 -------------------------Task-4-Started---------------------------
+The setting for the best mlp model was Single Hidden Layer
 Testing Accuracy for MLP with learning rate 0.1  = 0.8571428571428571
 Testing Accuracy for MLP with learning rate 0.01  = 0.7142857142857143
 Testing Accuracy for MLP with learning rate 0.001  = 0.8571428571428571
@@ -116,5 +117,6 @@ End of Stepwise Forward Selection.
 The best set of features are [1, 2, 21], here we have also included the label class 1
 -------------------------Task-5-Finished--------------------------
 -------------------------Task-6-Started---------------------------
+The setting for the best mlp model was Single Hidden Layer
 Testing Accuracy for Max Vote Ensemble model = 0.5714285714285714
 -------------------------Task-6-Finished--------------------------
