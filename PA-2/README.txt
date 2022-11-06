@@ -8,6 +8,10 @@ To activate the virtual environment
 # In cmd.exe
 venv\Scripts\activate.bat
 
+To run the assignment use the following commands:-
+python Q1.py
+python Q2.py
+
 To deactivate the virtual environment
 # In cmd.exe
 venv\Scripts\deactivate.bat
